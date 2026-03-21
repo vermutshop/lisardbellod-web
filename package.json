@@ -1,0 +1,14 @@
+{
+  "name": "lisard-bellod-static-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync:youtube": "node --env-file=.env.local ./scripts/fetch-youtube.mjs",
+    "build": "echo \"Static site ready\"",
+    "serve": "npx serve ."
+  },
+  "dependencies": {
+    "astro": "^6.0.8"
+  }
+}

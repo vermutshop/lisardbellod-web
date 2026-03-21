@@ -1,0 +1,21 @@
+{
+  "name": "Lisard Bellod",
+  "short_name": "Lisard Bellod",
+  "description": "Contenido real sobre coche electrico, negocio, proyectos y oportunidades con datos.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050608",
+  "theme_color": "#050608",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
