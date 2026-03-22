@@ -104,7 +104,14 @@ export default async function handler(req, res) {
     let details = { code: "unknown_error" };
     try {
       details = JSON.parse(error.message);
-    } catch {}
+    } catch {
+      details = {
+        code: "unknown_error",
+        message: error?.message || String(error),
+        hasKvUrl: Boolean(process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL),
+        hasKvToken: Boolean(process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN),
+      };
+    }
     sendJson(res, { error: "counter_unavailable", details }, 503);
   }
 }
