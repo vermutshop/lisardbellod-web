@@ -16,6 +16,21 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://lisardbellod.com/herramientas.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lisardbellod.com/calculadora-compra-coche.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lisardbellod.com/calculadora-ahorro-coche-electrico.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://lisardbellod.com/contacto.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
