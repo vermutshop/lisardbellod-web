@@ -5,7 +5,13 @@ async function kvRequest(command) {
   const token = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
 
   if (!baseUrl || !token) {
-    throw new Error("missing_kv_env");
+    throw new Error(
+      JSON.stringify({
+        code: "missing_kv_env",
+        hasBaseUrl: Boolean(baseUrl),
+        hasToken: Boolean(token),
+      })
+    );
   }
 
   const response = await fetch(`${baseUrl}/${command}`, {
@@ -15,7 +21,13 @@ async function kvRequest(command) {
   });
 
   if (!response.ok) {
-    throw new Error(`kv_request_failed:${response.status}`);
+    throw new Error(
+      JSON.stringify({
+        code: "kv_request_failed",
+        status: response.status,
+        command,
+      })
+    );
   }
 
   return response.json();
@@ -89,6 +101,10 @@ export default async function handler(req, res) {
 
     sendJson(res, { error: "method_not_allowed" }, 405);
   } catch (error) {
-    sendJson(res, { error: "counter_unavailable" }, 503);
+    let details = { code: "unknown_error" };
+    try {
+      details = JSON.parse(error.message);
+    } catch {}
+    sendJson(res, { error: "counter_unavailable", details }, 503);
   }
 }
