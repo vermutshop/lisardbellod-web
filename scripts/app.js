@@ -39,6 +39,36 @@ function getVideoTopics(video) {
   return topics;
 }
 
+function mergeManualSocialMetrics(data, manualMetrics) {
+  if (!manualMetrics) return data;
+
+  const instagramFollowers =
+    Number.parseInt(manualMetrics.instagramFollowers, 10) || data.socials?.instagramFollowers || 0;
+  const tiktokFollowers =
+    Number.parseInt(manualMetrics.tiktokFollowers, 10) || data.socials?.tiktokFollowers || 0;
+  const youtubeHoursManual =
+    Number.parseFloat(manualMetrics.youtubeHoursManual) || data.metrics?.hoursWatchedThisYear || 0;
+
+  const channelSubscribers = (data.channels || []).reduce(
+    (sum, channel) => sum + (Number(channel.subscribers) || 0),
+    0
+  );
+
+  return {
+    ...data,
+    metrics: {
+      ...data.metrics,
+      totalAudience: channelSubscribers + instagramFollowers + tiktokFollowers,
+      hoursWatchedThisYear: youtubeHoursManual,
+    },
+    socials: {
+      ...data.socials,
+      instagramFollowers,
+      tiktokFollowers,
+    },
+  };
+}
+
 function initShare() {
   const toggle = document.querySelector("[data-share-toggle]");
   const popover = document.querySelector("[data-share-popover]");
@@ -498,18 +528,23 @@ function renderVideos(data) {
 }
 
 async function init() {
-  const response = await fetch("./data/data.json", { cache: "no-store" });
-  const data = await response.json();
+  const [dataResponse, socialMetricsResponse] = await Promise.all([
+    fetch("./data/data.json", { cache: "no-store" }),
+    fetch("./data/social-metrics.json", { cache: "no-store" }).catch(() => null),
+  ]);
+  const data = await dataResponse.json();
+  const socialMetrics = socialMetricsResponse?.ok ? await socialMetricsResponse.json() : null;
+  const mergedData = mergeManualSocialMetrics(data, socialMetrics);
 
   initCounters();
   initShare();
   initCalculator();
   initEVCalculator();
-  renderFooter(data);
-  renderSharedStats(data);
+  renderFooter(mergedData);
+  renderSharedStats(mergedData);
 
-  if (page === "home") renderHome(data);
-  if (page === "videos") renderVideos(data);
+  if (page === "home") renderHome(mergedData);
+  if (page === "videos") renderVideos(mergedData);
 }
 
 init().catch((error) => {

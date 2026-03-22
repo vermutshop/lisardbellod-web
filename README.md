@@ -7,6 +7,7 @@ Web estática orientada a autoridad y rendimiento, alimentada por un único arch
 - `index.html`: home con métricas agregadas y últimos vídeos por canal.
 - `videos.html`: videoteca completa con filtros rápidos y buscador.
 - `data/data.json`: fuente central de datos para la web.
+- `data/social-metrics.json`: métricas manuales para Instagram, TikTok y horas de YouTube, fáciles de editar desde GitHub.
 - `scripts/fetch-youtube.mjs`: script Node.js para regenerar el dataset desde la API de YouTube.
 - `.github/workflows/update-data.yml`: automatización diaria en GitHub Actions.
 
@@ -27,5 +28,6 @@ Web estática orientada a autoridad y rendimiento, alimentada por un único arch
 ## Notas
 
 - La home y la videoteca leen el JSON en cliente, así que no requieren backend en producción.
+- Si quieres actualizar Instagram, TikTok o las horas manuales de YouTube, basta con editar `data/social-metrics.json` y hacer push.
 - El script calcula una estimación de horas consumidas a partir de visualizaciones y duración.
 - Si prefieres Astro más adelante, esta estructura ya te deja claro el modelo de datos y la automatización.

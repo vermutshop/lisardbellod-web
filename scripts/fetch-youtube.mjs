@@ -4,6 +4,7 @@ import path from "node:path";
 const API_KEY = process.env.YOUTUBE_API_KEY;
 const ROOT = process.cwd();
 const OUTPUT_PATH = path.join(ROOT, "data", "data.json");
+const SOCIAL_METRICS_PATH = path.join(ROOT, "data", "social-metrics.json");
 const SEARCH_PAGE_SIZE = 50;
 const VIDEO_DETAILS_BATCH_SIZE = 50;
 const SHORTS_MAX_DURATION_MINUTES = 3;
@@ -31,13 +32,10 @@ const CHANNELS = [
   },
 ];
 
-const SOCIALS = {
+const DEFAULT_SOCIAL_METRICS = {
   instagramFollowers: 143,
   tiktokFollowers: 4750,
-};
-
-const MANUAL_METRICS = {
-  hoursWatchedThisYear: 57191.5,
+  youtubeHoursManual: 57191.5,
 };
 
 function ensureApiKey() {
@@ -64,6 +62,26 @@ async function fetchText(url) {
     throw new Error(`Error ${response.status} al consultar ${url}`);
   }
   return response.text();
+}
+
+async function loadSocialMetrics() {
+  try {
+    const content = await fs.readFile(SOCIAL_METRICS_PATH, "utf8");
+    const parsed = JSON.parse(content);
+    return {
+      instagramFollowers:
+        Number.parseInt(parsed.instagramFollowers, 10) ||
+        DEFAULT_SOCIAL_METRICS.instagramFollowers,
+      tiktokFollowers:
+        Number.parseInt(parsed.tiktokFollowers, 10) ||
+        DEFAULT_SOCIAL_METRICS.tiktokFollowers,
+      youtubeHoursManual:
+        Number.parseFloat(parsed.youtubeHoursManual) ||
+        DEFAULT_SOCIAL_METRICS.youtubeHoursManual,
+    };
+  } catch {
+    return DEFAULT_SOCIAL_METRICS;
+  }
 }
 
 function iso8601DurationToMinutes(duration) {
@@ -194,6 +212,7 @@ async function fetchChannelUploads(channel, uploadsPlaylistId) {
 
 async function buildDataset() {
   ensureApiKey();
+  const socialMetrics = await loadSocialMetrics();
   const oneYearAgo = new Date();
   oneYearAgo.setDate(oneYearAgo.getDate() - 365);
 
@@ -231,12 +250,15 @@ async function buildDataset() {
     },
     metrics: {
       totalAudience:
-        totalSubscribers + SOCIALS.instagramFollowers + SOCIALS.tiktokFollowers,
+        totalSubscribers + socialMetrics.instagramFollowers + socialMetrics.tiktokFollowers,
       totalVideos: videos.length,
-      hoursWatchedThisYear: MANUAL_METRICS.hoursWatchedThisYear,
+      hoursWatchedThisYear: socialMetrics.youtubeHoursManual,
       viewsLast365Days,
     },
-    socials: SOCIALS,
+    socials: {
+      instagramFollowers: socialMetrics.instagramFollowers,
+      tiktokFollowers: socialMetrics.tiktokFollowers,
+    },
     channels: channelPayloads.map(({ videos: ignoredVideos, uploads: ignoredUploads, ...channel }) => channel),
     videos,
   };
