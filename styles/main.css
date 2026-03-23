@@ -1,4 +1,5 @@
 :root {
+  color-scheme: dark;
   --bg: #050608;
   --bg-alt: #0b0d12;
   --surface: rgba(18, 20, 26, 0.72);
@@ -20,6 +21,7 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--bg);
 }
 
 body {
@@ -32,6 +34,7 @@ body {
     "Helvetica Neue",
     sans-serif;
   color: var(--text);
+  background-color: var(--bg);
   background:
     radial-gradient(circle at top left, rgba(125, 184, 255, 0.18), transparent 26%),
     radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.08), transparent 18%),
