@@ -12,6 +12,11 @@
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
     <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
     <meta name="theme-color" content="#050608" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#050608" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#050608" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
     <link rel="manifest" href="./site.webmanifest" />
@@ -88,6 +93,27 @@
             <p id="resultsSummary">Cargando vídeos...</p>
           </div>
           <div id="videoGrid" class="video-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="social-section">
+        <div class="container">
+          <a class="podcast-feature-card" href="https://open.spotify.com/show/7qklMSuuZip5tPXmnRot8F" target="_blank" rel="noreferrer">
+            <div class="podcast-feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path fill="currentColor" d="M12 1.5A10.5 10.5 0 1 0 22.5 12 10.51 10.51 0 0 0 12 1.5Zm4.82 15.16a.9.9 0 0 1-1.24.29 9.45 9.45 0 0 0-9.39-.58.9.9 0 1 1-.76-1.64 11.25 11.25 0 0 1 11.18.7.9.9 0 0 1 .21 1.23Zm1.77-3.1a1.12 1.12 0 0 1-1.54.37 11.77 11.77 0 0 0-11.83-.73 1.12 1.12 0 1 1-.96-2.03 14.01 14.01 0 0 1 14.08.86 1.12 1.12 0 0 1 .25 1.53Zm.16-3.43a13.99 13.99 0 0 0-14.11-.86 1.35 1.35 0 1 1-1.17-2.43 16.69 16.69 0 0 1 16.82 1.03 1.35 1.35 0 0 1-1.54 2.26Z"/>
+              </svg>
+            </div>
+            <div class="podcast-feature-copy">
+              <p class="podcast-feature-kicker">Podcast</p>
+              <h3>Si aquí ves vídeos, allí escuchas las charlas de cuñaos.</h3>
+              <p>
+                Otro formato, misma idea: conversaciones, reflexiones y contenido para escuchar en
+                Spotify cuando no te apetece mirar la pantalla.
+              </p>
+            </div>
+            <span class="button primary podcast-feature-button">Abrir Spotify</span>
+          </a>
         </div>
       </section>
     </main>

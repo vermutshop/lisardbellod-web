@@ -685,6 +685,85 @@ h2 {
     linear-gradient(180deg, rgba(24, 26, 33, 0.82), rgba(15, 17, 22, 0.9));
 }
 
+.podcast-feature-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.1rem;
+  padding: 1.1rem 1.2rem;
+  border-radius: calc(var(--radius) + 4px);
+  border: 1px solid rgba(29, 185, 84, 0.22);
+  background:
+    radial-gradient(circle at top left, rgba(29, 185, 84, 0.14), transparent 24%),
+    radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.08), transparent 18%),
+    linear-gradient(180deg, rgba(16, 23, 19, 0.96), rgba(8, 14, 11, 0.98));
+  box-shadow: var(--shadow);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.podcast-feature-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(29, 185, 84, 0.34);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.5);
+}
+
+.podcast-feature-card-compact {
+  margin-top: 0.9rem;
+}
+
+.podcast-feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #1ed760 0%, #159b45 100%);
+  color: #08110b;
+  box-shadow: 0 12px 24px rgba(29, 185, 84, 0.18);
+  flex-shrink: 0;
+}
+
+.podcast-feature-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.podcast-feature-copy h3,
+.podcast-feature-copy p {
+  margin-bottom: 0;
+}
+
+.podcast-feature-kicker {
+  margin-bottom: 0.45rem;
+  color: #8ce7af;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+
+.podcast-feature-copy h3 {
+  font-size: clamp(1rem, 1.8vw, 1.28rem);
+  line-height: 1.08;
+  margin-bottom: 0.4rem;
+  max-width: 24ch;
+}
+
+.podcast-feature-copy p {
+  color: var(--muted);
+  line-height: 1.45;
+  max-width: 54ch;
+  font-size: 0.95rem;
+}
+
+.podcast-feature-button {
+  white-space: nowrap;
+  align-self: center;
+  padding-inline: 1rem;
+}
+
 .social-label {
   font-size: 1.08rem;
   font-weight: 600;
@@ -1123,6 +1202,7 @@ input[type="search"]:focus {
   .contact-page-grid,
   .tool-shell,
   .follow-cta-card,
+  .podcast-feature-card,
   .stats-grid,
   .social-grid,
   .projects-grid,
@@ -1166,6 +1246,7 @@ input[type="search"]:focus {
   .contact-page-grid,
   .tool-shell,
   .follow-cta-card,
+  .podcast-feature-card,
   .newsletter-card,
   .contact-card {
     grid-template-columns: 1fr;
