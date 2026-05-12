@@ -1,14 +1,14 @@
 {
   "meta": {
     "generatedBy": "scripts/fetch-youtube.mjs",
-    "lastUpdated": "2026-05-11T08:23:27.103Z",
+    "lastUpdated": "2026-05-12T07:41:35.645Z",
     "regenerationWindowDays": 3
   },
   "metrics": {
-    "totalAudience": 10323,
-    "totalVideos": 118,
+    "totalAudience": 10373,
+    "totalVideos": 119,
     "hoursWatchedThisYear": 57304.4,
-    "viewsLast365Days": 1140435
+    "viewsLast365Days": 1145924
   },
   "socials": {
     "instagramFollowers": 150,
@@ -21,10 +21,23 @@
       "description": "Canal principal con contenido central de la marca personal y sus vídeos más importantes.",
       "category": "Principal",
       "id": "UCUaJJERaZmu5_lfJPxT4X8A",
-      "subscribers": 5300,
-      "views": 1782574,
+      "subscribers": 5350,
+      "views": 1785833,
       "uploadsPlaylistId": "UUUaJJERaZmu5_lfJPxT4X8A",
       "latestVideos": [
+        {
+          "id": "BpbU27Lc5zw",
+          "title": "1.290 KM en coche eléctrico atravesando España ⚡ (coste REAL del viaje)",
+          "description": "⚡ Hemos hecho 1.290 KM REALES en coche eléctrico atravesando España… y sinceramente, este viaje me ha hecho cambiar todavía más la forma de ver los viajes largos en EV.\n\n📍 Ruta:\nValls → Valladolid → Valls\n\nY lo más fuerte:\n👉 Mi mujer hizo prácticamente todo el viaje.\n👉 Una amiga cargó un coche eléctrico por primera vez.\n👉 Ida con aire acondicionado.\n👉 Vuelta con lluvia y calefacción.\n👉 Ritmo REAL de autopista.\n👉 Sin buscar consumos récord.\n\nMuchísima gente sigue pensando que viajar en eléctrico es complicado… pero después de este viaje tengo bastante claro que muchas veces el problema es más mental que real.\n\n⚡ CARGAS REALIZADAS\n\n* 14,60 kWh — 17,40€\n* 38,67 kWh — 16,23€\n* 10,92 kWh — 7,38€\n* 16,41 kWh — 10,27€\n* 22,83 kWh — 17,71€\n* 39,36 kWh — 4,91€\n* 36,07 kWh — 5,41€\n\n🔋 Energía total cargada:\n178,86 kWh\n\n🔋 Energía total consumida:\n231,22 kWh\n\n⚡ Consumo medio REAL:\n17,9 kWh/100 km\n\n💸 Coste total aproximado del viaje:\n80–85€\n\nY ojo al dato…\n\n⛽ Este mismo viaje con nuestra antigua Mercedes Vito:\n➡️ Entre 232€ y 255€ en gasoil.\n\nSí… la diferencia asusta 😅\n\nPero lo mejor del viaje no fue el ahorro.\nFue:\n✔️ Lo cómodo que fue todo.\n✔️ Lo fácil que resultó cargar.\n✔️ Poder aparcar y cenar mientras el coche cargaba.\n✔️ Ver a alguien cargar un eléctrico por primera vez y darse cuenta de que no tiene misterio.\n\n🔥 SUSCRÍBETE A MI NEWSLETTER:\nnews.lisard.es\n\n📲 Canal de WhatsApp:\nhttps://tinyurl.com/LisardYT\n\n⚡ Calculadora coche eléctrico vs gasolina:\ncalculadora.lisard.es\n\n⚡ Bonpreu Energia:\nhttps://energia.bonpreuesclat.cat/nou-client-electricitat?promocode=MGM247RXKVYZR\n\n🎙️ Mi Podcast en Spotify:\nhttps://open.spotify.com/show/7qklMSuuZip5tPXmnRot8F\n\n🛒 Accesorios y setup:\n\n🚗 Accesorios para el coche:\nhttps://s.click.aliexpress.com/e/_omA5TVr\n\n📱 Soporte móvil:\nhttps://amzn.to/3WyelXg\n\n📺 ATOTO:\nhttps://amzn.to/47nyXb1\n\n📷 Mi cámara:\nhttps://amzn.to/3XgfIdr\n\n🎤 Mi micro:\nhttps://amzn.to/4oitrMB\n\n#CocheElectrico #KiaEV3 #ViajeElectrico #EV #Zunder #ElectricCar #Kia #MovilidadElectrica #España #roadtrip \n\n0:00 Inicio\n0:46 La mejor ruta modo facil. \n01:50 Cuantos Kilometros\n03:20 Todo autopista\n04:19 Primera Parada\n06:00 Burgos\n07:00 Llegan al 50% \n08:40 Salen al 96% hacia burgos!\n10:00 Parada en Pancorbo\n12:40 Zaragoza al 35% carga\n16:35 con la furgo 230€ gasoil\n18:00 La primera carga de Mireia\n21:00 Conclusion",
+          "publishedAt": "2026-05-11T14:48:16Z",
+          "thumbnail": "https://i.ytimg.com/vi/BpbU27Lc5zw/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=BpbU27Lc5zw",
+          "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
+          "channelName": "Lisard Bellod",
+          "category": "Principal",
+          "views": 2605,
+          "durationMinutes": 22.883333333333333
+        },
         {
           "id": "331C_7IMJVs",
           "title": "Long Range vs Standard Range: cuál comprar en 2026 (guía real)",
@@ -35,7 +48,7 @@
           "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
           "channelName": "Lisard Bellod",
           "category": "Principal",
-          "views": 3921,
+          "views": 4009,
           "durationMinutes": 11.033333333333333
         },
         {
@@ -48,21 +61,8 @@
           "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
           "channelName": "Lisard Bellod",
           "category": "Principal",
-          "views": 15331,
+          "views": 15574,
           "durationMinutes": 15.616666666666667
-        },
-        {
-          "id": "BNn-TCZwY3c",
-          "title": "👉 Polestar 2 Long Range: prueba real, consumo, potencia y opinión (¿mejor que Tesla?)",
-          "description": "Hoy pruebo el Polestar 2 Long Range, uno de los coches eléctricos más interesantes del mercado actual. En este vídeo te traigo una prueba real del Polestar 2, donde analizo su potencia, autonomía, consumo, sensaciones de conducción y experiencia en ciudad y carretera.\n\nEl Polestar 2 Long Range destaca por su potencia brutal, su comportamiento más cercano a un coche deportivo que a un SUV y una experiencia premium que recuerda mucho a marcas como Mercedes. Si estás pensando en comprar un coche eléctrico, este modelo puede ser una de las mejores alternativas actuales.\n\nEn esta review del Polestar 2 Long Range en español te cuento:\n\n·Cómo se comporta en conducción real\n·Qué tal es su aceleración y potencia\n·Consumo real del Polestar 2\n·Autonomía en uso diario\n·Sensaciones al volante\n·Si merece la pena frente a Tesla Model 3 u otros eléctricos\n\nEste coche eléctrico no es un SUV típico, es más bajo, más dinámico y con un enfoque claramente más deportivo. Eso lo convierte en una opción muy interesante para quien busca un eléctrico diferente, con diseño premium y buenas prestaciones.\nSi vienes de un coche térmico de gama alta tipo Mercedes, Audi o BMW, el Polestar 2 puede ser el eléctrico ideal para dar el salto sin perder sensaciones de conducción.\nAdemás, te doy mi opinión sincera tras probarlo en condiciones reales, sin filtros.\n\n🚀 MIS RECURSOS \n\n📩 Newsletter: https://news.lisard.es\n📲 Canal WhatsApp: https://tinyurl.com/LisardYT\n🧮 Calculadora coche eléctrico: https://calculadora.lisard.es\n\n🛒 ACCESORIOS QUE USO (AFILIADOS)\nAccesorios coche: https://s.click.aliexpress.com/e/_omA5TVr\nSoporte móvil: https://amzn.to/3WyelXg\nATOTO: https://amzn.to/47nyXb1\nMi cámara: https://amzn.to/3XgfIdr\nMi micro: https://amzn.to/4oitrMB\n\n💸 AHORRO EN ENERGÍA (IMPORTANTE)\n⚡ Alta en BonpreuEsclat Energia:\nhttps://energia.bonpreuesclat.cat/nou-client-electricitat?promocode=MGM247RXKVYZR\n\n🎧 PODCAST\nhttps://open.spotify.com/show/7qklMSuuZip5tPXmnRot8F\n\n00:00 Primeras sensaciones\n00:28 Consumo y regeneración\n01:03 Aceleración en autovía\n03:06 Ruido y ayudas carril\n04:54 Confort y ergonomía\n06:40 Para quién es este coche\n10:43 Exterior y carga\n12:37 Interior y pantallas\n14:30 Ajustes y conectividad\n16:52 Cámara marcha atrás\n18:13 Cuadro digital en ciudad\n19:22 Frunk y maletero\n21:45 Llave y cierre fácil\n23:02 Cierre y veredicto\n\n💬 Déjame en comentarios:\n¿Te comprarías el Polestar 2 o prefieres Tesla?",
-          "publishedAt": "2026-04-09T06:00:00Z",
-          "thumbnail": "https://i.ytimg.com/vi/BNn-TCZwY3c/maxresdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=BNn-TCZwY3c",
-          "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
-          "channelName": "Lisard Bellod",
-          "category": "Principal",
-          "views": 1503,
-          "durationMinutes": 23.116666666666667
         }
       ]
     },
@@ -73,7 +73,7 @@
       "category": "Emprendimiento",
       "id": "UCuHu9H9TimiFbUbtoi-EDCg",
       "subscribers": 99,
-      "views": 5390,
+      "views": 5391,
       "uploadsPlaylistId": "UUuHu9H9TimiFbUbtoi-EDCg",
       "latestVideos": [
         {
@@ -158,6 +158,19 @@
   ],
   "videos": [
     {
+      "id": "BpbU27Lc5zw",
+      "title": "1.290 KM en coche eléctrico atravesando España ⚡ (coste REAL del viaje)",
+      "description": "⚡ Hemos hecho 1.290 KM REALES en coche eléctrico atravesando España… y sinceramente, este viaje me ha hecho cambiar todavía más la forma de ver los viajes largos en EV.\n\n📍 Ruta:\nValls → Valladolid → Valls\n\nY lo más fuerte:\n👉 Mi mujer hizo prácticamente todo el viaje.\n👉 Una amiga cargó un coche eléctrico por primera vez.\n👉 Ida con aire acondicionado.\n👉 Vuelta con lluvia y calefacción.\n👉 Ritmo REAL de autopista.\n👉 Sin buscar consumos récord.\n\nMuchísima gente sigue pensando que viajar en eléctrico es complicado… pero después de este viaje tengo bastante claro que muchas veces el problema es más mental que real.\n\n⚡ CARGAS REALIZADAS\n\n* 14,60 kWh — 17,40€\n* 38,67 kWh — 16,23€\n* 10,92 kWh — 7,38€\n* 16,41 kWh — 10,27€\n* 22,83 kWh — 17,71€\n* 39,36 kWh — 4,91€\n* 36,07 kWh — 5,41€\n\n🔋 Energía total cargada:\n178,86 kWh\n\n🔋 Energía total consumida:\n231,22 kWh\n\n⚡ Consumo medio REAL:\n17,9 kWh/100 km\n\n💸 Coste total aproximado del viaje:\n80–85€\n\nY ojo al dato…\n\n⛽ Este mismo viaje con nuestra antigua Mercedes Vito:\n➡️ Entre 232€ y 255€ en gasoil.\n\nSí… la diferencia asusta 😅\n\nPero lo mejor del viaje no fue el ahorro.\nFue:\n✔️ Lo cómodo que fue todo.\n✔️ Lo fácil que resultó cargar.\n✔️ Poder aparcar y cenar mientras el coche cargaba.\n✔️ Ver a alguien cargar un eléctrico por primera vez y darse cuenta de que no tiene misterio.\n\n🔥 SUSCRÍBETE A MI NEWSLETTER:\nnews.lisard.es\n\n📲 Canal de WhatsApp:\nhttps://tinyurl.com/LisardYT\n\n⚡ Calculadora coche eléctrico vs gasolina:\ncalculadora.lisard.es\n\n⚡ Bonpreu Energia:\nhttps://energia.bonpreuesclat.cat/nou-client-electricitat?promocode=MGM247RXKVYZR\n\n🎙️ Mi Podcast en Spotify:\nhttps://open.spotify.com/show/7qklMSuuZip5tPXmnRot8F\n\n🛒 Accesorios y setup:\n\n🚗 Accesorios para el coche:\nhttps://s.click.aliexpress.com/e/_omA5TVr\n\n📱 Soporte móvil:\nhttps://amzn.to/3WyelXg\n\n📺 ATOTO:\nhttps://amzn.to/47nyXb1\n\n📷 Mi cámara:\nhttps://amzn.to/3XgfIdr\n\n🎤 Mi micro:\nhttps://amzn.to/4oitrMB\n\n#CocheElectrico #KiaEV3 #ViajeElectrico #EV #Zunder #ElectricCar #Kia #MovilidadElectrica #España #roadtrip \n\n0:00 Inicio\n0:46 La mejor ruta modo facil. \n01:50 Cuantos Kilometros\n03:20 Todo autopista\n04:19 Primera Parada\n06:00 Burgos\n07:00 Llegan al 50% \n08:40 Salen al 96% hacia burgos!\n10:00 Parada en Pancorbo\n12:40 Zaragoza al 35% carga\n16:35 con la furgo 230€ gasoil\n18:00 La primera carga de Mireia\n21:00 Conclusion",
+      "publishedAt": "2026-05-11T14:48:16Z",
+      "thumbnail": "https://i.ytimg.com/vi/BpbU27Lc5zw/maxresdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=BpbU27Lc5zw",
+      "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
+      "channelName": "Lisard Bellod",
+      "category": "Principal",
+      "views": 2605,
+      "durationMinutes": 22.883333333333333
+    },
+    {
       "id": "331C_7IMJVs",
       "title": "Long Range vs Standard Range: cuál comprar en 2026 (guía real)",
       "description": "Si estás pensando en comprar un coche eléctrico, una de las decisiones más importantes es elegir entre batería Standard Range o Long Range.\n\nEn este vídeo te explico mi experiencia real usando un coche eléctrico Long Range, cuándo vale la pena pagar más por autonomía y en qué casos un Standard Range es mejor opción.\n\nAnalizamos:\n\n-Diferencias reales entre Standard y Long Range\n\n-Cuándo compensa pagar más por batería\n\n-Qué tipo de usuario necesita más autonomía\n\nCómo ahorrar dinero en la compra de tu coche eléctrico\n\n👉 Calcula tu caso real:\nhttps://calculadora.lisard.es\n👉 Newsletter con contenido exclusivo:\nhttps://news.lisard.es\n👉 Canal de WhatsApp:\nhttps://tinyurl.com/LisardYT\n\n🎥 EQUIPO QUE USO:\n\n-Accesorios para el coche: https://s.click.aliexpress.com/e/_omA5TVr\n-Soporte de móvil: https://amzn.to/3WyelXg\n-ATOTO: https://amzn.to/47nyXb1\n-Mi cámara: https://amzn.to/3XgfIdr\n-Mi micro: https://amzn.to/4oitrMB\n\n🎧 Podcast:\nhttps://open.spotify.com/show/7qklMSuuZip5tPXmnRot8F \n\n00:00 Dilema de autonomía\n00:53 Precios y baterías\n01:38 Viajes largos reales\n03:31 Mito de los kilómetros\n04:37 Analiza tus trayectos\n05:21 Cuándo elegir Long Range\n06:35 Más usos y ejemplos\n07:43 Ciclos y degradación\n08:26 Tres perfiles claros\n09:57 Regla de tres final\n10:40 Conclusión y consejo",
@@ -167,7 +180,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 3921,
+      "views": 4009,
       "durationMinutes": 11.033333333333333
     },
     {
@@ -180,7 +193,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 15331,
+      "views": 15574,
       "durationMinutes": 15.616666666666667
     },
     {
@@ -193,7 +206,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 1503,
+      "views": 1515,
       "durationMinutes": 23.116666666666667
     },
     {
@@ -206,7 +219,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 2770,
+      "views": 2775,
       "durationMinutes": 14.133333333333333
     },
     {
@@ -219,7 +232,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 11200,
+      "views": 11232,
       "durationMinutes": 13.766666666666667
     },
     {
@@ -232,7 +245,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 6820,
+      "views": 6903,
       "durationMinutes": 28.333333333333332
     },
     {
@@ -245,7 +258,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 4373,
+      "views": 4382,
       "durationMinutes": 15.7
     },
     {
@@ -258,7 +271,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 5148,
+      "views": 5150,
       "durationMinutes": 5.583333333333333
     },
     {
@@ -271,7 +284,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 3219,
+      "views": 3224,
       "durationMinutes": 19
     },
     {
@@ -284,7 +297,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 4094,
+      "views": 4097,
       "durationMinutes": 18.416666666666668
     },
     {
@@ -310,7 +323,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 1472,
+      "views": 1475,
       "durationMinutes": 29.116666666666667
     },
     {
@@ -323,7 +336,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 6274,
+      "views": 6307,
       "durationMinutes": 33.88333333333333
     },
     {
@@ -336,7 +349,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 11570,
+      "views": 11607,
       "durationMinutes": 46.21666666666667
     },
     {
@@ -362,7 +375,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 17878,
+      "views": 17981,
       "durationMinutes": 21.233333333333334
     },
     {
@@ -375,7 +388,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 2184,
+      "views": 2188,
       "durationMinutes": 8.25
     },
     {
@@ -401,7 +414,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 3574,
+      "views": 3576,
       "durationMinutes": 23.316666666666666
     },
     {
@@ -414,7 +427,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 12124,
+      "views": 12137,
       "durationMinutes": 13.033333333333333
     },
     {
@@ -427,7 +440,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 18996,
+      "views": 19037,
       "durationMinutes": 26.2
     },
     {
@@ -440,7 +453,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 6852,
+      "views": 6863,
       "durationMinutes": 24.916666666666668
     },
     {
@@ -466,7 +479,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 2765,
+      "views": 2766,
       "durationMinutes": 90.75
     },
     {
@@ -479,7 +492,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 7740,
+      "views": 7786,
       "durationMinutes": 24.2
     },
     {
@@ -492,7 +505,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 3848,
+      "views": 3851,
       "durationMinutes": 53.11666666666667
     },
     {
@@ -505,7 +518,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 5527,
+      "views": 5539,
       "durationMinutes": 50.35
     },
     {
@@ -518,7 +531,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 2828,
+      "views": 2836,
       "durationMinutes": 37.083333333333336
     },
     {
@@ -531,7 +544,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 4179,
+      "views": 4192,
       "durationMinutes": 42.666666666666664
     },
     {
@@ -544,7 +557,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 8245,
+      "views": 8257,
       "durationMinutes": 90.98333333333333
     },
     {
@@ -557,7 +570,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 4793,
+      "views": 4800,
       "durationMinutes": 23.45
     },
     {
@@ -570,7 +583,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 2367,
+      "views": 2369,
       "durationMinutes": 33.28333333333333
     },
     {
@@ -583,7 +596,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 1597,
+      "views": 1600,
       "durationMinutes": 34.45
     },
     {
@@ -596,7 +609,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 2095,
+      "views": 2097,
       "durationMinutes": 25.233333333333334
     },
     {
@@ -609,7 +622,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 6988,
+      "views": 6990,
       "durationMinutes": 31.133333333333333
     },
     {
@@ -635,7 +648,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 1655,
+      "views": 1656,
       "durationMinutes": 17.4
     },
     {
@@ -648,7 +661,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 4728,
+      "views": 4738,
       "durationMinutes": 21.1
     },
     {
@@ -726,7 +739,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 4114,
+      "views": 4117,
       "durationMinutes": 33.733333333333334
     },
     {
@@ -739,7 +752,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 4057,
+      "views": 4062,
       "durationMinutes": 22.216666666666665
     },
     {
@@ -765,7 +778,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 13645,
+      "views": 13699,
       "durationMinutes": 25.25
     },
     {
@@ -804,7 +817,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 7118,
+      "views": 7131,
       "durationMinutes": 10.033333333333333
     },
     {
@@ -830,7 +843,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 2514,
+      "views": 2515,
       "durationMinutes": 18.466666666666665
     },
     {
@@ -843,7 +856,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 19150,
+      "views": 19247,
       "durationMinutes": 30.016666666666666
     },
     {
@@ -856,7 +869,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 608,
+      "views": 609,
       "durationMinutes": 10.416666666666666
     },
     {
@@ -869,7 +882,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 730,
+      "views": 735,
       "durationMinutes": 76.7
     },
     {
@@ -882,7 +895,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 1813,
+      "views": 1818,
       "durationMinutes": 25.75
     },
     {
@@ -921,7 +934,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 8354,
+      "views": 8355,
       "durationMinutes": 23.133333333333333
     },
     {
@@ -934,7 +947,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 14921,
+      "views": 14922,
       "durationMinutes": 24.033333333333335
     },
     {
@@ -947,7 +960,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 9805,
+      "views": 9806,
       "durationMinutes": 18
     },
     {
@@ -960,7 +973,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 5501,
+      "views": 5503,
       "durationMinutes": 32.75
     },
     {
@@ -973,7 +986,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 13020,
+      "views": 13049,
       "durationMinutes": 19.383333333333333
     },
     {
@@ -999,7 +1012,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 6863,
+      "views": 6874,
       "durationMinutes": 26.816666666666666
     },
     {
@@ -1025,7 +1038,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 3486,
+      "views": 3487,
       "durationMinutes": 5.983333333333333
     },
     {
@@ -1051,7 +1064,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 10933,
+      "views": 10937,
       "durationMinutes": 16.616666666666667
     },
     {
@@ -1077,7 +1090,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 3334,
+      "views": 3335,
       "durationMinutes": 22.833333333333332
     },
     {
@@ -1103,7 +1116,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 27554,
+      "views": 27578,
       "durationMinutes": 13.716666666666667
     },
     {
@@ -1116,7 +1129,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 14263,
+      "views": 14274,
       "durationMinutes": 25.983333333333334
     },
     {
@@ -1142,7 +1155,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 5807,
+      "views": 5809,
       "durationMinutes": 18.933333333333334
     },
     {
@@ -1168,7 +1181,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 14772,
+      "views": 14782,
       "durationMinutes": 22.05
     },
     {
@@ -1207,7 +1220,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 3765,
+      "views": 3767,
       "durationMinutes": 19.966666666666665
     },
     {
@@ -1220,7 +1233,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 6845,
+      "views": 6848,
       "durationMinutes": 31.5
     },
     {
@@ -1246,7 +1259,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 1621,
+      "views": 1622,
       "durationMinutes": 18.05
     },
     {
@@ -1259,7 +1272,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 2880,
+      "views": 2881,
       "durationMinutes": 22.533333333333335
     },
     {
@@ -1285,7 +1298,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 2009,
+      "views": 2010,
       "durationMinutes": 16.966666666666665
     },
     {
@@ -1298,7 +1311,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 2001,
+      "views": 2002,
       "durationMinutes": 7.116666666666666
     },
     {
@@ -1311,7 +1324,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 17999,
+      "views": 18002,
       "durationMinutes": 16.25
     },
     {
@@ -1337,7 +1350,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 5886,
+      "views": 5887,
       "durationMinutes": 15.766666666666667
     },
     {
@@ -1376,7 +1389,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 15545,
+      "views": 15548,
       "durationMinutes": 7.033333333333333
     },
     {
@@ -1389,7 +1402,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 34161,
+      "views": 34163,
       "durationMinutes": 27.633333333333333
     },
     {
@@ -1402,7 +1415,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 19517,
+      "views": 19518,
       "durationMinutes": 18.966666666666665
     },
     {
@@ -1415,7 +1428,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 13749,
+      "views": 13751,
       "durationMinutes": 11.333333333333334
     },
     {
@@ -1454,7 +1467,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 1049,
+      "views": 1050,
       "durationMinutes": 8.066666666666666
     },
     {
@@ -1480,7 +1493,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 1587,
+      "views": 1588,
       "durationMinutes": 8.016666666666667
     },
     {
@@ -1506,7 +1519,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 1488,
+      "views": 1490,
       "durationMinutes": 12.466666666666667
     },
     {
@@ -1571,7 +1584,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 2524,
+      "views": 2525,
       "durationMinutes": 7.666666666666667
     },
     {
@@ -1597,7 +1610,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 472,
+      "views": 473,
       "durationMinutes": 12.433333333333334
     },
     {
@@ -1649,7 +1662,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 33,
+      "views": 35,
       "durationMinutes": 3.1666666666666665
     },
     {
