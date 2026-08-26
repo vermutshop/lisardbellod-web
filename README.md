@@ -11,7 +11,7 @@ Web estática orientada a autoridad y rendimiento, alimentada por un único arch
 - `data/metric-overrides.json`: correcciones manuales de views y suscriptores que prevalecen sobre la sincronización automática.
 - `scripts/fetch-youtube.mjs`: script Node.js para regenerar el dataset desde la API de YouTube.
 - `.github/workflows/update-data.yml`: automatización diaria en GitHub Actions.
-- `scripts/poll-telegram-metrics.mjs`: bot privado para actualizar o corregir métricas desde Telegram.
+- `api/telegram-metrics.js`: bot privado para actualizar o corregir métricas desde Telegram.
 
 ## Cómo adaptarlo a tus canales
 
@@ -36,16 +36,22 @@ Web estática orientada a autoridad y rendimiento, alimentada por un único arch
 
 ## Bot privado de Telegram
 
-El bot permite cambiar seguidores de Instagram y TikTok, horas de YouTube, views del último año, suscriptores y views totales de cada canal. Siempre muestra el valor actual y pide confirmación antes de publicar el cambio. GitHub Actions consulta el bot cada cinco minutos, por lo que no necesita ningún servicio adicional.
+El bot permite cambiar seguidores de Instagram y TikTok, horas de YouTube, views del último año, suscriptores y views totales de cada canal. Siempre muestra el valor actual y pide confirmación antes de publicar el cambio. Telegram avisa a Vercel en el momento, y Vercel actualiza el repositorio de GitHub.
 
 Las correcciones de views y suscriptores se guardan en `data/metric-overrides.json` para que una actualización automática posterior de YouTube no las sobrescriba.
 
 ### Activación
 
 1. Crea un bot privado desde `@BotFather` y guarda su token.
-2. Abre el bot y escribe `/start` para obtener el ID numérico de tu chat.
-3. En GitHub, abre `vermutshop/lisardbellod-web` y entra en `Settings` > `Secrets and variables` > `Actions`.
-4. Crea los secretos `TELEGRAM_BOT_TOKEN` y `TELEGRAM_ALLOWED_CHAT_ID`.
-5. Abre el bot y escribe `/actualizar`.
+2. Obtén el ID numérico de tu chat de Telegram.
+3. En las variables de entorno de Vercel añade las siguientes variables, solo para producción:
+   - `TELEGRAM_BOT_TOKEN`
+   - `TELEGRAM_WEBHOOK_SECRET` con una cadena larga y aleatoria
+   - `TELEGRAM_ALLOWED_CHAT_ID`
+   - `TELEGRAM_GITHUB_TOKEN`, un fine-grained token de GitHub con permiso `Contents: Read and write` exclusivamente para `vermutshop/lisardbellod-web`
+   - `TELEGRAM_GITHUB_REPOSITORY=vermutshop/lisardbellod-web`
+4. Mantén las variables de KV ya usadas por `api/calculator-counter.js`; el bot las reutiliza para guardar la conversación durante 30 minutos.
+5. Tras desplegar, configura el webhook de Telegram apuntando a `https://www.lisardbellod.com/api/telegram-metrics` y usando el mismo `TELEGRAM_WEBHOOK_SECRET`.
+6. Abre el bot y escribe `/actualizar`.
 
-El workflow `.github/workflows/telegram-metrics.yml` ignora cualquier mensaje cuyo chat no coincida con `TELEGRAM_ALLOWED_CHAT_ID`. Los comandos se procesan normalmente en menos de cinco minutos.
+El endpoint ignora cualquier mensaje cuyo chat no coincida con `TELEGRAM_ALLOWED_CHAT_ID`.
