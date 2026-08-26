@@ -1,5 +1,13 @@
 {
-  "updatedAt": null,
+  "updatedAt": "2026-08-26T22:58:16.096Z",
   "metrics": {},
-  "channels": {}
+  "channels": {
+    "UCUaJJERaZmu5_lfJPxT4X8A": {
+      "views": {
+        "value": 1370944,
+        "updatedAt": "2026-08-26T22:58:16.096Z",
+        "source": "telegram"
+      }
+    }
+  }
 }
