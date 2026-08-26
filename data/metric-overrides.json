@@ -1,11 +1,16 @@
 {
-  "updatedAt": "2026-08-26T22:58:16.096Z",
+  "updatedAt": "2026-08-26T22:59:20.488Z",
   "metrics": {},
   "channels": {
     "UCUaJJERaZmu5_lfJPxT4X8A": {
       "views": {
         "value": 1370944,
         "updatedAt": "2026-08-26T22:58:16.096Z",
+        "source": "telegram"
+      },
+      "subscribers": {
+        "value": 6168,
+        "updatedAt": "2026-08-26T22:59:20.488Z",
         "source": "telegram"
       }
     }
