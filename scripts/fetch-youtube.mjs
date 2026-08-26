@@ -8,6 +8,8 @@ const SOCIAL_METRICS_PATH = path.join(ROOT, "data", "social-metrics.json");
 const SEARCH_PAGE_SIZE = 50;
 const VIDEO_DETAILS_BATCH_SIZE = 50;
 const SHORTS_MAX_DURATION_MINUTES = 3;
+const INSTAGRAM_URL = "https://www.instagram.com/lisard/";
+const LEGACY_INSTAGRAM_URL = "https://www.instagram.com/lisardbellod/";
 const channelIdCache = new Map();
 const channelDetailsCache = new Map();
 
@@ -95,7 +97,8 @@ function toVideoModel(raw, details, channel) {
   return {
     id: raw.id.videoId,
     title: raw.snippet.title,
-    description: raw.snippet.description,
+    // Mantiene los enlaces propios vigentes también en descripciones importadas de YouTube.
+    description: (raw.snippet.description || "").replaceAll(LEGACY_INSTAGRAM_URL, INSTAGRAM_URL),
     publishedAt: raw.snippet.publishedAt,
     thumbnail:
       raw.snippet.thumbnails.maxres?.url ||
