@@ -22,6 +22,50 @@ const COUNTER_STORAGE_KEY = "lisard_calculator_counters";
 
 const FILTER_ORDER = ["Todos", "Coche eléctrico", "Emprende", "Local", "Comercio"];
 
+function initNav() {
+  const toggle = document.querySelector("[data-nav-toggle]");
+  const panel = document.querySelector("[data-nav-panel]");
+  if (!toggle || !panel) return;
+
+  const closeNav = () => {
+    document.body.classList.remove("nav-open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Abrir menu");
+  };
+
+  const openNav = () => {
+    document.body.classList.add("nav-open");
+    toggle.setAttribute("aria-expanded", "true");
+    toggle.setAttribute("aria-label", "Cerrar menu");
+  };
+
+  toggle.addEventListener("click", () => {
+    if (document.body.classList.contains("nav-open")) {
+      closeNav();
+    } else {
+      openNav();
+    }
+  });
+
+  panel.addEventListener("click", (event) => {
+    if (event.target.closest("a")) closeNav();
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!document.body.classList.contains("nav-open")) return;
+    if (panel.contains(event.target) || toggle.contains(event.target)) return;
+    closeNav();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeNav();
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 720) closeNav();
+  });
+}
+
 function getVideoTopics(video) {
   const haystack = `${video.title} ${video.description || ""}`.toLowerCase();
   const topics = new Set();
@@ -528,6 +572,8 @@ function renderVideos(data) {
 }
 
 async function init() {
+  initNav();
+
   const [dataResponse, socialMetricsResponse] = await Promise.all([
     fetch("./data/data.json", { cache: "no-store" }),
     fetch("./data/social-metrics.json", { cache: "no-store" }).catch(() => null),

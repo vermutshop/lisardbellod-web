@@ -66,7 +66,21 @@
     <header class="site-header">
       <div class="container nav">
         <a class="brand" href="./index.html">Lisard Bellod</a>
-        <nav class="nav-links">
+        <button
+          class="nav-toggle"
+          type="button"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Abrir menu"
+        >
+          <span class="nav-toggle-bars" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+        <nav class="nav-links" id="site-nav" data-nav-panel>
           <a href="./index.html">Inicio</a>
           <a href="./videos.html">Videoteca</a>
           <a href="./herramientas.html">Herramientas</a>
@@ -250,5 +264,6 @@
         <p>Archivado real para trabajo real.</p>
       </div>
     </footer>
+    <script src="./scripts/app.js" defer></script>
   </body>
 </html>
