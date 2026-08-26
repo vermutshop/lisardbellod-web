@@ -113,6 +113,36 @@ function mergeManualSocialMetrics(data, manualMetrics) {
   };
 }
 
+function mergeMetricOverrides(data, overrides) {
+  if (!overrides || typeof overrides !== "object") return data;
+
+  const getOverrideValue = (entry) => {
+    const value = Number(entry?.value);
+    return Number.isFinite(value) && value >= 0 ? value : null;
+  };
+
+  const channels = (data.channels || []).map((channel) => {
+    const override = overrides.channels?.[channel.id] || {};
+    const subscribers = getOverrideValue(override.subscribers);
+    const views = getOverrideValue(override.views);
+    return {
+      ...channel,
+      ...(subscribers === null ? {} : { subscribers }),
+      ...(views === null ? {} : { views }),
+    };
+  });
+
+  const viewsLast365Days = getOverrideValue(overrides.metrics?.viewsLast365Days);
+  return {
+    ...data,
+    channels,
+    metrics: {
+      ...data.metrics,
+      ...(viewsLast365Days === null ? {} : { viewsLast365Days }),
+    },
+  };
+}
+
 function initShare() {
   const toggle = document.querySelector("[data-share-toggle]");
   const popover = document.querySelector("[data-share-popover]");
@@ -574,13 +604,15 @@ function renderVideos(data) {
 async function init() {
   initNav();
 
-  const [dataResponse, socialMetricsResponse] = await Promise.all([
+  const [dataResponse, socialMetricsResponse, overridesResponse] = await Promise.all([
     fetch("./data/data.json", { cache: "no-store" }),
     fetch("./data/social-metrics.json", { cache: "no-store" }).catch(() => null),
+    fetch("./data/metric-overrides.json", { cache: "no-store" }).catch(() => null),
   ]);
   const data = await dataResponse.json();
   const socialMetrics = socialMetricsResponse?.ok ? await socialMetricsResponse.json() : null;
-  const mergedData = mergeManualSocialMetrics(data, socialMetrics);
+  const overrides = overridesResponse?.ok ? await overridesResponse.json() : null;
+  const mergedData = mergeManualSocialMetrics(mergeMetricOverrides(data, overrides), socialMetrics);
 
   initCounters();
   initShare();
