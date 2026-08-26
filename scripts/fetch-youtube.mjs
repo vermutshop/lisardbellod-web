@@ -19,8 +19,8 @@ const CHANNELS = [
     category: "Principal",
   },
   {
-    url: "https://www.youtube.com/@TuPlanZeta",
-    name: "Tu Plan Zeta",
+    url: "https://www.youtube.com/@lisard_world",
+    name: "Lisard World",
     description: "Canal de emprendimiento, ideas, estrategia y construcción de proyectos.",
     category: "Emprendimiento",
   },
