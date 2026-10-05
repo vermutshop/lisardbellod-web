@@ -6,6 +6,8 @@ Web estática orientada a autoridad y rendimiento, alimentada por un único arch
 
 - `index.html`: home con métricas agregadas y últimos vídeos por canal.
 - `videos.html`: videoteca completa con filtros rápidos y buscador.
+- `shop.html`: recomendaciones personales con imágenes de producto, enlaces directos y aviso de afiliación, sin precios.
+- `data/shop.json`: catálogo de productos recomendados, independiente de la sincronización de YouTube.
 - `data/data.json`: fuente central de datos para la web.
 - `data/social-metrics.json`: métricas manuales para Instagram, TikTok y horas de YouTube, fáciles de editar desde GitHub.
 - `data/metric-overrides.json`: correcciones manuales de views y suscriptores que prevalecen sobre la sincronización automática.
@@ -33,6 +35,19 @@ Web estática orientada a autoridad y rendimiento, alimentada por un único arch
 - Si quieres actualizar Instagram, TikTok o las horas manuales de YouTube, basta con editar `data/social-metrics.json` y hacer push.
 - Las horas de YouTube se introducen manualmente desde YouTube Studio; no son una estimación pública.
 - Si prefieres Astro más adelante, esta estructura ya te deja claro el modelo de datos y la automatización.
+
+## Añadir recomendaciones a Shop
+
+Añade cada producto al array `products` de `data/shop.json` con estos campos:
+
+- `name`: nombre del producto.
+- `store`: nombre de la tienda (Vermut.shop, Amazon, AliExpress u otra).
+- `url`: enlace completo de compra, conservando el código de afiliado si lo tiene.
+- `image`: URL de la imagen original de la tienda.
+- `note`: comentario personal opcional, basado en la experiencia de Lisard.
+- `affiliate`: `true` si el enlace contiene un código de afiliado; `false` en caso contrario.
+
+Las fichas no muestran precios. Los enlaces de afiliado se identifican en la ficha y llevan `rel="sponsored"`. Un catálogo vacío muestra un aviso de próximas recomendaciones.
 
 ## Bot privado de Telegram
 

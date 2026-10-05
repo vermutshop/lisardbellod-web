@@ -8,8 +8,8 @@ const SOCIAL_METRICS_PATH = path.join(ROOT, "data", "social-metrics.json");
 const SEARCH_PAGE_SIZE = 50;
 const VIDEO_DETAILS_BATCH_SIZE = 50;
 const SHORTS_MAX_DURATION_MINUTES = 3;
-const INSTAGRAM_URL = "https://www.instagram.com/lisard/";
-const LEGACY_INSTAGRAM_URL = "https://www.instagram.com/lisardbellod/";
+const INSTAGRAM_URL = "https://www.instagram.com/lisardbellod/";
+const LEGACY_INSTAGRAM_URL = "https://www.instagram.com/lisard/";
 const channelIdCache = new Map();
 const channelDetailsCache = new Map();
 
