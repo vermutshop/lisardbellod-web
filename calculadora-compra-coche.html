@@ -300,8 +300,22 @@
                 <p class="purchase-help">Total de los pagos introducidos. Si hay comisiones o servicios obligatorios que pagas aparte, súmalos a la entrada para incluirlos en el total.</p>
               </div>
               <div class="calculator-actions">
-                <button class="button primary" type="button" data-calculator-copy>Copiar resumen</button>
+                <button class="button primary" type="button" data-calculator-share aria-expanded="false" aria-controls="purchase-share-panel">Compartir resumen</button>
                 <a class="button secondary" href="#calculadora-compra" data-calculator-edit>Editar datos</a>
+              </div>
+              <div class="purchase-share-panel" id="purchase-share-panel" data-calculator-share-panel hidden>
+                <h3>Tu resultado, listo para compartir</h3>
+                <p class="purchase-help">Envía el desglose y la diferencia de precio, con el enlace a esta calculadora.</p>
+                <div class="calculator-actions">
+                  <a class="button purchase-whatsapp" data-calculator-whatsapp target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                  <a class="button secondary" data-calculator-email>Correo electrónico</a>
+                  <button class="button secondary" type="button" data-calculator-copy>Copiar resumen</button>
+                </div>
+                <details class="purchase-share-preview" data-calculator-preview>
+                  <summary>Ver el mensaje</summary>
+                  <label for="purchase-share-message">Resumen para compartir</label>
+                  <textarea id="purchase-share-message" data-calculator-message rows="13" readonly spellcheck="false"></textarea>
+                </details>
               </div>
               <p class="calculator-feedback" data-calculator-feedback role="status"></p>
             </section>

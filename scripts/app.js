@@ -300,6 +300,13 @@ function initCalculator() {
 
   const feedback = results.querySelector("[data-calculator-feedback]");
   const resultTitle = document.getElementById("purchase-result-title");
+  const shareButton = results.querySelector("[data-calculator-share]");
+  const sharePanel = results.querySelector("[data-calculator-share-panel]");
+  const shareMessage = results.querySelector("[data-calculator-message]");
+  const sharePreview = results.querySelector("[data-calculator-preview]");
+  const whatsappLink = results.querySelector("[data-calculator-whatsapp]");
+  const emailLink = results.querySelector("[data-calculator-email]");
+  const calculatorUrl = "https://www.lisardbellod.com/calculadora-compra-coche.html";
   const outputs = Object.fromEntries(
     [...results.querySelectorAll("[data-calc-output]")].map((element) => [element.dataset.calcOutput, element])
   );
@@ -315,6 +322,12 @@ function initCalculator() {
     results.hidden = true;
     feedback.textContent = "";
     summary = "";
+    sharePanel.hidden = true;
+    shareButton.setAttribute("aria-expanded", "false");
+    sharePreview.open = false;
+    shareMessage.value = "";
+    whatsappLink.removeAttribute("href");
+    emailLink.removeAttribute("href");
   };
 
   const scrollTo = (element) => {
@@ -369,28 +382,55 @@ function initCalculator() {
     }
 
     summary = [
-      "Coste real de la compra del coche",
-      `Entrada o primer pago: ${money(downPayment)}`,
-      `${months} mensualidades de ${money(monthlyPayment)}: ${money(monthlyTotal)}`,
-      `Cuota final: ${money(finalPayment)}`,
-      `Coste real financiado: ${money(totalFinanced)}`,
-      `Precio al contado: ${money(cashPrice)}`,
-      outputs.comparison.textContent,
+      "🚗 COSTE REAL DEL COCHE",
+      "",
+      `💳 Financiado: ${money(totalFinanced)}`,
+      `💶 Al contado: ${money(cashPrice)}`,
+      "",
+      `${difference > 0 ? "🔴" : difference < 0 ? "🟢" : "⚖️"} ${outputs.comparison.textContent}`,
+      "",
+      "DESGLOSE DE LA FINANCIACIÓN",
+      `• Entrada o primer pago: ${money(downPayment)}`,
+      `• ${months} mensualidades de ${money(monthlyPayment)}: ${money(monthlyTotal)}`,
+      `• Cuota final: ${money(finalPayment)}`,
+      "",
       "Total de los pagos introducidos.",
+      "",
+      "Creado en Lisard Bellod",
+      calculatorUrl,
     ].join("\n");
+    shareMessage.value = summary;
+    whatsappLink.href = `https://wa.me/?text=${encodeURIComponent(summary)}`;
+    emailLink.href = `mailto:?subject=${encodeURIComponent("Coste real del coche · Lisard Bellod")}&body=${encodeURIComponent(summary.replace(/\n/g, "\r\n"))}`;
     feedback.textContent = "";
     results.hidden = false;
     trackCalculation(JSON.stringify({ downPayment, monthlyPayment, months, finalPayment, cashPrice }));
     scrollTo(resultTitle);
   });
 
+  shareButton.addEventListener("click", () => {
+    if (!summary) return;
+    sharePanel.hidden = !sharePanel.hidden;
+    shareButton.setAttribute("aria-expanded", String(!sharePanel.hidden));
+    if (!sharePanel.hidden) {
+      whatsappLink.focus({ preventScroll: true });
+      sharePanel.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
+        block: "nearest",
+      });
+    }
+  });
+
   results.querySelector("[data-calculator-copy]").addEventListener("click", async () => {
     if (!summary) return;
     try {
       await navigator.clipboard.writeText(summary);
-      feedback.textContent = "Resumen copiado al portapapeles.";
+      feedback.textContent = "Resumen y enlace copiados. Listos para pegar en WhatsApp o un correo.";
     } catch {
-      feedback.textContent = "No se pudo copiar. Puedes seleccionar y copiar los resultados directamente.";
+      sharePreview.open = true;
+      shareMessage.focus();
+      shareMessage.select();
+      feedback.textContent = "No se pudo copiar automáticamente. El mensaje está seleccionado para que puedas copiarlo.";
     }
   });
 
