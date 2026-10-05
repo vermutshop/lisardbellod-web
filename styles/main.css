@@ -1542,3 +1542,320 @@ input[type="search"]:focus {
     padding-top: 3rem;
   }
 }
+
+/* Purchase calculator */
+.purchase-hero {
+  padding: 3rem 0 1.5rem;
+}
+
+.purchase-hero .tool-page-hero {
+  max-width: 920px;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  align-items: center;
+}
+
+.purchase-hero h1 {
+  max-width: 20ch;
+  font-size: clamp(2.3rem, 4vw, 3.6rem);
+  line-height: 1.05;
+}
+
+.purchase-hero .lead,
+.purchase-hero .counter-banner {
+  margin: 0;
+}
+
+#calculadora-compra {
+  padding-top: 0.75rem;
+}
+
+.purchase-calculator {
+  max-width: 920px;
+  margin-inline: auto;
+}
+
+.purchase-calculator [hidden] {
+  display: none !important;
+}
+
+#calculadora-compra,
+#purchase-result-title,
+.purchase-calculator input {
+  scroll-margin-top: 7rem;
+}
+
+.purchase-heading {
+  margin-bottom: 1.8rem;
+}
+
+.purchase-heading h2,
+.purchase-result-heading h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.12;
+  margin-bottom: 0.8rem;
+}
+
+.purchase-heading > p:last-child,
+.purchase-help,
+.purchase-calculator small {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.purchase-form-card {
+  padding: clamp(1.2rem, 4vw, 2.4rem);
+}
+
+.purchase-fields {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.purchase-fields legend {
+  padding: 0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.purchase-calculator .button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.purchase-fields + .purchase-fields {
+  margin-top: 2rem;
+}
+
+.purchase-fields > .purchase-help {
+  margin-top: -0.5rem;
+  margin-bottom: 1.4rem;
+}
+
+.purchase-calculator .calculator-grid {
+  gap: 1.6rem;
+}
+
+.purchase-calculator .calculator-field > span:first-child {
+  color: var(--text);
+  font-weight: 550;
+}
+
+.purchase-calculator .input-wrap input {
+  min-width: 0;
+  font-size: 1.15rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.purchase-calculator .input-wrap input::placeholder {
+  color: #818b9c;
+}
+
+.purchase-calculator .input-suffix {
+  min-width: 52px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.purchase-calculator small {
+  font-size: 0.82rem;
+}
+
+.purchase-tip {
+  padding: 1rem 1.15rem;
+  margin: 1.6rem 0 0;
+  border-left: 2px solid var(--accent);
+  background: rgba(125, 184, 255, 0.05);
+  color: var(--accent-dark);
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.purchase-cash-field {
+  max-width: 460px;
+}
+
+.purchase-submit {
+  margin-top: 2rem;
+}
+
+.purchase-calculator .button {
+  font: inherit;
+  cursor: pointer;
+  min-height: 48px;
+}
+
+.purchase-submit .primary {
+  flex: 1;
+}
+
+.purchase-form-note {
+  font-size: 0.82rem;
+  margin: 1rem 0 0;
+}
+
+.purchase-results {
+  margin-top: 3rem;
+}
+
+.purchase-totals {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.purchase-results .result-value {
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.04em;
+}
+
+.purchase-results .result-note {
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.purchase-difference {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(125, 184, 255, 0.25);
+  background: rgba(125, 184, 255, 0.09);
+  border-radius: 20px;
+  margin-top: 1rem;
+  color: var(--accent-dark);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 550;
+}
+
+.purchase-difference p {
+  margin: 0;
+}
+
+.purchase-results [data-price-tone="positive"] {
+  --price-rgb: 74, 222, 158;
+  --price-ink: #8af0bb;
+}
+
+.purchase-results [data-price-tone="negative"] {
+  --price-rgb: 251, 113, 133;
+  --price-ink: #ff9dab;
+}
+
+.purchase-results [data-price-tone="positive"],
+.purchase-results [data-price-tone="negative"] {
+  border-color: rgba(var(--price-rgb), 0.35);
+  background:
+    radial-gradient(ellipse at top right, rgba(var(--price-rgb), 0.18), transparent 70%),
+    linear-gradient(160deg, #141b23, #0a0e13);
+  box-shadow: 0 12px 40px rgba(var(--price-rgb), 0.06);
+}
+
+.purchase-results [data-price-tone] .result-value {
+  color: var(--price-ink, var(--accent-dark));
+  text-shadow: 0 0 32px rgba(var(--price-rgb, 125, 184, 255), 0.18);
+}
+
+.purchase-price-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid rgba(var(--price-rgb, 125, 184, 255), 0.25);
+  border-radius: 999px;
+  background: rgba(var(--price-rgb, 125, 184, 255), 0.09);
+  color: var(--price-ink, var(--accent-dark));
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.purchase-price-badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.purchase-difference[data-price-tone] {
+  color: var(--price-ink, var(--accent-dark));
+}
+
+.purchase-difference strong {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.purchase-breakdown {
+  margin-top: 1.8rem;
+  padding-inline: 0.25rem;
+}
+
+.purchase-breakdown h3 {
+  font-size: 1.1rem;
+}
+
+.purchase-breakdown dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+  line-height: 1.5;
+}
+
+.purchase-breakdown dt {
+  color: var(--muted);
+}
+
+.purchase-breakdown dd {
+  margin: 0;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.purchase-breakdown .purchase-help {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .purchase-hero .tool-page-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .purchase-hero .counter-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .purchase-hero .counter-label {
+    max-width: 23ch;
+    margin: 0;
+  }
+
+  .purchase-calculator .calculator-grid,
+  .purchase-totals {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .purchase-calculator .calculator-actions {
+    flex-direction: column;
+  }
+
+  .purchase-calculator .button {
+    width: 100%;
+  }
+
+  .purchase-breakdown dl > div {
+    flex-wrap: wrap;
+    gap: 0.3rem 1rem;
+  }
+}

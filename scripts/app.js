@@ -295,90 +295,109 @@ function createCounterTracker(counterKey, isMeaningful) {
 
 function initCalculator() {
   const form = document.querySelector("[data-calculator-form]");
-  const feedback = document.querySelector("[data-calculator-feedback]");
-  const copyButton = document.querySelector("[data-calculator-copy]");
-  const resetButton = document.querySelector("[data-calculator-reset]");
+  const results = document.querySelector("[data-calculator-results]");
+  if (!form || !results) return;
 
-  if (!form || !feedback || !copyButton || !resetButton) return;
-
-  const outputs = {
-    totalFinanced: document.querySelector('[data-calc-output="totalFinanced"]'),
-    extraPaid: document.querySelector('[data-calc-output="extraPaid"]'),
-    extraPercent: document.querySelector('[data-calc-output="extraPercent"]'),
-    installmentTotal: document.querySelector('[data-calc-output="installmentTotal"]'),
-  };
-
-  const getValue = (name) => Number.parseFloat(form.elements[name].value) || 0;
-  const trackCalculation = createCounterTracker(
-    "buy_car",
-    () => getValue("cashPrice") > 0 && (getValue("downPayment") > 0 || getValue("monthlyPayment") > 0 || getValue("finalPayment") > 0)
+  const feedback = results.querySelector("[data-calculator-feedback]");
+  const resultTitle = document.getElementById("purchase-result-title");
+  const outputs = Object.fromEntries(
+    [...results.querySelectorAll("[data-calc-output]")].map((element) => [element.dataset.calcOutput, element])
   );
-  const getSignature = () =>
-    JSON.stringify({
-      cashPrice: getValue("cashPrice"),
-      downPayment: getValue("downPayment"),
-      monthlyPayment: getValue("monthlyPayment"),
-      months: Math.max(0, Math.round(getValue("months"))),
-      finalPayment: getValue("finalPayment"),
-      extraCosts: getValue("extraCosts"),
-    });
+  const currency = new Intl.NumberFormat("es-ES", {
+    style: "currency", currency: "EUR", minimumFractionDigits: 2, maximumFractionDigits: 2,
+  });
+  const money = (cents) => currency.format(cents / 100);
+  const cents = (name) => Math.round(Number(form.elements[name].value) * 100);
+  const trackCalculation = createCounterTracker("buy_car", () => true);
+  let summary = "";
 
-  const render = () => {
-    const cashPrice = getValue("cashPrice");
-    const downPayment = getValue("downPayment");
-    const monthlyPayment = getValue("monthlyPayment");
-    const months = Math.max(0, Math.round(getValue("months")));
-    const finalPayment = getValue("finalPayment");
-    const extraCosts = getValue("extraCosts");
-
-    const installmentTotal = monthlyPayment * months + finalPayment;
-    const totalFinanced = downPayment + installmentTotal + extraCosts;
-    const extraPaid = totalFinanced - cashPrice;
-    const extraPercent = cashPrice > 0 ? (extraPaid / cashPrice) * 100 : 0;
-
-    outputs.totalFinanced.textContent = formatCurrency(totalFinanced);
-    outputs.extraPaid.textContent = formatCurrency(extraPaid);
-    outputs.extraPercent.textContent = `${new Intl.NumberFormat("es-ES", {
-      maximumFractionDigits: 1,
-      minimumFractionDigits: 0,
-    }).format(extraPercent)} %`;
-    outputs.installmentTotal.textContent = formatCurrency(installmentTotal);
+  const invalidateResult = () => {
+    results.hidden = true;
+    feedback.textContent = "";
+    summary = "";
   };
 
-  form.addEventListener("input", () => {
-    feedback.textContent = "";
-    render();
-    trackCalculation(getSignature());
+  const scrollTo = (element) => {
+    element.focus({ preventScroll: true });
+    element.scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
+      block: "start",
+    });
+  };
+
+  form.addEventListener("input", invalidateResult);
+  form.addEventListener("reset", () => {
+    queueMicrotask(() => {
+      invalidateResult();
+      form.elements.downPayment.focus();
+    });
   });
 
-  resetButton.addEventListener("click", () => {
-    form.reset();
-    feedback.textContent = "Valores restablecidos.";
-    render();
-  });
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
 
-  copyButton.addEventListener("click", async () => {
-    const summary = [
-      `Precio al contado: ${formatCurrency(getValue("cashPrice"))}`,
-      `Entrada: ${formatCurrency(getValue("downPayment"))}`,
-      `Cuota mensual: ${formatCurrency(getValue("monthlyPayment"))}`,
-      `Numero de cuotas: ${Math.max(0, Math.round(getValue("months")))}`,
-      `Cuota final: ${formatCurrency(getValue("finalPayment"))}`,
-      `Otros costes: ${formatCurrency(getValue("extraCosts"))}`,
-      `Coste total financiado: ${outputs.totalFinanced.textContent}`,
-      `Pagas de mas: ${outputs.extraPaid.textContent}`,
-      `Incremento porcentual: ${outputs.extraPercent.textContent}`,
+    const downPayment = cents("downPayment");
+    const monthlyPayment = cents("monthlyPayment");
+    const months = Number(form.elements.months.value);
+    const finalPayment = cents("finalPayment");
+    const cashPrice = cents("cashPrice");
+    const monthlyTotal = monthlyPayment * months;
+    const totalFinanced = downPayment + monthlyTotal + finalPayment;
+    const difference = totalFinanced - cashPrice;
+
+    const financeTone = difference > 0 ? "negative" : difference < 0 ? "positive" : "neutral";
+    const cashTone = difference > 0 ? "positive" : difference < 0 ? "negative" : "neutral";
+    for (const [name, tone] of [["finance", financeTone], ["cash", cashTone]]) {
+      const badge = results.querySelector(`[data-price-badge="${name}"]`);
+      badge.textContent = tone === "positive" ? "Menor coste" : tone === "negative" ? "Mayor coste" : "Mismo coste";
+      badge.closest(".result-card").dataset.priceTone = tone;
+    }
+    results.querySelector("[data-comparison-result]").dataset.priceTone = financeTone;
+    outputs.totalFinanced.textContent = money(totalFinanced);
+    outputs.cashTotal.textContent = money(cashPrice);
+    outputs.downPayment.textContent = money(downPayment);
+    outputs.installmentLabel.textContent = `${months} mensualidades × ${money(monthlyPayment)}`;
+    outputs.monthlyTotal.textContent = money(monthlyTotal);
+    outputs.finalPayment.textContent = money(finalPayment);
+    if (difference === 0) {
+      outputs.comparison.textContent = "Financiar y pagar al contado cuestan lo mismo.";
+    } else {
+      const amount = document.createElement("strong");
+      amount.textContent = `${money(Math.abs(difference))} ${difference > 0 ? "más" : "menos"}`;
+      outputs.comparison.replaceChildren("Al financiar pagas ", amount, " que al contado.");
+    }
+
+    summary = [
+      "Coste real de la compra del coche",
+      `Entrada o primer pago: ${money(downPayment)}`,
+      `${months} mensualidades de ${money(monthlyPayment)}: ${money(monthlyTotal)}`,
+      `Cuota final: ${money(finalPayment)}`,
+      `Coste real financiado: ${money(totalFinanced)}`,
+      `Precio al contado: ${money(cashPrice)}`,
+      outputs.comparison.textContent,
+      "Total de los pagos introducidos.",
     ].join("\n");
+    feedback.textContent = "";
+    results.hidden = false;
+    trackCalculation(JSON.stringify({ downPayment, monthlyPayment, months, finalPayment, cashPrice }));
+    scrollTo(resultTitle);
+  });
 
+  results.querySelector("[data-calculator-copy]").addEventListener("click", async () => {
+    if (!summary) return;
     try {
       await navigator.clipboard.writeText(summary);
       feedback.textContent = "Resumen copiado al portapapeles.";
     } catch {
-      feedback.textContent = "No se pudo copiar el resumen.";
+      feedback.textContent = "No se pudo copiar. Puedes seleccionar y copiar los resultados directamente.";
     }
   });
 
-  render();
+  results.querySelector("[data-calculator-edit]").addEventListener("click", (event) => {
+    event.preventDefault();
+    scrollTo(form.elements.downPayment);
+  });
 }
 
 function initEVCalculator() {
@@ -603,6 +622,7 @@ function renderVideos(data) {
 
 async function init() {
   initNav();
+  initCalculator();
 
   const [dataResponse, socialMetricsResponse, overridesResponse] = await Promise.all([
     fetch("./data/data.json", { cache: "no-store" }),
@@ -616,7 +636,6 @@ async function init() {
 
   initCounters();
   initShare();
-  initCalculator();
   initEVCalculator();
   renderFooter(mergedData);
   renderSharedStats(mergedData);
