@@ -619,6 +619,9 @@ function renderSharedStats(data) {
 }
 
 function renderVideos(data) {
+  const orderedVideos = [...data.videos].sort(
+    (a, b) => Number(b.id === "bLzZ3JALPQk") - Number(a.id === "bLzZ3JALPQk")
+  );
   const searchInput = document.getElementById("searchInput");
   const filterButtons = document.getElementById("filterButtons");
   const videoGrid = document.getElementById("videoGrid");
@@ -643,7 +646,7 @@ function renderVideos(data) {
 
   const render = () => {
     const normalizedSearch = searchTerm.trim().toLowerCase();
-    const filtered = data.videos.filter((video) => {
+    const filtered = orderedVideos.filter((video) => {
       const matchesFilter = activeFilter === "Todos" || getVideoTopics(video).has(activeFilter);
       const matchesSearch = !normalizedSearch || video.title.toLowerCase().includes(normalizedSearch);
       return matchesFilter && matchesSearch;
