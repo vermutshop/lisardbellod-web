@@ -75,6 +75,23 @@
       "store": "AliExpress",
       "affiliate": true,
       "url": "https://s.click.aliexpress.com/e/_c3kiMTwN"
+    },
+    {
+      "name": "Accesorios para Kia EV3",
+      "kind": "collection",
+      "store": "AliExpress",
+      "url": "https://s.click.aliexpress.com/e/_c3zbBvfJ",
+      "image": "./image/shop/kia-ev3-accesorios-captura.png",
+      "imageCrop": {
+        "x": 228,
+        "y": 519,
+        "width": 520,
+        "height": 520,
+        "sourceWidth": 1962,
+        "sourceHeight": 1526
+      },
+      "note": "Una búsqueda general para rebuscar entre organizadores y otros accesorios para el Kia EV3.",
+      "affiliate": true
     }
   ]
 }

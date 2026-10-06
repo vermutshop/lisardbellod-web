@@ -14,6 +14,7 @@ function productUrl(value) {
 
 function createProductCard(product) {
   if (!product.name || !product.store) throw new Error("Falta el nombre o la tienda");
+  const isCollection = product.kind === "collection";
   const card = document.createElement("article");
   card.className = "shop-card";
 
@@ -22,7 +23,7 @@ function createProductCard(product) {
   imageLink.href = productUrl(product.url);
   imageLink.target = "_blank";
   imageLink.rel = product.affiliate ? "sponsored noopener noreferrer" : "noopener noreferrer";
-  imageLink.setAttribute("aria-label", `Ver ${product.name} en ${product.store}`);
+  imageLink.setAttribute("aria-label", `${isCollection ? "Explorar" : "Ver"} ${product.name} en ${product.store}`);
 
   const image = document.createElement("img");
   image.src = productUrl(product.image);
@@ -66,7 +67,14 @@ function createProductCard(product) {
   store.textContent = product.store;
   const name = document.createElement("h3");
   name.textContent = product.name;
-  body.append(store, name);
+  body.append(store);
+  if (isCollection) {
+    const label = document.createElement("p");
+    label.className = "shop-card-kind";
+    label.textContent = "Búsqueda general";
+    body.append(label);
+  }
+  body.append(name);
 
   if (product.note) {
     const note = document.createElement("p");
@@ -81,8 +89,8 @@ function createProductCard(product) {
   buyLink.href = imageLink.href;
   buyLink.target = imageLink.target;
   buyLink.rel = imageLink.rel;
-  buyLink.textContent = `Comprar en ${product.store} ↗`;
-  buyLink.setAttribute("aria-label", `Comprar ${product.name} en ${product.store} (abre en una pestaña nueva)`);
+  buyLink.textContent = isCollection ? "Explorar accesorios ↗" : `Comprar en ${product.store} ↗`;
+  buyLink.setAttribute("aria-label", `${isCollection ? "Explorar" : "Comprar"} ${product.name} en ${product.store} (abre en una pestaña nueva)`);
   body.append(buyLink);
 
   if (product.affiliate) {

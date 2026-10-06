@@ -46,6 +46,7 @@ Añade cada producto al array `products` de `data/shop.json` con estos campos:
 - `image`: URL de la imagen original de la tienda.
 - `note`: comentario personal opcional, basado en la experiencia de Lisard.
 - `affiliate`: `true` si el enlace contiene un código de afiliado; `false` en caso contrario.
+- `kind`: `"collection"` para un enlace a una búsqueda general de accesorios; muestra la etiqueta «Búsqueda general» y el botón «Explorar accesorios».
 - `imageCrop`: encuadre opcional para mostrar solo la foto del producto de una captura original, con `x`, `y`, `width`, `height`, `sourceWidth` y `sourceHeight` en píxeles. La interfaz oculta el resto de la captura.
 
 Las fichas no muestran precios. Los enlaces de afiliado se identifican en la ficha y llevan `rel="sponsored"`. Un catálogo vacío muestra un aviso de próximas recomendaciones.

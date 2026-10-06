@@ -149,6 +149,15 @@
   overflow-wrap: anywhere;
 }
 
+.shop-card-kind {
+  padding: 0.3rem 0.65rem;
+  border: 1px solid rgba(125, 184, 255, 0.25);
+  border-radius: 999px;
+  color: var(--accent-dark);
+  font-size: 0.78rem;
+  margin-bottom: 0.8rem;
+}
+
 .shop-card-note {
   color: var(--muted);
   line-height: 1.6;
