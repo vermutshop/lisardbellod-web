@@ -181,6 +181,8 @@ también todas las entradas nuevas y funcionar sin archivos ignorados.
 7. Añadir la URL una sola vez a `blog-sitemap.xml`, con `lastmod` correcto.
    Actualizar las fechas de los listados afectados y añadir nuevos archivos
    de categoría/año si procede. Preservar las demás URLs y `robots.txt`.
+   Ejecutar `python3 scripts/build-blog-search-index.py` y versionar
+   `blog/search-index.json` para que la entrada aparezca en el buscador.
 8. No cambiar la home, la videoteca, Shop, métricas, otros artículos o diseño
    salvo las integraciones necesarias y expresamente relacionadas con la entrada.
 
