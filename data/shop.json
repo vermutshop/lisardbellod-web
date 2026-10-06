@@ -1,6 +1,17 @@
 {
   "products": [
     {
+      "name": "Instalación de cargador eléctrico en la provincia de TARRAGONA",
+      "kind": "service",
+      "store": "Toni · Instalador",
+      "url": "tel:+34686333483",
+      "phone": "686 333 483",
+      "videoUrl": "https://www.youtube.com/watch?v=bLzZ3JALPQk&t=2s",
+      "image": "https://i.ytimg.com/vi/bLzZ3JALPQk/maxresdefault.jpg",
+      "note": "Dile a Toni que vas de mi parte y te regalaremos una botella de vermut Montseta, firmada por mí, una vez finalizada la instalación.",
+      "affiliate": false
+    },
+    {
       "name": "Cargador portátil dé Schuko 3,7 kW con app · 7 m",
       "store": "Amazon",
       "url": "https://link.amazon/B0bamtEdS",

@@ -15,15 +15,20 @@ function productUrl(value) {
 function createProductCard(product) {
   if (!product.name || !product.store) throw new Error("Falta el nombre o la tienda");
   const isCollection = product.kind === "collection";
+  const isService = product.kind === "service";
+  const destination = isService ? product.url : productUrl(product.url);
+  if (isService && (typeof destination !== "string" || !/^tel:\+\d{8,15}$/.test(destination))) {
+    throw new Error("Teléfono de servicio no válido");
+  }
   const card = document.createElement("article");
-  card.className = "shop-card";
+  card.className = isService ? "shop-card shop-service-card" : "shop-card";
 
   const imageLink = document.createElement("a");
   imageLink.className = "shop-card-image";
-  imageLink.href = productUrl(product.url);
+  imageLink.href = productUrl(isService ? product.videoUrl : product.url);
   imageLink.target = "_blank";
   imageLink.rel = product.affiliate ? "sponsored noopener noreferrer" : "noopener noreferrer";
-  imageLink.setAttribute("aria-label", `${isCollection ? "Explorar" : "Ver"} ${product.name} en ${product.store}`);
+  imageLink.setAttribute("aria-label", isService ? `Ver vídeo de ${product.name}` : `${isCollection ? "Explorar" : "Ver"} ${product.name} en ${product.store}`);
 
   const image = document.createElement("img");
   image.src = productUrl(product.image);
@@ -35,7 +40,7 @@ function createProductCard(product) {
   image.addEventListener("error", () => {
     image.hidden = true;
     imageLink.classList.add("shop-image-unavailable");
-    imageLink.textContent = "Ver imagen en la tienda ↗";
+    imageLink.textContent = isService ? "Ver vídeo de la instalación ↗" : "Ver imagen en la tienda ↗";
   }, { once: true });
   if (product.imageCrop) {
     const crop = product.imageCrop;
@@ -68,10 +73,10 @@ function createProductCard(product) {
   const name = document.createElement("h3");
   name.textContent = product.name;
   body.append(store);
-  if (isCollection) {
+  if (isCollection || isService) {
     const label = document.createElement("p");
     label.className = "shop-card-kind";
-    label.textContent = "Búsqueda general";
+    label.textContent = isService ? "Servicio" : "Búsqueda general";
     body.append(label);
   }
   body.append(name);
@@ -84,13 +89,15 @@ function createProductCard(product) {
   }
 
   const buyLink = document.createElement("a");
-  buyLink.className = "button secondary shop-buy-link";
+  buyLink.className = `button ${isService ? "primary" : "secondary"} shop-buy-link`;
   // Keep the supplied link intact, including affiliate codes and tracking parameters.
-  buyLink.href = imageLink.href;
-  buyLink.target = imageLink.target;
-  buyLink.rel = imageLink.rel;
-  buyLink.textContent = isCollection ? "Explorar accesorios ↗" : `Comprar en ${product.store} ↗`;
-  buyLink.setAttribute("aria-label", `${isCollection ? "Explorar" : "Comprar"} ${product.name} en ${product.store} (abre en una pestaña nueva)`);
+  buyLink.href = destination;
+  if (!isService) {
+    buyLink.target = imageLink.target;
+    buyLink.rel = imageLink.rel;
+  }
+  buyLink.textContent = isService ? `Llamar a Toni · ${product.phone}` : isCollection ? "Explorar accesorios ↗" : `Comprar en ${product.store} ↗`;
+  buyLink.setAttribute("aria-label", isService ? `Llamar a Toni al ${product.phone}` : `${isCollection ? "Explorar" : "Comprar"} ${product.name} en ${product.store} (abre en una pestaña nueva)`);
   body.append(buyLink);
 
   if (product.affiliate) {

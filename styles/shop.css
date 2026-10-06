@@ -111,6 +111,17 @@
   transition: transform 180ms ease;
 }
 
+.shop-service-card .shop-card-image {
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  background: var(--bg-alt);
+}
+
+.shop-service-card .shop-buy-link {
+  margin-top: 0;
+  line-height: 1.4;
+}
+
 .shop-card-image:hover img {
   transform: scale(1.03);
 }
