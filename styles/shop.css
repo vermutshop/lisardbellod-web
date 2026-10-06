@@ -120,6 +120,21 @@
   color: var(--accent);
 }
 
+.shop-source-crop {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.shop-card-image .shop-source-crop img {
+  position: absolute;
+  height: auto;
+  max-width: none;
+  transform: none;
+  transition: none;
+}
+
 .shop-card-body {
   display: flex;
   flex-direction: column;

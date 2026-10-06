@@ -30,6 +30,51 @@
       "image": "https://m.media-amazon.com/images/I/71tEnbDu7RL._AC_SL1500_.jpg",
       "note": "Soporte con base de succión y brazo plegable. Compatible con MagSafe y con Android mediante anillo magnético.",
       "affiliate": true
+    },
+    {
+      "name": "Cepillo SEAMETAL para limpiar llantas",
+      "image": "./image/shop/cepillo-llantas-captura.png",
+      "imageCrop": {
+        "x": 150,
+        "y": 180,
+        "width": 650,
+        "height": 650,
+        "sourceWidth": 1780,
+        "sourceHeight": 1266
+      },
+      "store": "AliExpress",
+      "affiliate": true,
+      "url": "https://s.click.aliexpress.com/e/_c4Wb8eev"
+    },
+    {
+      "name": "Paños de limpieza para coche · 30 × 30 cm",
+      "image": "./image/shop/panos-captura.png",
+      "imageCrop": {
+        "x": 170,
+        "y": 170,
+        "width": 644,
+        "height": 644,
+        "sourceWidth": 1160,
+        "sourceHeight": 1078
+      },
+      "store": "AliExpress",
+      "affiliate": true,
+      "url": "https://s.click.aliexpress.com/e/_c3t470uN"
+    },
+    {
+      "name": "Limpiaparabrisas con mango para coche",
+      "image": "./image/shop/limpiaparabrisas-captura.png",
+      "imageCrop": {
+        "x": 140,
+        "y": 75,
+        "width": 655,
+        "height": 655,
+        "sourceWidth": 1786,
+        "sourceHeight": 1084
+      },
+      "store": "AliExpress",
+      "affiliate": true,
+      "url": "https://s.click.aliexpress.com/e/_c3kiMTwN"
     }
   ]
 }

@@ -36,7 +36,28 @@ function createProductCard(product) {
     imageLink.classList.add("shop-image-unavailable");
     imageLink.textContent = "Ver imagen en la tienda ↗";
   }, { once: true });
-  imageLink.append(image);
+  if (product.imageCrop) {
+    const crop = product.imageCrop;
+    const values = [crop.x, crop.y, crop.width, crop.height, crop.sourceWidth, crop.sourceHeight];
+    if (!values.every(Number.isFinite) || crop.x < 0 || crop.y < 0 ||
+        crop.width <= 0 || crop.height <= 0 ||
+        crop.x + crop.width > crop.sourceWidth || crop.y + crop.height > crop.sourceHeight) {
+      throw new Error("Encuadre de imagen no válido");
+    }
+    // Frame the exact product photo from the supplied screenshot in CSS.
+    const frame = document.createElement("div");
+    frame.className = "shop-source-crop";
+    frame.style.aspectRatio = `${crop.width} / ${crop.height}`;
+    image.width = crop.sourceWidth;
+    image.height = crop.sourceHeight;
+    image.style.width = `${(crop.sourceWidth / crop.width) * 100}%`;
+    image.style.left = `${(-crop.x / crop.width) * 100}%`;
+    image.style.top = `${(-crop.y / crop.height) * 100}%`;
+    frame.append(image);
+    imageLink.append(frame);
+  } else {
+    imageLink.append(image);
+  }
 
   const body = document.createElement("div");
   body.className = "shop-card-body";
