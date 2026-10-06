@@ -110,6 +110,31 @@ actual del repositorio remoto antes de editar. No dependas de archivos del Mac.
   concreta del lector. Un bloque final de relacionados es opcional y no
   sustituye al enlazado natural dentro del texto.
 
+### Preferencia permanente: Shop y afiliación en las nuevas entradas
+
+Por petición de Lisard, todos los artículos que se publiquen a partir de ahora
+deben incluir un enlace a `/shop.html` y enlaces de afiliado del catálogo cuando
+haya productos relacionados con el contenido.
+
+- Leer `data/shop.json` en cada publicación y utilizar sus URLs exactas,
+  conservando todos los códigos y parámetros de afiliación. No inventar enlaces,
+  descuentos, productos, precios ni experiencias personales con ellos.
+- Integrar normalmente entre uno y tres productos pertinentes en el texto o en
+  un breve apartado de recomendaciones. No recomendar un producto para una
+  función distinta de la que tiene: por ejemplo, un cargador de tracción no es
+  un arrancador de la batería auxiliar.
+- Si no hay productos pertinentes, incluir igualmente una invitación breve a
+  visitar la Shop, sin forzar recomendaciones ajenas al tema.
+- Identificar con claridad los enlaces de afiliado y aplicar `rel="sponsored"`
+  a aquellos cuyo registro tenga `affiliate: true`. Si se abren en otra pestaña,
+  añadir también `noopener noreferrer`. No marcar como afiliados los productos
+  o servicios que tengan `affiliate: false`.
+- Añadir un aviso breve cuando haya enlaces de afiliado: «Este artículo contiene
+  enlaces de afiliado. Si compras a través de ellos, puedo recibir una comisión».
+- Comprobar que el enlace a la Shop funciona y que las URLs comerciales coinciden
+  con el catálogo vigente antes de publicar. Esta preferencia no solicita
+  modificar de forma retroactiva las entradas ya publicadas.
+
 ## Implementación en este repositorio
 
 El blog publicado consta de HTML versionado en `blog/`, imágenes en
