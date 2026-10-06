@@ -485,6 +485,47 @@ h2 {
   padding: 1rem 1rem 1.2rem;
 }
 
+.video-installer {
+  margin: 1rem 1rem 0;
+  padding: 1rem;
+  border: 1px solid rgba(125, 184, 255, 0.3);
+  border-radius: 16px;
+  background: rgba(125, 184, 255, 0.08);
+}
+
+.video-installer h3 {
+  color: var(--accent-dark);
+  font-size: 1.05rem;
+  line-height: 1.35;
+  margin-bottom: 0.75rem;
+}
+
+.video-installer p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.video-installer-call {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 0.6rem;
+  width: 100%;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.video-installer-call strong {
+  white-space: nowrap;
+}
+
+.video-installer-call:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .video-title {
   font-size: 1.02rem;
   line-height: 1.35;

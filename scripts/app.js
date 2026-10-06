@@ -542,11 +542,24 @@ function initEVCalculator() {
 }
 
 function createVideoCard(video) {
+  const installerContact = video.id === "bLzZ3JALPQk"
+    ? `
+      <aside class="video-installer" aria-label="Instalación de cargador eléctrico en Tarragona">
+        <h3>Instalación de cargador eléctrico en la provincia de TARRAGONA</h3>
+        <p>Dile a Toni que vas de mi parte y te regalaremos una botella de vermut Montseta,
+          firmada por mí, una vez finalizada la instalación.</p>
+        <a class="button primary video-installer-call" href="tel:+34686333483" aria-label="Llamar a Toni al 686 333 483">
+          <span>Llamar a Toni</span><strong>686 333 483</strong>
+        </a>
+      </aside>
+    `
+    : "";
   return `
     <article class="video-card">
       <a class="thumb-link" href="${video.url}" target="_blank" rel="noreferrer">
         <img src="${video.thumbnail}" alt="Miniatura de ${video.title}" loading="lazy" />
       </a>
+      ${installerContact}
       <div class="video-body">
         <h3 class="video-title">${video.title}</h3>
         <p class="video-meta">
