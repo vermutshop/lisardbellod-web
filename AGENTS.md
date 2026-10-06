@@ -83,7 +83,11 @@ actual del repositorio remoto antes de editar. No dependas de archivos del Mac.
   miniatura del vídeo exacto. No sustituir una imagen elegida por el usuario.
 - Recuperar la miniatura de mayor calidad disponible y comprobar que corresponde
   al vídeo y que no es una imagen de error. Si falla la versión grande, probar
-  otra resolución. Si no se consigue una portada válida, pedir la imagen.
+  otra resolución cuando el servidor sea accesible. Por indicación posterior de
+  Lisard, si no se consigue una portada válida, publicar sin imagen y añadirla
+  más adelante; no bloquear la publicación ni pedir compresiones o reenvíos.
+  Usar la tarjeta sin imagen existente y la imagen general de la web para
+  Open Graph/Twitter, sin presentarla como una fotografía del coche probado.
 - Guardar la portada dentro del repositorio, por ejemplo
   `blog-assets/<slug>/portada.webp`, con tamaño optimizado, proporción adecuada
   al diseño y texto alternativo descriptivo. Preferir las herramientas de
