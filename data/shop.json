@@ -1,3 +1,27 @@
 {
-  "products": []
+  "products": [
+    {
+      "name": "Cargador portátil dé Schuko 3,7 kW con app · 7 m",
+      "store": "Amazon",
+      "url": "https://link.amazon/B0bamtEdS",
+      "image": "https://m.media-amazon.com/images/I/61+4fRX1sOL._AC_SX679_.jpg",
+      "note": "Cargador para coche eléctrico con cable de 7 metros, control desde la app e intensidad ajustable de 6 a 16 A.",
+      "affiliate": true
+    },
+    {
+      "name": "Alfombrillas 3W para Kia EV3 · 2024–2026",
+      "store": "Amazon",
+      "url": "https://link.amazon/B0bWsJRRn",
+      "image": "https://m.media-amazon.com/images/I/71JqTTAj8TL._AC_SL1500_.jpg",
+      "affiliate": true
+    },
+    {
+      "name": "Vermut Montseta Negro",
+      "store": "Vermut.shop",
+      "url": "https://vermut.shop/products/vermut-montseta-negro",
+      "image": "https://vermut.shop/cdn/shop/files/768.jpg?v=1767549733&width=3840",
+      "note": "Vermut elaborado en Valls con una receta de hierbas, flores y raíces transmitida de generación en generación.",
+      "affiliate": false
+    }
+  ]
 }
