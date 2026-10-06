@@ -33,6 +33,14 @@
 .blog-article-content figure { margin: 2rem 0; }
 .blog-article-content a, .blog-original a { color: var(--accent-dark); text-decoration: underline; text-underline-offset: .2em; }
 .blog-original { border-top: 1px solid var(--line); margin-top: 3rem; padding-top: 1.5rem; font-size: .9rem; }
+.blog-shop-promo { margin-top: 3rem; padding: clamp(1.4rem, 4vw, 2rem); border: 1px solid rgba(125,184,255,.35); border-radius: 24px; background: linear-gradient(135deg,rgba(125,184,255,.13),rgba(16,23,34,.95) 58%); }
+.blog-shop-promo .eyebrow { margin: 0 0 .5rem; color: var(--accent-dark); }
+.blog-shop-promo h2 { max-width: none; margin: 0 0 .8rem; font-size: clamp(1.45rem,3vw,2rem); }
+.blog-shop-product { margin: 0 0 1.2rem; color: #f4f7fb; font-size: 1.03rem; line-height: 1.5; }
+.blog-shop-product span { color: var(--muted); }
+.blog-shop-actions { display: flex; flex-wrap: wrap; gap: .7rem; }
+.blog-shop-actions .button { text-align: center; }
+.blog-shop-disclosure { margin: 1rem 0 0; color: var(--muted); font-size: .78rem; line-height: 1.5; }
 .blog-article-navigation { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; border-top: 1px solid var(--line); margin-top: 3rem; padding-top: 2rem; }
 .blog-article-navigation a { display: block; padding: 1.2rem; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
 .blog-article-navigation a:hover { border-color: rgba(125,184,255,.45); }
@@ -53,4 +61,4 @@
 .blog-filter-links .button, .blog-pagination .button { font-size: .85rem; padding: .65rem .95rem; }
 .blog-pagination { margin-top: 2rem; color: var(--muted); }
 @media (max-width: 900px) { .blog-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
-@media (max-width: 620px) { .blog-grid, .blog-article-navigation { grid-template-columns: 1fr; } .blog-preview-hero, .blog-article-shell { padding-top: 2.5rem; } .blog-footer-inner { flex-direction: column; align-items: stretch; } }
+@media (max-width: 620px) { .blog-grid, .blog-article-navigation { grid-template-columns: 1fr; } .blog-preview-hero, .blog-article-shell { padding-top: 2.5rem; } .blog-shop-actions { flex-direction: column; } .blog-footer-inner { flex-direction: column; align-items: stretch; } }
