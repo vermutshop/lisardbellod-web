@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Como abrir los puertos del DG834PN ? | Lisard Bellod</title>
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://www.lisardbellod.com/blog/como-abrir-los-puertos-del-dg834pn/">
+<meta name="description" content="Después de 4 años con los mega rooters que dan las operadoras, me he comprado uno el DG834PN y de momento una pasada, ya os explicare mas sobre el. Os…">
+<meta name="author" content="Lisard Bellod">
+<meta property="og:locale" content="es_ES">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Lisard Bellod">
+<meta property="og:title" content="Como abrir los puertos del DG834PN ? | Lisard Bellod">
+<meta property="og:description" content="Después de 4 años con los mega rooters que dan las operadoras, me he comprado uno el DG834PN y de momento una pasada, ya os explicare mas sobre el. Os…">
+<meta property="og:url" content="https://www.lisardbellod.com/blog/como-abrir-los-puertos-del-dg834pn/">
+<meta property="og:image" content="https://www.lisardbellod.com/image/lisardbellod.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Como abrir los puertos del DG834PN ? | Lisard Bellod">
+<meta name="twitter:description" content="Después de 4 años con los mega rooters que dan las operadoras, me he comprado uno el DG834PN y de momento una pasada, ya os explicare mas sobre el. Os…">
+<meta name="twitter:image" content="https://www.lisardbellod.com/image/lisardbellod.png">
+<meta property="article:published_time" content="2007-02-14T21:29:16Z">
+<meta property="article:modified_time" content="2007-02-14T21:29:16Z">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.lisardbellod.com/blog/como-abrir-los-puertos-del-dg834pn/"},"headline":"Como abrir los puertos del DG834PN ?","description":"Después de 4 años con los mega rooters que dan las operadoras, me he comprado uno el DG834PN y de momento una pasada, ya os explicare mas sobre el. Os…","datePublished":"2007-02-14T21:29:16Z","dateModified":"2007-02-14T21:29:16Z","author":{"@type":"Person","name":"Lisard Bellod","url":"https://www.lisardbellod.com/"},"publisher":{"@type":"Person","name":"Lisard Bellod","url":"https://www.lisardbellod.com/"}}</script>
+<link rel="stylesheet" href="/styles/main.css"><link rel="stylesheet" href="/styles/blog.css">
+</head><body>
+<header class="site-header"><div class="container nav"><a class="brand" href="/index.html">Lisard Bellod</a><a class="preview-back" href="/blog/">Archivo del blog</a></div></header>
+<main><section class="container blog-article-shell">
+<p class="eyebrow"><a href="/blog/">Archivo del blog</a> / <a href="/blog/categoria/lisard/">Lisard</a></p>
+<h1>Como abrir los puertos del DG834PN ?</h1>
+<p class="blog-article-date">Lisard Bellod · <time datetime="2007-02-14T23:29:16">14 de febrero de 2007</time></p>
+<div class="blog-article-content"><p><img src="http://www.cjvu.co.uk/uk/en/images/DG834PN+WPN111.gif" alt="dg 834 pn" loading="lazy"></p>
+<p>Después de 4 años con los <em>mega rooters</em> que dan las operadoras, me he comprado uno el <a href="http://www.netgear.co.uk/wireless_modem_router_dg834pn.php" rel="noopener noreferrer">DG834PN</a> y de momento una pasada, ya os explicare mas sobre el. Os dejo un mini manual, que mañana si puedo lo colgare en pdf con fotos explicativas para abrir puertos, a disfrutar los que lo tengáis.</p>
+<p>Partimos de la base que el rooter ya esta configurado con Internet, y <a href="http://www.adslayuda.com/Redes-4.html" rel="noopener noreferrer">que tenemos definida un ip</a> (ej, <em>192.168.0.33</em> ) en el ordenador,<br>
+Abrimos el panel del control del rooter, y nos vamos aquí: SERVICES <em>( Menú de la izquierda )</em><br>
+Aquí clikamos en <strong>add Custom service</strong></p>
+<ul>
+<li><strong>Name:</strong> tio pepe o lo que queráis, yo puse emule,</li>
+<li><strong>Type: </strong>TCP/UDP</li>
+<li><strong>start port:</strong> yo puse 2000</li>
+<li><strong>Finish port:</strong> 40000</li>
+</ul>
+<p>Una vez hecho esto le damos a apply.</p>
+<p>Bueno ahora ya tenemos definidos que puertos queremos abrir, ahora solo nos falta decir en que IP lo haremos.</p>
+<p>Le damos a <strong>FIREWALL RULES</strong>: <em>( Menu de la izquierda )</em><br>
+En <strong>Outbound Services</strong> le damos a <em>ADD</em><br>
+El servicio que nos aparecerá el del Emule que hemos hecho previamente,</p>
+<ul>
+<li><strong>ACTION:</strong> le damos a ALLOW always</li>
+<li>En <strong>Lan Users:</strong> le damos a single address</li>
+<li>Y en las casillas de abajo le ponemos la<em> Ip</em> definida en nuestro ordenador,</li>
+</ul>
+<p>Apretamos el boton <em>APPLY</em><br>
+Y volvemos a darle a <em>Firewall Rules ( menú izquierda )<br>
+</em></p>
+<ul>
+<li>En <strong>Inbound Services</strong> le damos a<em> ADD</em></li>
+<li><strong>Service:</strong> emule</li>
+<li><strong>Action:</strong> ALLOW alwalls</li>
+<li><strong>Send to LAN Server</strong>: aquí en las casillas vacias la ip definida de nuestro ordenado</li>
+</ul>
+<p>Le damos a <strong>APPLY</strong>.</p>
+<p>Tachaaaan listo y puertos abiertos,</p>
+<p>PIRATEAR ES DELITO YA SEA RÁPIDA O LENTAMENTE</p>
+</div>
+<nav class="blog-article-navigation" aria-label="Otros artículos"><a href="/blog/how-to-open-the-netgear%e2%80%99s-dg834pn-ports/"><span>← Anterior</span><strong>How to open the Netgear’s DG834PN ports ?</strong></a><a href="/blog/visitas/"><span>Siguiente →</span><strong>Visitas,</strong></a></nav>
+</section></main>
+<footer class="site-footer blog-shared-footer">
+      <div class="container blog-footer-inner">
+        <div><p class="eyebrow">Sigue la historia</p><h2>Nos vemos también fuera del blog.</h2>
+          <p>Vídeos, pruebas y lo que voy aprendiendo por el camino.</p></div>
+        <div class="blog-footer-actions">
+          <a class="button primary" href="https://www.youtube.com/@LisardBellod" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a class="button secondary" href="https://www.instagram.com/lisardbellod/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+    </footer>
+<script defer src="/scripts/blog-image-fallback.js"></script>
+</body></html>

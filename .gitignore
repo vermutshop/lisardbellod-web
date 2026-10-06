@@ -1,2 +1,6 @@
 .env.local
 node_modules
+blog-media/
+blog-draft/
+blog-preview/
+data/blog/

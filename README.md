@@ -36,6 +36,22 @@ Web estática orientada a autoridad y rendimiento, alimentada por un único arch
 - Las horas de YouTube se introducen manualmente desde YouTube Studio; no son una estimación pública.
 - Si prefieres Astro más adelante, esta estructura ya te deja claro el modelo de datos y la automatización.
 
+## Archivo del blog
+
+`blog/` contiene los 1.656 artículos históricos publicados como HTML estático.
+La navegación entre artículos, el pie compartido y las redes sociales se editan
+en `scripts/blog_layout.py`; para reconstruir la versión final ejecuta
+`python3 scripts/build-blog-draft.py --production` y
+`python3 scripts/build-blog-sitemap.py`, y copia
+`data/blog/blog-sitemap-proposed.xml` a `blog-sitemap.xml`.
+
+El inventario original se recupera con `node scripts/blog-inventory.mjs`.
+`node scripts/blog-media.mjs` copia los medios del antiguo WordPress y
+`node scripts/build-blog-assets.mjs` genera las versiones optimizadas que se
+sirven desde `blog-assets/`. Estos archivos de trabajo no se despliegan.
+Las redirecciones 301 del dominio antiguo se configuran allí con
+`data/blog/redirect-map.csv`; publicar la nueva web no las activa.
+
 ## Añadir recomendaciones a Shop
 
 Añade cada producto al array `products` de `data/shop.json` con estos campos:
