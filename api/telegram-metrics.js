@@ -228,7 +228,7 @@ async function beginMetric(chatId, metricKey, channelId) {
   await setState(chatId, { stage: "input", metric: metricKey, channelId, label, currentValue });
   await sendMessage(
     chatId,
-    `Ahora figura ${formatMetric(currentValue)} ${label}.\nEscribe la nueva cifra, sin texto.${metric.file === "channels" ? "\nEsta corrección se usará hasta la próxima sincronización automática de YouTube." : ""}`
+    `Ahora figura ${formatMetric(currentValue)} ${label}.\nEscribe la nueva cifra, sin texto.${metric.field === "viewsLast365Days" ? "\nUsa el total de los últimos 365 días de YouTube Studio. Si aún no has aportado ese dato, la cifra actual es una referencia de las visitas acumuladas de vídeos publicados en el último año." : ""}${metric.file === "channels" ? "\nEsta corrección se usará hasta la próxima sincronización automática de YouTube." : ""}`
   );
 }
 

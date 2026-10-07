@@ -52,7 +52,7 @@ test('Telegram menu, correction, confirmation and saving work without external c
  await update(callback('confirm'));assert.equal(writes.length,1);assert.equal(state,null);
  assert.equal(writes[0].content.channels[channelId].subscribers.value,6900);
  assert.ok(Date.parse(writes[0].content.channels[channelId].subscribers.updatedAt));
- await update(callback('metric:viewsLast365Days'));assert.equal(state.currentValue,1468763);
+ await update(callback('metric:viewsLast365Days'));assert.equal(state.currentValue,1468763);assert.match(messages.at(-1).text,/referencia de las visitas acumuladas/);
  await update(callback('metric:instagram'));await update(message('0'));assert.equal(writes.length,1);
  await update(callback('confirm'));assert.equal(writes[1].content.instagramFollowers,0);assert.ok(Date.parse(writes[1].content.updatedAt));
 });
