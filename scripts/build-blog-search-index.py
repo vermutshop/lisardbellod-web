@@ -80,7 +80,7 @@ def article(path: Path):
 
 def main() -> None:
     entries = [item for path in BLOG.rglob("index.html") if (item := article(path))]
-    entries.sort(key=lambda item: item["p"], reverse=True)
+    entries.sort(key=lambda item: (item["p"], item["u"]), reverse=True)
     urls = [item["u"] for item in entries]
     if len(urls) != len(set(urls)):
         raise ValueError("El índice contiene URLs duplicadas")

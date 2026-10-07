@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "sync:youtube": "node --env-file=.env.local ./scripts/fetch-youtube.mjs",
-    "build": "echo \"Static site ready\"",
+    "build": "node ./scripts/build-sitemaps.mjs",
     "serve": "npx serve ."
   },
   "dependencies": {

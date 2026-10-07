@@ -38,19 +38,22 @@ Web estática orientada a autoridad y rendimiento, alimentada por un único arch
 
 ## Archivo del blog
 
-`blog/` contiene los 1.656 artículos históricos publicados como HTML estático.
-La navegación entre artículos, el pie compartido y las redes sociales se editan
-en `scripts/blog_layout.py`; para reconstruir la versión final ejecuta
-`python3 scripts/build-blog-draft.py --production` y
-`python3 scripts/build-blog-sitemap.py`, y copia
-`data/blog/blog-sitemap-proposed.xml` a `blog-sitemap.xml`.
+`blog/` contiene los artículos históricos y nuevos publicados como HTML estático.
+Es la fuente actual para el buscador y el sitemap; no reconstruyas producción
+desde el inventario antiguo de WordPress porque excluiría las entradas nuevas.
+`python3 scripts/build-blog-search-index.py` actualiza el buscador y
+`npm run build` genera `sitemap.xml`, `blog-sitemap.xml` y
+`data/sitemap-state.json` desde las páginas indexables. Vercel ejecuta el build
+en cada despliegue y `.github/workflows/sync-sitemaps.yml` versiona estos
+archivos y el índice de búsqueda tras cada publicación.
 
 El inventario original se recupera con `node scripts/blog-inventory.mjs`.
 `node scripts/blog-media.mjs` copia los medios del antiguo WordPress y
 `node scripts/build-blog-assets.mjs` genera las versiones optimizadas que se
 sirven desde `blog-assets/`. Estos archivos de trabajo no se despliegan.
-Las redirecciones 301 del dominio antiguo se configuran allí con
-`data/blog/redirect-map.csv`; publicar la nueva web no las activa.
+Las redirecciones 301 del dominio antiguo se configuran en el WordPress de
+`lisard.es`; `data/blog/redirects-redirection-import.csv` está listo para
+importarse en el plugin Redirection. Publicar la nueva web no activa esos 301.
 
 ## Añadir recomendaciones a Shop
 

@@ -1,0 +1,49 @@
+name: Sync blog search and sitemaps
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-sitemaps-main
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      - name: Refresh and commit public indexes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python3 scripts/build-blog-search-index.py
+            npm run build
+            if git diff --quiet -- blog/search-index.json sitemap.xml blog-sitemap.xml data/sitemap-state.json; then
+              echo "Search and sitemaps are current"
+              exit 0
+            fi
+            git add blog/search-index.json sitemap.xml blog-sitemap.xml data/sitemap-state.json
+            git commit -m "chore: sync search and sitemaps"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          echo "Could not publish updated indexes after three attempts" >&2
+          exit 1
