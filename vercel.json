@@ -1,4 +1,11 @@
 {
   "outputDirectory": ".",
-  "buildCommand": "npm run build"
+  "buildCommand": "npm run build",
+  "redirects": [
+    {
+      "source": "/blog-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "statusCode": 301
+    }
+  ]
 }

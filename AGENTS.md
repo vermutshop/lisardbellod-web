@@ -142,8 +142,8 @@ haya productos relacionados con el contenido.
 ## Implementación en este repositorio
 
 El blog publicado consta de HTML versionado en `blog/`, imágenes en
-`blog-assets/`, estilos en `styles/blog.css` y sitemap en `blog-sitemap.xml`.
-`npm run build` solo imprime un mensaje: NO genera ni valida el blog.
+`blog-assets/`, estilos en `styles/blog.css` y sitemap único en `sitemap.xml`.
+`npm run build` genera el sitemap de toda la web y sus fechas desde el HTML publicado; no genera artículos.
 
 IMPORTANTE: `data/blog/` está ignorado por Git. El inventario, los mapas y los
 scripts de migración históricos dependen de esos archivos locales.
@@ -178,11 +178,11 @@ también todas las entradas nuevas y funcionar sin archivos ignorados.
    Conservar las URLs históricas.
 6. Actualizar los enlaces anterior/siguiente de la nueva entrada y sus vecinos,
    siguiendo la convención actual del blog.
-7. Añadir la URL una sola vez a `blog-sitemap.xml`, con `lastmod` correcto.
-   Actualizar las fechas de los listados afectados y añadir nuevos archivos
-   de categoría/año si procede. Preservar las demás URLs y `robots.txt`.
+7. Incluir un canonical correcto en la nueva página; el generador añadirá su
+   URL una sola vez a `sitemap.xml`, con `lastmod` según los cambios reales.
+   Añadir los listados de categoría/año necesarios y preservar las demás URLs.
    Ejecutar `python3 scripts/build-blog-search-index.py` y `npm run build`.
-   Versionar `blog/search-index.json`, `sitemap.xml`, `blog-sitemap.xml` y
+   Versionar `blog/search-index.json`, `sitemap.xml` y
    `data/sitemap-state.json`. La automatización de GitHub también los
    comprueba y actualiza en cada publicación.
 8. No cambiar la home, la videoteca, Shop, métricas, otros artículos o diseño

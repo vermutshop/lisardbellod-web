@@ -1,4 +1,4 @@
-// Build both public sitemaps from the published, tracked HTML.
+// Build the single public sitemap from all published, tracked HTML.
 // Git dates reflect page updates; existing dates survive shallow Vercel clones.
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
@@ -82,8 +82,10 @@ function dependencies(file, html, canonical) {
     const asset = localAsset(match[1], canonical);
     if (asset) result.push(asset);
   }
-  if (file === 'index.html' || file === 'videos.html') result.push('data/data.json');
-  if (file === 'index.html') result.push('data/social-metrics.json', 'data/metric-overrides.json');
+  if (result.includes('scripts/app.js')) result.push('scripts/site-metrics.mjs');
+  if (['index.html', 'videos.html', 'contacto.html'].includes(file)) {
+    result.push('data/data.json', 'data/social-metrics.json', 'data/metric-overrides.json');
+  }
   if (file === 'shop.html') result.push('data/shop.json');
   if (file === 'blog/index.html') result.push('blog/search-index.json');
   return result;
@@ -125,7 +127,7 @@ function sitemap(entries) {
 
 const oldDates = new Map([...previousDates('sitemap.xml'), ...previousDates('blog-sitemap.xml')]);
 const dates = gitDates();
-const groups = { root: [], blog: [] };
+const entries = [];
 const seen = new Set();
 
 for (const file of trackedPages()) {
@@ -149,12 +151,14 @@ for (const file of trackedPages()) {
     ? [previous, latestGitDate ?? today].filter(Boolean).sort().at(-1)
     : previous ?? latestGitDate ?? today;
   nextState[canonical] = { hash, lastmod };
-  groups[canonical.startsWith(`${site}/blog/`) ? 'blog' : 'root'].push({ canonical, lastmod });
+  entries.push({ canonical, lastmod });
 }
 
-for (const [filename, group] of [['sitemap.xml', groups.root], ['blog-sitemap.xml', groups.blog]]) {
-  group.sort((a, b) => a.canonical.localeCompare(b.canonical, 'es'));
-  writeFileSync(path.join(root, filename), sitemap(group));
-  console.log(`${filename}: ${group.length} URLs`);
+entries.sort((a, b) => a.canonical.localeCompare(b.canonical, 'es'));
+const output = sitemap(entries);
+if (entries.length > 50000 || Buffer.byteLength(output, 'utf8') > 50 * 1024 * 1024) {
+  throw new Error('El sitemap supera el límite: hay que dividirlo antes de publicar.');
 }
+writeFileSync(path.join(root, 'sitemap.xml'), output);
+console.log(`sitemap.xml: ${entries.length} URLs`);
 writeFileSync(stateFile, JSON.stringify(nextState, null, 2) + '\n');

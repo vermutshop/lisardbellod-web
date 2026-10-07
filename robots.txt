@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.lisardbellod.com/sitemap.xml
-Sitemap: https://www.lisardbellod.com/blog-sitemap.xml

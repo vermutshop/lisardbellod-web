@@ -1,3 +1,5 @@
+import { mergeSiteMetrics, parseMetricValue } from "../scripts/site-metrics.mjs";
+
 const REPOSITORY = process.env.TELEGRAM_GITHUB_REPOSITORY || "vermutshop/lisardbellod-web";
 const BRANCH = process.env.TELEGRAM_GITHUB_BRANCH || "main";
 const STATE_TTL_SECONDS = 60 * 30;
@@ -134,40 +136,6 @@ async function writeRepositoryJson(path, content, sha, message) {
   if (!response.ok) throw new Error(`github_write_${response.status}`);
 }
 
-function parseMetricValue(input, integer) {
-  const normalized = input.trim().replace(/\s/g, "");
-  if (!normalized) return null;
-
-  const commas = [...normalized.matchAll(/,/g)].map((match) => match.index);
-  const dots = [...normalized.matchAll(/\./g)].map((match) => match.index);
-  const lastComma = commas.at(-1) ?? -1;
-  const lastDot = dots.at(-1) ?? -1;
-  let numeric = normalized;
-
-  if (lastComma >= 0 && lastDot >= 0) {
-    const decimalIndex = Math.max(lastComma, lastDot);
-    const decimalChar = normalized[decimalIndex];
-    numeric = normalized.replace(/[,.]/g, (character, index) =>
-      index === decimalIndex ? "." : ""
-    );
-    if (decimalChar !== "," && decimalChar !== ".") return null;
-  } else if (lastComma >= 0 || lastDot >= 0) {
-    const separator = lastComma >= 0 ? "," : ".";
-    const positions = lastComma >= 0 ? commas : dots;
-    const decimals = normalized.length - positions.at(-1) - 1;
-    if (positions.length === 1 && decimals > 0 && decimals <= 2 && !integer) {
-      numeric = normalized.replace(separator, ".");
-    } else {
-      numeric = normalized.replaceAll(separator, "");
-    }
-  }
-
-  if (!/^\d+(?:\.\d+)?$/.test(numeric)) return null;
-  const value = Number(numeric);
-  if (!Number.isFinite(value) || value < 0) return null;
-  return integer ? Math.round(value) : value;
-}
-
 function formatMetric(value) {
   return new Intl.NumberFormat("es-ES", { maximumFractionDigits: 1 }).format(value);
 }
@@ -189,13 +157,13 @@ async function currentMetricValue(metric, channelId) {
     return Number(content[metric.field]) || 0;
   }
 
-  const overrides = await readRepositoryJson("data/metric-overrides.json");
-  if (metric.file === "overrides") return Number(overrides.content.metrics?.[metric.field]?.value) || 0;
-
-  const overriddenValue = Number(overrides.content.channels?.[channelId]?.[metric.field]?.value);
-  if (Number.isFinite(overriddenValue)) return overriddenValue;
-  const data = await readRepositoryJson("data/data.json");
-  return Number(data.content.channels?.find((channel) => channel.id === channelId)?.[metric.field]) || 0;
+  const [overrides, data] = await Promise.all([
+    readRepositoryJson("data/metric-overrides.json"),
+    readRepositoryJson("data/data.json"),
+  ]);
+  const current = mergeSiteMetrics(data.content, null, overrides.content);
+  if (metric.file === "overrides") return Number(current.metrics[metric.field]) || 0;
+  return Number(current.channels.find((channel) => channel.id === channelId)?.[metric.field]) || 0;
 }
 
 async function saveMetric(state) {
@@ -205,6 +173,7 @@ async function saveMetric(state) {
   if (metric.file === "social") {
     const file = await readRepositoryJson("data/social-metrics.json");
     file.content[metric.field] = state.value;
+    file.content.updatedAt = now;
     await writeRepositoryJson(
       "data/social-metrics.json",
       file.content,
@@ -259,7 +228,7 @@ async function beginMetric(chatId, metricKey, channelId) {
   await setState(chatId, { stage: "input", metric: metricKey, channelId, label, currentValue });
   await sendMessage(
     chatId,
-    `Ahora figura ${formatMetric(currentValue)} ${label}.\nEscribe la nueva cifra, sin texto.`
+    `Ahora figura ${formatMetric(currentValue)} ${label}.\nEscribe la nueva cifra, sin texto.${metric.file === "channels" ? "\nEsta corrección se usará hasta la próxima sincronización automática de YouTube." : ""}`
   );
 }
 

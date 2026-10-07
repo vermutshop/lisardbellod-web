@@ -1,3 +1,4 @@
+import { metricNumber } from "./site-metrics.mjs";
 import fs from "node:fs/promises";
 import path from "node:path";
 
@@ -17,19 +18,19 @@ const CHANNELS = [
   {
     url: "https://www.youtube.com/@LisardBellod",
     name: "Lisard Bellod",
-    description: "Canal principal con contenido central de la marca personal y sus vídeos más importantes.",
+    description: "Pruebas de coches eléctricos, rutas, carga y tecnología en el día a día.",
     category: "Principal",
   },
   {
     url: "https://www.youtube.com/@lisard_world",
     name: "Lisard World",
-    description: "Canal de emprendimiento, ideas, estrategia y construcción de proyectos.",
+    description: "Negocios, ideas y lo que voy aprendiendo al poner en marcha mis proyectos.",
     category: "Emprendimiento",
   },
   {
     url: "https://www.youtube.com/@Vallsalmon",
     name: "Valls al mon",
-    description: "Canal en catalán sobre crítica, gente y comercio desde Valls hacia el mundo.",
+    description: "Gent, comerç i vida local. Des de Valls i en català.",
     category: "Catalan",
   },
 ];
@@ -49,7 +50,7 @@ function ensureApiKey() {
 async function fetchJson(url) {
   const response = await fetch(url);
   if (!response.ok) {
-    throw new Error(`Error ${response.status} al consultar ${url}`);
+    throw new Error(`Error ${response.status} al consultar YouTube`);
   }
   return response.json();
 }
@@ -61,7 +62,7 @@ async function fetchText(url) {
     },
   });
   if (!response.ok) {
-    throw new Error(`Error ${response.status} al consultar ${url}`);
+    throw new Error(`Error ${response.status} al consultar YouTube`);
   }
   return response.text();
 }
@@ -72,13 +73,13 @@ async function loadSocialMetrics() {
     const parsed = JSON.parse(content);
     return {
       instagramFollowers:
-        Number.parseInt(parsed.instagramFollowers, 10) ||
+        metricNumber(parsed.instagramFollowers) ??
         DEFAULT_SOCIAL_METRICS.instagramFollowers,
       tiktokFollowers:
-        Number.parseInt(parsed.tiktokFollowers, 10) ||
+        metricNumber(parsed.tiktokFollowers) ??
         DEFAULT_SOCIAL_METRICS.tiktokFollowers,
       youtubeHoursManual:
-        Number.parseFloat(parsed.youtubeHoursManual) ||
+        metricNumber(parsed.youtubeHoursManual) ??
         DEFAULT_SOCIAL_METRICS.youtubeHoursManual,
     };
   } catch {
@@ -249,7 +250,7 @@ async function buildDataset() {
     meta: {
       generatedBy: "scripts/fetch-youtube.mjs",
       lastUpdated: new Date().toISOString(),
-      regenerationWindowDays: 3,
+      regenerationWindowDays: 1,
     },
     metrics: {
       totalAudience:

@@ -30,13 +30,13 @@ function initNav() {
   const closeNav = () => {
     document.body.classList.remove("nav-open");
     toggle.setAttribute("aria-expanded", "false");
-    toggle.setAttribute("aria-label", "Abrir menu");
+    toggle.setAttribute("aria-label", "Abrir menú");
   };
 
   const openNav = () => {
     document.body.classList.add("nav-open");
     toggle.setAttribute("aria-expanded", "true");
-    toggle.setAttribute("aria-label", "Cerrar menu");
+    toggle.setAttribute("aria-label", "Cerrar menú");
   };
 
   toggle.addEventListener("click", () => {
@@ -81,66 +81,6 @@ function getVideoTopics(video) {
   }
 
   return topics;
-}
-
-function mergeManualSocialMetrics(data, manualMetrics) {
-  if (!manualMetrics) return data;
-
-  const instagramFollowers =
-    Number.parseInt(manualMetrics.instagramFollowers, 10) || data.socials?.instagramFollowers || 0;
-  const tiktokFollowers =
-    Number.parseInt(manualMetrics.tiktokFollowers, 10) || data.socials?.tiktokFollowers || 0;
-  const youtubeHoursManual =
-    Number.parseFloat(manualMetrics.youtubeHoursManual) || data.metrics?.hoursWatchedThisYear || 0;
-
-  const channelSubscribers = (data.channels || []).reduce(
-    (sum, channel) => sum + (Number(channel.subscribers) || 0),
-    0
-  );
-
-  return {
-    ...data,
-    metrics: {
-      ...data.metrics,
-      totalAudience: channelSubscribers + instagramFollowers + tiktokFollowers,
-      hoursWatchedThisYear: youtubeHoursManual,
-    },
-    socials: {
-      ...data.socials,
-      instagramFollowers,
-      tiktokFollowers,
-    },
-  };
-}
-
-function mergeMetricOverrides(data, overrides) {
-  if (!overrides || typeof overrides !== "object") return data;
-
-  const getOverrideValue = (entry) => {
-    const value = Number(entry?.value);
-    return Number.isFinite(value) && value >= 0 ? value : null;
-  };
-
-  const channels = (data.channels || []).map((channel) => {
-    const override = overrides.channels?.[channel.id] || {};
-    const subscribers = getOverrideValue(override.subscribers);
-    const views = getOverrideValue(override.views);
-    return {
-      ...channel,
-      ...(subscribers === null ? {} : { subscribers }),
-      ...(views === null ? {} : { views }),
-    };
-  });
-
-  const viewsLast365Days = getOverrideValue(overrides.metrics?.viewsLast365Days);
-  return {
-    ...data,
-    channels,
-    metrics: {
-      ...data.metrics,
-      ...(viewsLast365Days === null ? {} : { viewsLast365Days }),
-    },
-  };
 }
 
 function initShare() {
@@ -561,12 +501,11 @@ function createVideoCard(video) {
 
 function renderFooter(data) {
   document.querySelectorAll('[data-stat="lastUpdatedLabel"]').forEach((element) => {
-    element.textContent = `Ultima actualización: ${formatDate(data.meta.lastUpdated)}`;
+    element.textContent = `Datos actualizados: ${formatDate(data.meta.lastUpdated)}`;
   });
 }
 
 function renderHome(data) {
-  renderSharedStats(data);
   const rowsContainer = document.getElementById("latestRows");
   rowsContainer.innerHTML = data.channels
     .map((channel) => {
@@ -591,6 +530,18 @@ function renderHome(data) {
 
 function renderSharedStats(data) {
   const stats = data.metrics;
+  const fromStudio = data.metricSources?.viewsLast365Days === "studio";
+  document.querySelectorAll('[data-metric-label="viewsLast365Days"]').forEach((element) => {
+    element.textContent = fromStudio ? "Visualizaciones en los últimos 365 días" : "Visualizaciones de vídeos del último año";
+  });
+  document.querySelectorAll('[data-metric-note="viewsLast365Days"]').forEach((element) => {
+    element.textContent = fromStudio
+      ? "Dato de YouTube Studio actualizado manualmente, incluyendo vídeos y Shorts."
+      : "Visitas acumuladas de los vídeos y Shorts publicados en los últimos 365 días.";
+  });
+  document.querySelectorAll('[data-metrics-sync]').forEach((element) => {
+    element.textContent = `YouTube sincronizado el ${formatDate(data.metricSources?.youtubeUpdatedAt || data.meta.lastUpdated)}.`;
+  });
   const statMap = {
     totalAudience: formatNumber(stats.totalAudience),
     hoursWatched: formatCompactHours(stats.hoursWatchedThisYear),
@@ -660,36 +611,43 @@ function renderVideos(data) {
   render();
 }
 
+async function optionalJson(url) {
+  try {
+    const response = await fetch(url, { cache: "no-store" });
+    return response.ok ? await response.json() : null;
+  } catch {
+    return null;
+  }
+}
+
 async function init() {
   initNav();
   initCalculator();
-
-  const [dataResponse, socialMetricsResponse, overridesResponse] = await Promise.all([
-    fetch("./data/data.json", { cache: "no-store" }),
-    fetch("./data/social-metrics.json", { cache: "no-store" }).catch(() => null),
-    fetch("./data/metric-overrides.json", { cache: "no-store" }).catch(() => null),
-  ]);
-  const data = await dataResponse.json();
-  const socialMetrics = socialMetricsResponse?.ok ? await socialMetricsResponse.json() : null;
-  const overrides = overridesResponse?.ok ? await overridesResponse.json() : null;
-  const mergedData = mergeManualSocialMetrics(mergeMetricOverrides(data, overrides), socialMetrics);
-
   initCounters();
   initShare();
   initEVCalculator();
+
+  if (!document.querySelector('[data-stat]') && page !== "home" && page !== "videos") return;
+  const [{ mergeSiteMetrics }, dataResponse, socialMetrics, overrides] = await Promise.all([
+    import("./site-metrics.mjs"),
+    fetch("/data/data.json", { cache: "no-store" }),
+    optionalJson("/data/social-metrics.json"),
+    optionalJson("/data/metric-overrides.json"),
+  ]);
+  if (!dataResponse.ok) throw new Error("metrics_unavailable");
+  const mergedData = mergeSiteMetrics(await dataResponse.json(), socialMetrics, overrides);
   renderFooter(mergedData);
   renderSharedStats(mergedData);
-
   if (page === "home") renderHome(mergedData);
   if (page === "videos") renderVideos(mergedData);
 }
 
-init().catch((error) => {
-  const target = document.querySelector("main");
-  if (target) {
-    target.insertAdjacentHTML(
-      "beforeend",
-      `<div class="container"><div class="empty-state">No se pudieron cargar los datos: ${error.message}</div></div>`
-    );
+init().catch(() => {
+  document.querySelectorAll('[data-stat]').forEach((element) => { element.textContent = "—"; });
+  const target = document.querySelector('[data-metrics-sync]') || document.querySelector('main');
+  if (target?.hasAttribute('data-metrics-sync')) {
+    target.textContent = "Las cifras no están disponibles ahora. Puedes seguir explorando la web.";
+  } else if (target) {
+    target.insertAdjacentHTML("beforeend", '<div class="container"><p class="empty-state">No se han podido cargar los datos. Prueba a recargar la página.</p></div>');
   }
 });

@@ -42,7 +42,7 @@ Web estática orientada a autoridad y rendimiento, alimentada por un único arch
 Es la fuente actual para el buscador y el sitemap; no reconstruyas producción
 desde el inventario antiguo de WordPress porque excluiría las entradas nuevas.
 `python3 scripts/build-blog-search-index.py` actualiza el buscador y
-`npm run build` genera `sitemap.xml`, `blog-sitemap.xml` y
+`npm run build` genera un único `sitemap.xml` para toda la web y
 `data/sitemap-state.json` desde las páginas indexables. Vercel ejecuta el build
 en cada despliegue y `.github/workflows/sync-sitemaps.yml` versiona estos
 archivos y el índice de búsqueda tras cada publicación.
@@ -75,7 +75,7 @@ Las fichas no muestran precios. Los enlaces de afiliado se identifican en la fic
 
 El bot permite cambiar seguidores de Instagram y TikTok, horas de YouTube, views del último año, suscriptores y views totales de cada canal. Siempre muestra el valor actual y pide confirmación antes de publicar el cambio. Telegram avisa a Vercel en el momento, y Vercel actualiza el repositorio de GitHub.
 
-Las correcciones de views y suscriptores se guardan en `data/metric-overrides.json` para que una actualización automática posterior de YouTube no las sobrescriba.
+Las correcciones se guardan en `data/metric-overrides.json`. Los datos públicos de cada canal vuelven a tomar el valor de la API tras la siguiente sincronización; las visualizaciones anuales de Studio siguen siendo manuales.
 
 ### Activación
 
@@ -92,3 +92,7 @@ Las correcciones de views y suscriptores se guardan en `data/metric-overrides.js
 6. Abre el bot y escribe `/actualizar`.
 
 El endpoint ignora cualquier mensaje cuyo chat no coincida con `TELEGRAM_ALLOWED_CHAT_ID`.
+
+El antiguo `/blog-sitemap.xml` redirige con 301 al sitemap principal. En Search Console se envía únicamente `https://www.lisardbellod.com/sitemap.xml`.
+
+Las correcciones de suscriptores y visualizaciones totales desde Telegram caducan al sincronizar de nuevo YouTube. Instagram, TikTok, horas y las visualizaciones anuales de Studio se mantienen hasta su siguiente actualización manual. Sin un dato anual de Studio, la web muestra las visitas acumuladas de los vídeos publicados en los últimos 365 días, que no equivalen a las visitas recibidas durante ese periodo.
