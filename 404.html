@@ -4,93 +4,89 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="color-scheme" content="dark" />
-    <title>404 | Página no encontrada | Lisard Bellod</title>
-    <meta
-      name="description"
-      content="La página que buscas no existe o ha cambiado de URL. Vuelve al inicio de Lisard Bellod o entra en las secciones principales."
-    />
-    <meta name="robots" content="noindex,follow" />
-    <meta name="googlebot" content="noindex,follow" />
     <meta name="theme-color" content="#050608" />
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#050608" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#050608" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-    <link rel="manifest" href="./site.webmanifest" />
-    <link rel="stylesheet" href="./styles/main.css" />
+    <title>Página no encontrada (404) | Lisard Bellod</title>
+    <meta name="description" content="Esta página no está disponible. Vuelve al inicio o explora el blog, las herramientas y la Shop de Lisard Bellod." />
+    <meta name="robots" content="noindex,follow" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/styles/main.css?v=20261006-shop-service" />
+    <link rel="stylesheet" href="/styles/404.css" />
   </head>
-  <body>
+  <body class="not-found-page">
+    <a class="error-skip-link" href="#contenido">Ir al contenido</a>
     <header class="site-header">
       <div class="container nav">
-        <a class="brand" href="./index.html">Lisard Bellod</a>
-        <button
-          class="nav-toggle"
-          type="button"
-          data-nav-toggle
-          aria-expanded="false"
-          aria-controls="site-nav"
-          aria-label="Abrir menu"
-        >
-          <span class="nav-toggle-bars" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
+        <a class="brand" href="/">Lisard Bellod</a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+          <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
         </button>
-        <nav class="nav-links" id="site-nav" data-nav-panel>
-          <a href="./index.html">Inicio</a>
-          <a href="./videos.html">Videoteca</a>
-          <a href="./herramientas.html">Herramientas</a>
-          <a href="./shop.html">Shop</a>
-          <a href="./blog/">Blog</a>
-          <a href="./proyectos.html">Proyectos</a>
-          <a href="./contacto.html">Contacto</a>
+        <nav class="nav-links" id="site-nav" data-nav-panel aria-label="Navegación principal">
+          <a href="/">Inicio</a>
+          <a href="/videos.html">Videoteca</a>
+          <a href="/herramientas.html">Herramientas</a>
+          <a href="/shop.html">Shop</a>
+          <a href="/blog/">Blog</a>
+          <a href="/proyectos.html">Proyectos</a>
+          <a href="/contacto.html">Contacto</a>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <p class="eyebrow">Error 404</p>
-            <h1>Esta página no existe o ya no está aquí.</h1>
-            <p class="lead">
-              Puede que el enlace esté roto, que la URL haya cambiado o que Google siga teniendo
-              indexada una dirección antigua. Desde aquí puedes volver al inicio o entrar
-              directamente en las secciones principales.
-            </p>
-            <div class="hero-actions">
-              <a class="button primary" href="./index.html">Volver al inicio</a>
-              <a class="button secondary" href="./videos.html">Ir a videoteca</a>
-            </div>
+    <main id="contenido">
+      <section class="error-hero container" aria-labelledby="error-title">
+        <div class="error-copy">
+          <p class="error-kicker"><span aria-hidden="true"></span> Ruta no encontrada</p>
+          <p class="error-number" aria-hidden="true">404<span>.</span></p>
+          <h1 id="error-title">Aquí se acaba la carretera.</h1>
+          <p class="error-lead">Puede que el enlace sea antiguo o que haya un error en la dirección. Elige otra ruta y seguimos.</p>
+          <div class="error-actions">
+            <a class="button primary" href="/">Volver al inicio <span aria-hidden="true">↗</span></a>
+            <a class="button secondary" href="/blog/">Explorar el blog <span aria-hidden="true">→</span></a>
           </div>
-          <aside class="hero-panel">
-            <div class="profile-card">
-              <div class="profile-copy">
-                <p class="panel-kicker">Atajo rápido</p>
-                <h2 class="profile-name">¿Qué quieres hacer ahora?</h2>
-                <ul class="system-list">
-                  <li><a class="inline-link" href="./herramientas.html">Ver herramientas y calculadoras</a></li>
-                  <li><a class="inline-link" href="./proyectos.html">Explorar proyectos</a></li>
-                  <li><a class="inline-link" href="./contacto.html">Contactar conmigo</a></li>
-                </ul>
-              </div>
-            </div>
-          </aside>
+        </div>
+        <div class="error-graphic" aria-hidden="true">
+          <div class="error-route-line"></div>
+          <div class="error-route-start"></div>
+          <div class="error-route-end">?</div>
+          <div class="error-graphic-label error-graphic-label-start">Tu enlace</div>
+          <div class="error-graphic-label error-graphic-label-end">Destino no encontrado</div>
+          <div class="error-graphic-grid"></div>
+        </div>
+      </section>
+
+      <section class="error-next container" aria-labelledby="error-next-title">
+        <div class="error-next-heading">
+          <p class="eyebrow">Sigue explorando</p>
+          <h2 id="error-next-title">Por aquí sí llegas.</h2>
+        </div>
+        <div class="error-links">
+          <a class="error-link-card" href="/blog/">
+            <span class="error-link-icon" aria-hidden="true">01</span>
+            <span><strong>Blog</strong><small>Historias, pruebas y guías</small></span>
+            <span class="error-link-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="error-link-card" href="/herramientas.html">
+            <span class="error-link-icon" aria-hidden="true">02</span>
+            <span><strong>Herramientas</strong><small>Calculadoras para decidir mejor</small></span>
+            <span class="error-link-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="error-link-card" href="/shop.html">
+            <span class="error-link-icon" aria-hidden="true">03</span>
+            <span><strong>Shop</strong><small>Productos y recomendaciones</small></span>
+            <span class="error-link-arrow" aria-hidden="true">↗</span>
+          </a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-row">
-        <p>Lisard Bellod</p>
-        <p>Contenido real, negocio real y páginas que sí existen.</p>
+        <p>© Lisard Bellod</p>
+        <p>Si buscas algo concreto, <a href="/contacto.html">escríbeme</a>.</p>
       </div>
     </footer>
-    <script src="./scripts/app.js" defer></script>
+    <script src="/scripts/app.js" defer></script>
   </body>
 </html>
