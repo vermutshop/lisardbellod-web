@@ -87,6 +87,28 @@
         <p>Si buscas algo concreto, <a href="/contacto.html">escríbeme</a>.</p>
       </div>
     </footer>
-    <script src="/scripts/app.js" defer></script>
+    <script>
+      const navToggle = document.querySelector("[data-nav-toggle]");
+      const navPanel = document.querySelector("[data-nav-panel]");
+      const closeNav = () => {
+        document.body.classList.remove("nav-open");
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.setAttribute("aria-label", "Abrir menú");
+      };
+      navToggle.addEventListener("click", () => {
+        const open = document.body.classList.toggle("nav-open");
+        navToggle.setAttribute("aria-expanded", String(open));
+        navToggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+      });
+      navPanel.addEventListener("click", (event) => {
+        if (event.target.closest("a")) closeNav();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeNav();
+      });
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 720) closeNav();
+      });
+    </script>
   </body>
 </html>
