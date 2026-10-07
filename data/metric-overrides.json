@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-26T23:01:57.973Z",
+  "updatedAt": "2026-10-07T20:41:36.528Z",
   "metrics": {},
   "channels": {
     "UCUaJJERaZmu5_lfJPxT4X8A": {
@@ -9,8 +9,8 @@
         "source": "telegram"
       },
       "subscribers": {
-        "value": 6168,
-        "updatedAt": "2026-08-26T22:59:20.488Z",
+        "value": 6800,
+        "updatedAt": "2026-10-07T20:41:36.528Z",
         "source": "telegram"
       }
     }
