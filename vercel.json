@@ -3,6 +3,17 @@
   "buildCommand": "npm run build",
   "redirects": [
     {
+      "source": "/:path((?!api/telegram-metrics/?$).*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.lisardbellod.com"
+        }
+      ],
+      "destination": "https://lisardbellod.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/blog-sitemap.xml",
       "destination": "/sitemap.xml",
       "statusCode": 301

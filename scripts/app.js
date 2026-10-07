@@ -246,7 +246,7 @@ function initCalculator() {
   const sharePreview = results.querySelector("[data-calculator-preview]");
   const whatsappLink = results.querySelector("[data-calculator-whatsapp]");
   const emailLink = results.querySelector("[data-calculator-email]");
-  const calculatorUrl = "https://www.lisardbellod.com/calculadora-compra-coche.html";
+  const calculatorUrl = "https://lisardbellod.com/calculadora-compra-coche.html";
   const outputs = Object.fromEntries(
     [...results.querySelectorAll("[data-calc-output]")].map((element) => [element.dataset.calcOutput, element])
   );

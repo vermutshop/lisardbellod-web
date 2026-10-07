@@ -7,7 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const site = 'https://www.lisardbellod.com';
+const site = 'https://lisardbellod.com';
 const today = new Date().toISOString().slice(0, 10);
 const stateFile = path.join(root, 'data/sitemap-state.json');
 const previousState = existsSync(stateFile) ? JSON.parse(readFileSync(stateFile, 'utf8')) : {};

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.lisardbellod.com/sitemap.xml
+Sitemap: https://lisardbellod.com/sitemap.xml

@@ -10,7 +10,7 @@ import html
 import json
 from urllib.parse import quote
 
-SITE = "https://www.lisardbellod.com"
+SITE = "https://lisardbellod.com"
 AUTHOR = {"@type": "Person", "name": "Lisard Bellod", "url": f"{SITE}/"}
 SOCIAL_IMAGE = f"{SITE}/image/lisardbellod.png"
 

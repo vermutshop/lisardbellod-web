@@ -3,7 +3,7 @@
 ## Objetivo y contexto
 
 Este repositorio es `vermutshop/lisardbellod-web`, la web estática de
-https://www.lisardbellod.com. La rama de producción es `main`.
+https://lisardbellod.com. La rama de producción es `main`.
 Lisard utiliza Codex Cloud desde iOS para publicar entradas a partir de una
 transcripción, un enlace de vídeo y, opcionalmente, una imagen. Aplica este
 procedimiento sin exigir que repita las instrucciones en cada chat.
@@ -164,7 +164,7 @@ también todas las entradas nuevas y funcionar sin archivos ignorados.
 3. Cambiar todos los metadatos heredados de la plantilla: título, H1, canonical,
    descripción, Open Graph, Twitter y JSON-LD `BlogPosting`, con autor, fechas
    e imagen correctos. El canonical debe ser
-   `https://www.lisardbellod.com/blog/<slug>/`.
+   `https://lisardbellod.com/blog/<slug>/`.
    Usar la fecha efectiva de publicación en Europe/Madrid y convertir
    correctamente a UTC en los campos que lo requieran.
 4. Incluir portada, artículo, vídeo y enlaces internos. Escapar correctamente

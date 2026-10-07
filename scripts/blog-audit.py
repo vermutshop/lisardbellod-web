@@ -44,7 +44,7 @@ with MAP.open("w", newline="") as file:
     writer = csv.writer(file)
     writer.writerow(["old_url", "new_url", "post_id", "published"])
     for post in posts:
-        writer.writerow([post["url"], f"https://www.lisardbellod.com/blog/{post['slug']}/", post["id"], post["published"]])
+        writer.writerow([post["url"], f"https://lisardbellod.com/blog/{post['slug']}/", post["id"], post["published"]])
 
 REPORT.write_text(f"""# Inventario para migrar lisard.es
 

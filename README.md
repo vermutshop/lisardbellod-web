@@ -93,6 +93,19 @@ Las correcciones se guardan en `data/metric-overrides.json`. Los datos públicos
 
 El endpoint ignora cualquier mensaje cuyo chat no coincida con `TELEGRAM_ALLOWED_CHAT_ID`.
 
-El antiguo `/blog-sitemap.xml` redirige con 301 al sitemap principal. En Search Console se envía únicamente `https://www.lisardbellod.com/sitemap.xml`.
+El antiguo `/blog-sitemap.xml` redirige con 301 al sitemap principal. En Search Console se envía únicamente `https://lisardbellod.com/sitemap.xml`.
 
 Las correcciones de suscriptores y visualizaciones totales desde Telegram caducan al sincronizar de nuevo YouTube. Instagram, TikTok, horas y las visualizaciones anuales de Studio se mantienen hasta su siguiente actualización manual. Sin un dato anual de Studio, la web muestra las visitas acumuladas de los vídeos publicados en los últimos 365 días, que no equivalen a las visitas recibidas durante ese periodo.
+
+## Dominio principal
+
+La web pública usa `https://lisardbellod.com`. Los canónicos, metadatos sociales,
+datos estructurados y sitemap deben usar siempre este dominio. Las páginas de
+`www` redirigen con 308 conservando ruta y parámetros.
+
+En Vercel, ambos dominios deben estar conectados a Production; la redirección
+se gestiona en `vercel.json`, no con una redirección global del dominio.
+La única excepción es `/api/telegram-metrics`, que mantiene su dirección técnica
+anterior para no interrumpir el webhook privado de Telegram. No es una página
+indexable ni aparece en el sitemap. No activar un redirect global de `www` sin
+actualizar antes el webhook autenticado de Telegram.
