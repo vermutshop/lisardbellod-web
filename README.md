@@ -73,6 +73,9 @@ Las fichas no muestran precios. Los enlaces de afiliado se identifican en la fic
 
 ## Bot privado de Telegram
 
+Nombre: **countlisard**. Usuario: [@counterlisardbot](https://t.me/counterlisardbot).
+Abre ese chat y envía `/actualizar` para mostrar el menú de métricas.
+
 El bot permite cambiar seguidores de Instagram y TikTok, horas de YouTube, views del último año, suscriptores y views totales de cada canal. Siempre muestra el valor actual y pide confirmación antes de publicar el cambio. Telegram avisa a Vercel en el momento, y Vercel actualiza el repositorio de GitHub.
 
 Las correcciones se guardan en `data/metric-overrides.json`. Los datos públicos de cada canal vuelven a tomar el valor de la API tras la siguiente sincronización; las visualizaciones anuales de Studio siguen siendo manuales.
