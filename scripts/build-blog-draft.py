@@ -55,6 +55,7 @@ def page(content: str, title: str, description: str, canonical_path: str, post=N
 <title>{html.escape(full_title)}</title>
 {head(full_title, description, canonical_path, draft=not PRODUCTION, post=post, image_url=image_url)}
 <link rel="stylesheet" href="/styles/main.css"><link rel="stylesheet" href="/styles/blog.css">
+{'<script defer src="/scripts/metricool.js"></script>' if PRODUCTION else ''}
 </head><body>
 <header class="site-header"><div class="container nav"><a class="brand" href="/index.html">Lisard Bellod</a><a class="preview-back" href="{BASE}">Archivo del blog</a></div></header>
 <main>{content}</main>
