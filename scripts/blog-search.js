@@ -65,8 +65,8 @@
     for (const item of matches.slice(0, visible)) fragment.append(card(item, terms));
     list.replaceChildren(fragment);
     status.textContent = matches.length
-      ? `${matches.length.toLocaleString("es-ES")} ${matches.length === 1 ? "artículo" : "artículos"} para «${query}»`
-      : `No he encontrado artículos para «${query}». Prueba con otra palabra.`;
+      ? `${matches.length.toLocaleString("es-ES")} ${matches.length === 1 ? "resultado" : "resultados"} para «${query}»`
+      : `No he encontrado resultados para «${query}». Prueba con otra palabra.`;
     more.hidden = visible >= matches.length;
   }
 
@@ -116,7 +116,7 @@
       status.textContent = "Escribe al menos dos caracteres para buscar.";
       return;
     }
-    status.textContent = "Buscando en todos los artículos…";
+    status.textContent = "Buscando en artículos y páginas…";
     timer = setTimeout(() => run(query), 180);
   });
   more.addEventListener("click", () => {

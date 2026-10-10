@@ -17,6 +17,31 @@
       "source": "/blog-sitemap.xml",
       "destination": "/sitemap.xml",
       "statusCode": 301
+    },
+    {
+      "source": "/calcotadas/:path*",
+      "destination": "/blog/calcotadas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/calcotades/:path*",
+      "destination": "/blog/calcotades/",
+      "statusCode": 301
+    },
+    {
+      "source": "/que-es-esto/:path*",
+      "destination": "/blog/que-es-esto/",
+      "statusCode": 301
+    },
+    {
+      "source": "/top-pinscher/:path*",
+      "destination": "/blog/top-pinscher/",
+      "statusCode": 301
+    },
+    {
+      "source": "/carcasas/:path*",
+      "destination": "/blog/carcasas/",
+      "statusCode": 301
     }
   ]
 }

@@ -75,5 +75,19 @@
 .blog-filter-links, .blog-pagination { display: flex; flex-wrap: wrap; gap: .65rem; align-items: center; }
 .blog-filter-links .button, .blog-pagination .button { font-size: .85rem; padding: .65rem .95rem; }
 .blog-pagination { margin-top: 2rem; color: var(--muted); }
+.blog-legacy-links { display: grid; grid-template-columns: 2fr 1fr; gap: 1.2rem; margin-bottom: 2.5rem; }
+.blog-legacy-feature, .blog-legacy-more { overflow: hidden; border: 1px solid var(--line); border-radius: 24px; background: var(--surface); }
+.blog-legacy-feature { display: grid; grid-template-columns: 1fr 1fr; }
+.blog-legacy-feature > img { width: 100%; height: 100%; min-height: 260px; object-fit: cover; }
+.blog-legacy-feature > div, .blog-legacy-more { padding: 1.5rem; }
+.blog-legacy-links h2 { font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.2; }
+.blog-legacy-links p:not(.eyebrow) { color: var(--muted); line-height: 1.6; }
+.blog-legacy-links span { color: var(--accent-dark); font-weight: 600; }
+.blog-legacy-feature:hover, .blog-legacy-feature:focus-visible, .blog-legacy-more:hover, .blog-legacy-more:focus-visible { border-color: var(--accent-dark); }
+.blog-page-intro { padding-top: 0; padding-bottom: 2rem; }
+.blog-page-intro .blog-article-image img { height: auto; max-height: none; }
+#restaurantes { scroll-margin-top: 6rem; }
+@media (max-width: 900px) { .blog-legacy-links { grid-template-columns: 1fr; } }
+@media (max-width: 620px) { .blog-legacy-feature { grid-template-columns: 1fr; } .blog-legacy-feature > img { min-height: 0; height: auto; aspect-ratio: 16 / 9; } }
 @media (max-width: 900px) { .blog-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (max-width: 620px) { .blog-grid, .blog-search-list, .blog-article-navigation { grid-template-columns: 1fr; } .blog-preview-hero, .blog-article-shell { padding-top: 2.5rem; } .blog-shop-actions { flex-direction: column; } .blog-footer-inner { flex-direction: column; align-items: stretch; } }
