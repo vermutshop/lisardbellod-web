@@ -1,0 +1,35 @@
+.calcotadas-guide .calcotadas-hero h1 { max-width: 24ch; }
+.calcotadas-guide .calcotadas-hero { padding-bottom: 1.5rem; }
+.calcotadas-breadcrumb { margin-bottom: 2rem; font-size: .85rem; color: var(--muted); }
+.calcotadas-breadcrumb a, .calcotadas-guide .blog-article-date a { color: var(--accent-dark); }
+.calcotadas-content { max-width: 1040px; padding-top: 0; }
+.calcotadas-summary { padding: clamp(1.2rem, 4vw, 2rem); margin-bottom: 2rem; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
+.calcotadas-summary h2 { margin-top: 0; }
+.calcotadas-summary p:last-child { margin-bottom: 0; }
+.calcotadas-guide .blog-article-image { background: var(--surface); }
+.calcotadas-guide .blog-article-image img { display: block; height: auto; max-height: none; border-radius: 0; }
+.calcotadas-guide figcaption { padding: .8rem 1rem; font-size: .85rem; color: var(--muted); }
+.calcotadas-guide section[id] { scroll-margin-top: 6rem; }
+.calcotadas-table-hint { display: none; }
+.calcotadas-table-wrap { overflow-x: auto; margin: 1.5rem 0 2rem; border: 1px solid var(--line); border-radius: 16px; }
+.calcotadas-table-wrap:focus-visible { outline: 2px solid var(--accent-dark); outline-offset: 4px; }
+.calcotadas-guide table { width: 100%; border-collapse: collapse; font-size: .92rem; line-height: 1.6; }
+.calcotadas-guide caption { text-align: left; padding: 1rem; font-weight: 600; }
+.calcotadas-guide th, .calcotadas-guide td { padding: 1rem; text-align: left; vertical-align: top; border-top: 1px solid var(--line); }
+.calcotadas-guide thead { background: var(--surface); }
+.calcotadas-guide th[scope=row] { width: 29%; }
+.calcotadas-guide th span { display: block; font-weight: 400; color: var(--muted); }
+.calcotadas-restaurant { display: grid; grid-template-columns: minmax(180px, .8fr) minmax(0, 2fr); gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid var(--line); }
+.calcotadas-restaurant > img { width: 100%; height: auto; aspect-ratio: 640 / 420; object-fit: cover; }
+.calcotadas-restaurant .eyebrow { margin-bottom: .5rem; }
+.calcotadas-restaurant h3 { margin-top: 0; }
+.calcotadas-price { color: var(--muted); font-size: .9rem; }
+.calcotadas-guide .blog-article-content li { margin-bottom: .7rem; }
+.calcotadas-guide .blog-article-content ul { padding-left: 1.3rem; }
+@media (max-width: 620px) {
+ .calcotadas-table-hint { display: block; font-size: .85rem; color: var(--muted); }
+ .calcotadas-guide .calcotadas-content { padding-top: 0; }
+ .calcotadas-restaurant { grid-template-columns: 1fr; }
+ .calcotadas-guide table { min-width: 620px; }
+ .calcotadas-guide .calcotadas-hero h1 { font-size: clamp(2.2rem, 10vw, 3.2rem); }
+}
