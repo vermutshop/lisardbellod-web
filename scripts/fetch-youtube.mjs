@@ -15,19 +15,23 @@ const channelIdCache = new Map();
 const channelDetailsCache = new Map();
 
 const CHANNELS = [
+  // Los IDs permanentes evitan depender de handles que pueden cambiar o devolver 404.
   {
+    id: "UCUaJJERaZmu5_lfJPxT4X8A",
     url: "https://www.youtube.com/@LisardBellod",
     name: "Lisard Bellod",
     description: "Pruebas de coches eléctricos, rutas, carga y tecnología en el día a día.",
     category: "Principal",
   },
   {
-    url: "https://www.youtube.com/@lisard_world",
+    id: "UCuHu9H9TimiFbUbtoi-EDCg",
+    url: "https://www.youtube.com/channel/UCuHu9H9TimiFbUbtoi-EDCg",
     name: "Lisard World",
     description: "Negocios, ideas y lo que voy aprendiendo al poner en marcha mis proyectos.",
     category: "Emprendimiento",
   },
   {
+    id: "UCPX8H24n-SzE4TKFbG3B2-g",
     url: "https://www.youtube.com/@Vallsalmon",
     name: "Valls al mon",
     description: "Gent, comerç i vida local. Des de Valls i en català.",
