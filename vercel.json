@@ -43,5 +43,10 @@
       "destination": "/blog/carcasas/",
       "statusCode": 301
     }
-  ]
+  ],
+  "git": {
+    "deploymentEnabled": {
+      "codex/scheduled-toyota-chr-2026-12-15": false
+    }
+  }
 }
