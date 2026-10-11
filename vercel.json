@@ -42,6 +42,11 @@
       "source": "/carcasas/:path*",
       "destination": "/blog/carcasas/",
       "statusCode": 301
+    },
+    {
+      "source": "/blog/paginas/:path*",
+      "destination": "/blog/",
+      "permanent": true
     }
   ]
 }
