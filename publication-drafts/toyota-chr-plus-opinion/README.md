@@ -2,9 +2,9 @@
 
 Entrada preparada a petición de Lisard a partir de su transcripción completa y su portada. No está publicada.
 
-Estado de almacenamiento: copia local en `blog-draft/toyota-chr-plus-opinion/`. La rama está preparada, pero no se subió a GitHub: el repositorio es público y la revisión automática rechazó exponer el borrador antes de diciembre sin confirmación. Mientras no se autorice y verifique esa subida, usar esta copia local. La automatización está configurada con esta limitación.
+Almacenamiento autorizado por Lisard: artículo y portada en la rama pública `codex/scheduled-toyota-chr-2026-12-15` de `vermutshop/lisardbellod-web`. Esta autorización permite leer el borrador en GitHub antes de diciembre, pero no publicarlo en la web antes de la fecha prevista. El despliegue automático está desactivado para esa rama y `publication-drafts/` está excluido de Vercel. Usar el material remoto para no depender de archivos del Mac.
 
-- No publicar antes del **15 de diciembre de 2026 a las 09:00 Europe/Madrid**, equivalente a **2026-12-15T08:00:00Z**. La fecha la fijó Lisard; las 09:00 son la hora por defecto propuesta en el chat al no indicar otra.
+- No publicar antes del **15 de diciembre de 2026 a las 09:00 Europe/Madrid**, equivalente a **2026-12-15T08:00:00Z**. Fecha y hora confirmadas expresamente por Lisard.
 - Vídeo exacto: https://youtu.be/zkidhdR9t0I
 - Título, extracto, descripción, categoría y fecha mínima están en `publication.json`.
 - `article.html` contiene el texto final, marcado como borrador y `noindex,nofollow`, con una fecha prevista. `portada.webp` es la portada aportada por Lisard, optimizada sin recortar.
