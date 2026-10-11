@@ -44,6 +44,11 @@
       "statusCode": 301
     },
     {
+      "source": "/blog/paginas/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
       "source": "/blog/paginas/:path*",
       "destination": "/blog/",
       "permanent": true
