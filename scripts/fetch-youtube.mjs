@@ -1,4 +1,5 @@
 import { metricNumber } from "./site-metrics.mjs";
+import { isCatalogVideo } from "./youtube-video-classification.mjs";
 import fs from "node:fs/promises";
 import path from "node:path";
 
@@ -8,7 +9,6 @@ const OUTPUT_PATH = path.join(ROOT, "data", "data.json");
 const SOCIAL_METRICS_PATH = path.join(ROOT, "data", "social-metrics.json");
 const SEARCH_PAGE_SIZE = 50;
 const VIDEO_DETAILS_BATCH_SIZE = 50;
-const SHORTS_MAX_DURATION_MINUTES = 3;
 const INSTAGRAM_URL = "https://www.instagram.com/lisardbellod/";
 const LEGACY_INSTAGRAM_URL = "https://www.instagram.com/lisard/";
 const channelIdCache = new Map();
@@ -221,6 +221,9 @@ async function fetchChannelUploads(channel, uploadsPlaylistId) {
 async function buildDataset() {
   ensureApiKey();
   const socialMetrics = await loadSocialMetrics();
+  const confirmedNormalVideos = JSON.parse(await fs.readFile(
+    path.join(ROOT, "data", "youtube-normal-videos.json"), "utf8"
+  )).channels;
   const oneYearAgo = new Date();
   oneYearAgo.setDate(oneYearAgo.getDate() - 365);
 
@@ -228,7 +231,7 @@ async function buildDataset() {
     CHANNELS.map(async (channel) => {
       const stats = await fetchChannelDetails(channel);
       const uploads = await fetchChannelUploads(channel, stats.uploadsPlaylistId);
-      const videos = uploads.filter((video) => video.durationMinutes > SHORTS_MAX_DURATION_MINUTES);
+      const videos = uploads.filter((video) => isCatalogVideo(video, confirmedNormalVideos));
       return {
         ...channel,
         ...stats,

@@ -2,11 +2,12 @@
   "meta": {
     "generatedBy": "scripts/fetch-youtube.mjs",
     "lastUpdated": "2026-10-12T12:45:23.807Z",
-    "regenerationWindowDays": 1
+    "regenerationWindowDays": 1,
+    "catalogAuditAt": "2026-10-12"
   },
   "metrics": {
     "totalAudience": 12099,
-    "totalVideos": 166,
+    "totalVideos": 181,
     "hoursWatchedThisYear": 72664,
     "viewsLast365Days": 1525017
   },
@@ -2069,6 +2070,19 @@
       "durationMinutes": 34.85
     },
     {
+      "id": "zXbB9dzOwlQ",
+      "title": "¿Como duermen tres cachorros de Caniche Toy? Poodle Toy.",
+      "description": "En este fantástico vídeo podéis ver a tres cachorros de caniche toy negro, rojo y apricot, durmiendo la siesta después de comer. \nMe pasaría horas mirándolos. \n¿Os gustan?",
+      "publishedAt": "2024-11-19T22:35:31Z",
+      "thumbnail": "https://i.ytimg.com/vi/zXbB9dzOwlQ/maxresdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=zXbB9dzOwlQ",
+      "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
+      "channelName": "Lisard Bellod",
+      "category": "Principal",
+      "views": 150,
+      "durationMinutes": 1.4833333333333334
+    },
+    {
       "id": "QXZaLK2Qzrw",
       "title": "Idea de Negocio - EP. 1º de Monta tu Tienda Fisica",
       "description": "Bienvenidos al primer episodio de mi serie sobre cómo abrir una tienda física y online desde cero. En esta serie compartiré todos los consejos, trucos y aprendizajes necesarios para que puedas convertir tu idea en un negocio exitoso. 🚀 Desde encontrar la idea perfecta hasta gestionar y promocionar tu tienda, tendrás una guía completa para cada etapa del proceso.\n\nEn este episodio, comenzamos con lo más importante: cómo encontrar la idea adecuada para tu tienda física y online, un paso clave para emprender con éxito.\n\nPuntos destacados:\n0:00 Inicio\n1:06 Identifica tus pasiones y habilidades.\n2:16 Analiza el mercado local.\n3:36 Evita copiar negocios exitosos.\n5:44 Evalúa la viabilidad económica.\n7:36 Aprovecha oportunidades cercanas.\n10:51 Tamaño de la tienda\n13:05 La competencia \n15:04 Innovar\n17:50 Prepárate para la digitalización.\n\n💬 Comparte tus ideas o preguntas en los comentarios: ¿Qué tipo de tienda te gustaría abrir? ¿Física, online o ambas? ¡Te leo y respondo!\n\n📌 Más contenido útil en mi blog: https://lisard.es\n\nMi Cámara: https://amzn.to/4hSuXSU\nMi Micro: https://amzn.to/4fRiKfg\nDonde compro los Filamentos PLA: https://s.click.aliexpress.com/e/_DDGFwsz",
@@ -2134,6 +2148,32 @@
       "durationMinutes": 13.516666666666667
     },
     {
+      "id": "JtiUO469ZNI",
+      "title": "￼Timelapse de árbol de Navidad, ¿como se hace?Se acerca la Navidad y la bambú lo sabe #navidad",
+      "description": "Ponemos la maquinaria en marcha para decorar la casa con los mejores elementos navideños que nos puede dar nuestra impresora 3D, queréis ver todo lo que imprimimos seguirnos #impresiones3d #navidad2024 #bambulabp1s",
+      "publishedAt": "2024-11-07T14:26:56Z",
+      "thumbnail": "https://i.ytimg.com/vi/JtiUO469ZNI/maxresdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=JtiUO469ZNI",
+      "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
+      "channelName": "Lisard Bellod",
+      "category": "Principal",
+      "views": 97,
+      "durationMinutes": 1.4
+    },
+    {
+      "id": "XdGrHlUM1xU",
+      "title": "La Mejor Herramienta para Tu Impresora 3D que No Sabías que Necesitabas",
+      "description": "¿Te imaginas tener la herramienta perfecta para tu impresora 3D sin saberlo? En este video, te revelo un accesorio inesperado y súper económico que puede marcar una gran diferencia en tus impresiones. Es tan accesible que probablemente ya esté en tu casa, o puedes conseguirlo fácilmente sin gastar mucho. Esta sencilla herramienta me ha ahorrado tiempo y mejorado la precisión de mis proyectos. Acompáñame para descubrir de qué se trata, y si aún no la tienes, al final del video te dejo un enlace para que puedas adquirirla de inmediato. ¡No te lo pierdas, porque esta herramienta puede ser el secreto mejor guardado para los fanáticos de la impresión 3D!\n\nComprar: https://s.click.aliexpress.com/e/_DmkROcv\nDonde compro los Filamentos PLA: https://s.click.aliexpress.com/e/_DDGFwsz\nMi Cámara: https://amzn.to/4hSuXSU\nMi Micro: https://amzn.to/4fRiKfg",
+      "publishedAt": "2024-11-03T22:08:11Z",
+      "thumbnail": "https://i.ytimg.com/vi/XdGrHlUM1xU/maxresdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=XdGrHlUM1xU",
+      "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
+      "channelName": "Lisard Bellod",
+      "category": "Principal",
+      "views": 265,
+      "durationMinutes": 2.783333333333333
+    },
+    {
       "id": "TakllwMgGqs",
       "title": "¡Ilumina tus Impresiones en 3D! Instalación y Ajustes PRO de la Tira LED para Bambulab A1 Mini!",
       "description": "En este video te enseño cómo instalar la nueva tira LED para la Bambulab A1 Mini (¡también disponible para la A1!), paso a paso desde el unboxing hasta los ajustes finales. Además, comparto varios truquillos para que tu instalación quede a nivel PRO, sin molestias y con una iluminación perfecta para tus impresiones en 3D. 🌟\n\n¿Quieres que tu impresora luzca genial y tener la mejor visibilidad de tus proyectos? Este video es para ti. ¡Dale al play y suscríbete para más tips y accesorios de impresión 3D!\n\nCompra tu tira LED aquí: https://s.click.aliexpress.com/e/_DC8YWUd\nPegatinas doble cara: https://s.click.aliexpress.com/e/_DkCjV3R\nDonde compro los Filamentos PLA: https://s.click.aliexpress.com/e/_DDGFwsz\nMi Cámara: https://amzn.to/4hSuXSU\nMi Micro: https://amzn.to/4fRiKfg\n\n\n0:00 Inicio\n0:12 Unboxing\n1:19 Limpieza de la zona\n3:20 Planteamos la Tira\n4:10 Empezamos a pegar la Tira\n5:20 Enchufamos el Cable\n6:00 Primer test de luz\n7:00 TIP Instalación final del cable \n8:50 Bridas \n10:26 Limpiamos y  Imprimimos!",
@@ -2184,6 +2224,19 @@
       "category": "Principal",
       "views": 364,
       "durationMinutes": 8.166666666666666
+    },
+    {
+      "id": "zbMVwgT_5pc",
+      "title": "¿Nestea o Fuze Tea? La Batalla Definitiva entre Nestlé y Coca-Cola 🍹",
+      "description": "En este video, comparo dos gigantes del mundo del té: Nestea de Nestlé y Fuze Tea de Coca-Cola. Analizo cada botella en detalle, desde el sabor hasta el diseño, para descubrir cuál es la mejor opción. ¿Será el clásico Nestea el que se lleve la victoria o sorprenderá Fuze Tea con su fórmula? 🤔🍵\n\nSi eres fan del té frío y quieres saber cuál de estas bebidas sale ganadora, ¡no te pierdas este video! ¡Dale like y suscríbete para más comparaciones y reviews!\n\n🔔 Activa la campanita para no perderte los próximos videos.\n\n#Nestea #FuzeTea #Comparativa #TeFrio #CocaCola #Nestle #BatallaDeTés\n\nDonde compro los Filamentos PLA: https://s.click.aliexpress.com/e/_DDGFwsz\nMi Cámara: https://amzn.to/4hSuXSU\nMi Micro: https://amzn.to/4fRiKfg",
+      "publishedAt": "2024-10-21T22:10:17Z",
+      "thumbnail": "https://i.ytimg.com/vi/zbMVwgT_5pc/maxresdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=zbMVwgT_5pc",
+      "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
+      "channelName": "Lisard Bellod",
+      "category": "Principal",
+      "views": 1744,
+      "durationMinutes": 1.8333333333333333
     },
     {
       "id": "0YFKw0OiFyg",
@@ -2251,6 +2304,19 @@
       "durationMinutes": 6.65
     },
     {
+      "id": "95vOm0V5qfI",
+      "title": "¿El Mejor Ratón para tu Escritorio? ¡Sí, lo es! ¡Y funciona genial!",
+      "description": "En esta review, analizo a fondo el Logitech ERGO M575, un ratón trackball diseñado pensando en la ergonomía para quienes pasamos largas horas trabajando en tareas de oficina. Si trabajas a diario con herramientas de productividad como Microsoft Office, Google Workspace o software especializado, este ratón te ayudará a reducir la fatiga en la muñeca y mejorar tu flujo de trabajo. Además, el trackball permite un control preciso sin necesidad de mover el brazo, lo que lo hace ideal para espacios reducidos.\n\n¿Te preocupa su rendimiento en juegos? Si eres fan de títulos de estrategia como Civilization VI o juegos que no requieren movimientos rápidos del ratón, te sorprenderá lo cómodo que puede resultar. El ERGO M575 es mucho más que un simple ratón: es una inversión en tu bienestar y productividad. Te cuento mi experiencia completa, cómo se siente en la mano, sus características, ventajas y desventajas, y si realmente merece la pena para tu espacio de trabajo o gaming casual. ¡Dale al play y descubre todo lo que puede ofrecer!\n\nLo puedes comprar aquí: https://amzn.to/3YniTRN\n\n0:00 Inicio\n0:07 Retiramos el ratón antiguo \n0:24 El Nuevo ratón\n1:08 Primer plano del ratón\n2:21 Zona de uso",
+      "publishedAt": "2024-10-14T19:07:12Z",
+      "thumbnail": "https://i.ytimg.com/vi/95vOm0V5qfI/maxresdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=95vOm0V5qfI",
+      "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
+      "channelName": "Lisard Bellod",
+      "category": "Principal",
+      "views": 95,
+      "durationMinutes": 2.533333333333333
+    },
+    {
       "id": "ZkRgMtzFIwc",
       "title": "Domingo en el Campo | Desbrozando la Finca y Preparando para la Temporada de Aceitunas",
       "description": "En este video, te invito a acompañarme en una jornada de trabajo en la finca, donde me dediqué a desbrozar el terreno para dejarlo listo para la próxima recogida de aceitunas. Es un paso crucial para mantener el olivar en buen estado y garantizar que la cosecha sea lo más eficiente posible. ¡El aroma de las olivas en el aire ya anticipa lo que será una gran temporada!\n\nDurante el día, aproveché para abrir el corral y dejar que las gallinas anden libres por la finca. Además de comer hierba fresca, encontré algunos gusanos que seguramente serán un festín para ellas. 🐔✨ Es increíble ver cómo colaboran en la limpieza del terreno, contribuyendo a mantener el equilibrio natural del lugar.\n\nTambién me surgió una pregunta: ¿cuándo es el mejor momento para recoger las limas de mi árbol? Si tú también tienes dudas sobre cuándo cosechar limas, aquí te doy algunos consejos sobre cómo saber si están listas. En el video podrás ver algunas tomas de los frutos que ya comienzan a madurar, ¡pronto estarán listas para disfrutar! 🍋\n\nAl final del día, quise compartir contigo algo más personal: las flores de mi níspero. 🌸 Esta temporada están más hermosas que nunca, y me encanta mostrar el lado más bello de la naturaleza, ese que a veces pasa desapercibido cuando estamos centrados en el trabajo.\n\nAsí que, si te gusta el campo, la vida al aire libre, y quieres aprender más sobre el proceso de la recolección de aceitunas y el cuidado de árboles frutales, este video es para ti. ¡No te lo pierdas y suscríbete para más contenido sobre la vida en la finca!\n\n0:00 Inicio\n0:24 Timelapse de como desbrozo\n0:41 Vistas a pie de campo de la faena\n1:32 Abro las gallinas\n2:01 Gusanos para las gallinas\n2:20 ¿Cuándo se recogen las Limas?\n3:05 Flores de Níspero\n3:46 Viaje con el Tractor",
@@ -2316,6 +2382,19 @@
       "durationMinutes": 5.333333333333333
     },
     {
+      "id": "bH1n7JpWISI",
+      "title": "Imprimí un estuche en espiral con la Bambulab A1 Minil! ¿ENCAJARA? Timelapse bonustrack",
+      "description": "Mi peque me ha pedido un estuche para la escuela, elegimos este en espiral, pero no creo que lo pueda utilizar en el colegio por el ruido... \n¿Queréis ver el proceso? Timelapse bonustrack\nMáquina: Bambulab A1 Mini\nDonde compro los Filamentos PLA: https://s.click.aliexpress.com/e/_DDGFwsz\nMi Cámara: https://amzn.to/4hSuXSU\nMi Micro: https://amzn.to/4fRiKfg",
+      "publishedAt": "2024-10-07T13:15:22Z",
+      "thumbnail": "https://i.ytimg.com/vi/bH1n7JpWISI/maxresdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=bH1n7JpWISI",
+      "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
+      "channelName": "Lisard Bellod",
+      "category": "Principal",
+      "views": 81,
+      "durationMinutes": 2.216666666666667
+    },
+    {
       "id": "9Pd9vtSvqg8",
       "title": "Peleando Patatas y Hablando de este canal: Mi Primer Video en el Magatzem del Vermut.",
       "description": "En este primer video, te invito a compartir un momento muy especial mientras pelo patatas para hacer unas deliciosas bravas en el Magatzem del vermut. 🥔✨\n\nAquí podrás conocerme un poco más y descubrir los temas que abordaremos en este canal:\n\n🍷 Vermut:Hablaremos sobre la tradición del vermut y cómo disfrutarlo al máximo.\n\n💻 Tecnología: Exploraremos las últimas tendencias tecnológicas y cómo influyen en nuestra vida diaria.\n\n🛍️ Tienda y Comercio: Te contaré sobre mis experiencias en el mundo del comercio y consejos útiles para emprendedores.\n\n🐾 Perros: Compartiré anécdotas y tips sobre nuestros amigos peludos, ¡porque ellos también son parte de nuestra vida!\n\n🌾 Cosas del Campo: Disfrutaremos de la vida rural y todo lo que la naturaleza nos ofrece.\n\n👩‍🍳 Recetas: Te enseñaré a preparar deliciosas recetas que podrás hacer en casa.\n\n🖨️ Impresión 3D: Nos adentraremos en el fascinante mundo de la impresión 3D y cómo puede transformar nuestra vida.\n\n¡Acompáñame en este viaje lleno de sabor, historias y aprendizajes! No olvides suscribirte y darle like si te gusta el contenido. ¡Espero tus comentarios y sugerencias para futuros videos!\n\n¡Vamos a disfrutar juntos de esta aventura!\n\nSi te gusta como graba mi cámara y el audio la puedes comprar aquí: \n\nDonde compro los Filamentos PLA: https://s.click.aliexpress.com/e/_DDGFwsz\nMi Cámara: https://amzn.to/4hSuXSU\nMi Micro: https://amzn.to/4fRiKfg",
@@ -2327,6 +2406,123 @@
       "category": "Principal",
       "views": 79,
       "durationMinutes": 11.15
+    },
+    {
+      "id": "k_gR12YLH7I",
+      "title": "Timelapse de la impresión del Halcón Milenario de star wars! #starwars",
+      "description": "Fantástico Timelapse de la impresión del Halcón Milenario de star wars! #starwars  y después le quitamos los soportes de impresión y podéis ver lo bien que queda impreso con el filamento de SUNLU + silver \n\nhttps://i.refs.cc/IG5Ozlno?smile_ref=eyJzbWlsZV9zb3VyY2UiOiJzbWlsZV91aSIsInNtaWxlX21lZGl1bSI6IiIsInNtaWxlX2NhbXBhaWduIjoicmVmZXJyYWxfcHJvZ3JhbSIsInNtaWxlX2N1c3RvbWVyX2lkIjoyMjIyNzc5Njk0fQ%3D%3D",
+      "publishedAt": "2024-05-22T13:28:02Z",
+      "thumbnail": "https://i.ytimg.com/vi/k_gR12YLH7I/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgWihQMA8=&rs=AOn4CLCb4DKLaFvMPbqJnSXs2lRfisnPkA",
+      "url": "https://www.youtube.com/watch?v=k_gR12YLH7I",
+      "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
+      "channelName": "Lisard Bellod",
+      "category": "Principal",
+      "views": 71,
+      "durationMinutes": 1.95
+    },
+    {
+      "id": "--OYsEuuoCQ",
+      "title": "Red Sky Line - DJI",
+      "description": "Red Sky Line - DJI",
+      "publishedAt": "2024-05-21T18:46:10Z",
+      "thumbnail": "https://i.ytimg.com/vi/--OYsEuuoCQ/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGDggXChyMA8=&rs=AOn4CLAQ_5uAOF7BLvIsxvp8ZTAntwChTA",
+      "url": "https://www.youtube.com/watch?v=--OYsEuuoCQ",
+      "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
+      "channelName": "Lisard Bellod",
+      "category": "Principal",
+      "views": 39,
+      "durationMinutes": 0.6833333333333333
+    },
+    {
+      "id": "PNFA6pmS464",
+      "title": "Timelapse ¿Como hacer un lapicero en 5 horas? Impresora 3D#asmr",
+      "description": "Mi hija me pidió un lapicero y me puse manos a la obra, busqué el diseño en makerworld y a imprimir se dijo. 5 horas y aquí tenemos un lapicero con efecto tejido a mano #bambulab #3dprinting #manualidades #modelo3d",
+      "publishedAt": "2024-05-21T18:45:23Z",
+      "thumbnail": "https://i.ytimg.com/vi/PNFA6pmS464/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgXihUMA8=&rs=AOn4CLCjmb2_xBnrGu4DwxBpo5r8VGvWOQ",
+      "url": "https://www.youtube.com/watch?v=PNFA6pmS464",
+      "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
+      "channelName": "Lisard Bellod",
+      "category": "Principal",
+      "views": 112,
+      "durationMinutes": 0.48333333333333334
+    },
+    {
+      "id": "vHe02i6H-3k",
+      "title": "Timelapse de la caja sorpresa de Mario Bros impreso en Bambulab",
+      "description": "Súper caja sorpresa Timelapse de la caja sorpresa de Mario Bros impreso en Bambulab que en un futuro podrá tener posavasos. Pla amarillo genérico normal",
+      "publishedAt": "2024-05-04T07:37:29Z",
+      "thumbnail": "https://i.ytimg.com/vi/vHe02i6H-3k/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgVyhKMA8=&rs=AOn4CLB2ZWhKl8ioNDCNMYACZqYhpJF1zw",
+      "url": "https://www.youtube.com/watch?v=vHe02i6H-3k",
+      "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
+      "channelName": "Lisard Bellod",
+      "category": "Principal",
+      "views": 264,
+      "durationMinutes": 0.38333333333333336
+    },
+    {
+      "id": "dhw8o0pkVSs",
+      "title": "13 horas en un minuto : Timelapse de muñequitos Pikachu con un corazón #pikachu #pokemon",
+      "description": "13 horas en un minuto : Timelapse de muñequitos Pikachu con un corazón #pikachu #pokemon hecho con la Bambulab a1 mini y 4 colores Pla genéricos. El resultado en nuestro Instagram",
+      "publishedAt": "2024-05-03T13:33:19Z",
+      "thumbnail": "https://i.ytimg.com/vi/dhw8o0pkVSs/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgVyhPMA8=&rs=AOn4CLCp4a3z-v1jaHOSfyjVAEkJ4MRPHQ",
+      "url": "https://www.youtube.com/watch?v=dhw8o0pkVSs",
+      "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
+      "channelName": "Lisard Bellod",
+      "category": "Principal",
+      "views": 357,
+      "durationMinutes": 1.1166666666666667
+    },
+    {
+      "id": "ZlImSq64Xy8",
+      "title": "Timelapse de la cabeza de C3PO impresa con la bambulab a1 Mini, casi 9 horas de impresión non Stop",
+      "description": "Timelapse de la cabeza de C3PO impresa con la bambulab a1 Mini, casi 9 horas de impresión non Stop, con un PLA oro satinado. Solo falta limpiar los soportes y ponerle un tiesto para decorar cualquier zona de la casa. Impresión recomendada.",
+      "publishedAt": "2024-05-02T16:44:49Z",
+      "thumbnail": "https://i.ytimg.com/vi/ZlImSq64Xy8/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4AdIGgALgA4oCDAgAEAEYZSBZKE0wDw==&rs=AOn4CLADDFp55axPs9-r2qkjroC_M8JJ_A",
+      "url": "https://www.youtube.com/watch?v=ZlImSq64Xy8",
+      "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
+      "channelName": "Lisard Bellod",
+      "category": "Principal",
+      "views": 320,
+      "durationMinutes": 0.6833333333333333
+    },
+    {
+      "id": "nIngDDbyqno",
+      "title": "Timelapse de la luz del stormtrooper de Star Wars, impreso con una Bambulab a1 Mini",
+      "description": "Timelapse de la luz del stormtrooper de Star Wars, impreso con una Bambulab a1 Mini filamento blanco y negro genérico. Luego le falta la tapa para dejarlo acabado, bueno y la tira led.",
+      "publishedAt": "2024-05-01T11:27:31Z",
+      "thumbnail": "https://i.ytimg.com/vi/nIngDDbyqno/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4AdIGgALgA4oCDAgAEAEYYiBiKGIwDw==&rs=AOn4CLBH2Yku-4ZqQlDeVMlLWrm9aHab1A",
+      "url": "https://www.youtube.com/watch?v=nIngDDbyqno",
+      "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
+      "channelName": "Lisard Bellod",
+      "category": "Principal",
+      "views": 191,
+      "durationMinutes": 0.6333333333333333
+    },
+    {
+      "id": "rvVfBpmJ4-s",
+      "title": "Timelapse de una fantástica luz led de la marca Coca Cola, toda impresa con una Bambulab a1 mini.",
+      "description": "Timelapse de la Primera impresión 3D para  una fantástica luz led de la marca Coca Cola, toda impresa con una Bambulab a1 mini. \nEn la que posteriormente haremos un vídeo de cómo instalamos la tira led alimentada con USB\n\n¡Síguenos que te va a gustar!",
+      "publishedAt": "2024-04-29T23:34:47Z",
+      "thumbnail": "https://i.ytimg.com/vi/rvVfBpmJ4-s/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgTyhHMA8=&rs=AOn4CLChmOJnrTVF4drgIw7g6JwNOxmZFw",
+      "url": "https://www.youtube.com/watch?v=rvVfBpmJ4-s",
+      "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
+      "channelName": "Lisard Bellod",
+      "category": "Principal",
+      "views": 656,
+      "durationMinutes": 0.5
+    },
+    {
+      "id": "v_FN8x2OxlI",
+      "title": "Fonstcaldes a vista de drone",
+      "description": "Fontscaldes, un pueblo con encanto en el Alt Camp\n\nEn este vídeo, grabado con un DJI Mini 4 Pro, podemos ver el pueblo de Fontscaldes, en la comarca del Alt Camp, en Cataluña.\n\nFontscaldes es un pueblo pequeño, con apenas 125 habitantes. Se encuentra al norte de Valls, al pie del Coll de Lilla.\n\nEl pueblo está rodeado de naturaleza, con bosques de pinos y encinas. \n\nFontscaldes es un pueblo con encanto, con calles estrechas y casas blancas. También cuenta con algunos monumentos históricos, como la iglesia de Sant Simó.\n\nEl vídeo comienza con una panorámica del pueblo, desde lo alto de la montaña. Podemos ver las casas blancas, las calles estrechas y los tejados rojos. \n\nA continuación, el vídeo se centra en algunos de los lugares más emblemáticos de Fontscaldes. Podemos ver la iglesia de Sant Simó.\n\nEl vídeo termina con una vista aérea del pueblo, con vistas al fondo del mar i Tarragonadesde el mar.\n\nSi te ha gustado este vídeo, suscríbete a mi canal para ver más vídeos de drones.\n\nY si tienes la oportunidad, no te pierdas el restaurante \"El Cervelló\". Aquí se come de lujo, con productos de primera calidad y una cocina tradicional catalana.",
+      "publishedAt": "2023-11-19T18:30:22Z",
+      "thumbnail": "https://i.ytimg.com/vi/v_FN8x2OxlI/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgWihOMA8=&rs=AOn4CLDPML3jIcPi4lnrLXcdNrHK2vnqlw",
+      "url": "https://www.youtube.com/watch?v=v_FN8x2OxlI",
+      "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
+      "channelName": "Lisard Bellod",
+      "category": "Principal",
+      "views": 72,
+      "durationMinutes": 0.7666666666666667
     }
   ]
 }
