@@ -112,9 +112,16 @@
 }
 
 .shop-service-card .shop-card-image {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
+  flex-shrink: 0;
   padding: 0;
   background: var(--bg-alt);
+}
+
+.shop-service-card .shop-card-image img {
+  display: block;
+  height: auto;
+  aspect-ratio: 4 / 3;
 }
 
 .shop-service-card .shop-buy-link {
@@ -124,6 +131,10 @@
 
 .shop-card-image:hover img {
   transform: scale(1.03);
+}
+
+.shop-service-card .shop-card-image:hover img {
+  transform: none;
 }
 
 .shop-image-unavailable {
