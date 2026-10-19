@@ -1,0 +1,26 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Lisard Bellod",
+    "documentationUrl": "https://lisardbellod.com/llms.txt"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:lisardbellod.com:skills:explorar-lisard-bellod",
+      "displayName": "Consultar artículos y herramientas de Lisard Bellod",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://lisardbellod.com/ai/explorar-lisard-bellod/SKILL.md",
+      "description": "Guía para buscar contenido público, consultar sus fuentes y utilizar la navegación WebMCP y las calculadoras del sitio.",
+      "capabilities": [
+        "SearchArticles",
+        "BrowseSite",
+        "UseCalculators"
+      ],
+      "representativeQueries": [
+        "Busca artículos de Lisard Bellod sobre coches eléctricos.",
+        "Encuentra las calculadoras de compra y ahorro energético de Lisard Bellod."
+      ],
+      "version": "1.0.0"
+    }
+  ]
+}

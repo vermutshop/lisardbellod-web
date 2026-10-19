@@ -73,7 +73,7 @@
   async function run(query) {
     try {
       const documents = await loadDocuments();
-      if (input.value.trim() !== query) return;
+      if (input.value.trim() !== query) return { error: "La consulta ha cambiado." };
       const terms = normalize(query).split(/\s+/).filter(Boolean);
       matches = documents
         .map((item) => {
@@ -91,34 +91,58 @@
         .map(({ item }) => item);
       visible = PAGE_SIZE;
       draw(terms, query);
+      return {
+        query,
+        total: matches.length,
+        results: matches.slice(0, PAGE_SIZE).map((item) => ({
+          title: item.t, url: new URL(item.u, location.origin).href, date: item.p, excerpt: item.d,
+        })),
+        moreAvailable: matches.length > PAGE_SIZE,
+      };
     } catch {
-      if (input.value.trim() !== query) return;
+      if (input.value.trim() !== query) return { error: "La consulta ha cambiado." };
       status.textContent = "No he podido cargar el buscador. Vuelve a intentarlo en unos momentos.";
       list.replaceChildren();
       more.hidden = true;
+      return { error: status.textContent };
     }
   }
 
   search.hidden = false;
-  input.addEventListener("input", () => {
+  function updateSearch(immediate = false) {
     clearTimeout(timer);
     const query = input.value.trim();
     if (!query) {
       defaultView.hidden = false;
       results.hidden = true;
-      return;
+      return Promise.resolve({ error: "Escribe al menos dos caracteres para buscar." });
     }
     defaultView.hidden = true;
     results.hidden = false;
     list.replaceChildren();
     more.hidden = true;
-    if (normalize(query).length < 2) {
-      status.textContent = "Escribe al menos dos caracteres para buscar.";
-      return;
+    if (normalize(query).length < 2 || query.length > 120) {
+      status.textContent = "Escribe entre 2 y 120 caracteres para buscar.";
+      return Promise.resolve({ error: status.textContent });
     }
     status.textContent = "Buscando en artículos y páginas…";
+    if (immediate) return run(query);
     timer = setTimeout(() => run(query), 180);
+  }
+  input.addEventListener("input", () => updateSearch());
+  search.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const response = updateSearch(true);
+    if (event.agentInvoked && typeof event.respondWith === "function") event.respondWith(response);
+    const url = new URL(location.href);
+    url.searchParams.set("q", input.value.trim());
+    history.replaceState(null, "", url);
   });
+  const initialQuery = new URLSearchParams(location.search).get("q");
+  if (initialQuery) {
+    input.value = initialQuery.slice(0, 120);
+    updateSearch(true);
+  }
   more.addEventListener("click", () => {
     visible += PAGE_SIZE;
     draw(normalize(input.value.trim()).split(/\s+/).filter(Boolean), input.value.trim());

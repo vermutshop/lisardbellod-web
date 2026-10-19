@@ -115,3 +115,13 @@ La única excepción es `/api/telegram-metrics`, que mantiene su dirección téc
 anterior para no interrumpir el webhook privado de Telegram. No es una página
 indexable ni aparece en el sitemap. No activar un redirect global de `www` sin
 actualizar antes el webhook autenticado de Telegram.
+
+## Acceso para agentes de IA
+
+- `llms.txt` resume el contenido público y enlaza las fuentes principales. No cambia `robots.txt` ni las condiciones de uso.
+- `/.well-known/ai-catalog.json` publica la guía `ai/explorar-lisard-bellod/SKILL.md` en el formato ARD `specVersion: 1.0` validado por Lighthouse. La guía es un recurso Markdown, no un servidor MCP remoto.
+- `scripts/webmcp.js` registra en la portada las herramientas `list_site_sections`, `open_site_section` y `search_blog` cuando el navegador ofrece `document.modelContext` o la interfaz anterior `navigator.modelContext`. No carga catálogos de datos al registrar las herramientas.
+- El buscador `/blog/?q=...` conserva los resultados visibles y su formulario expone `search_blog_articles` mediante la API declarativa. El índice solo se descarga al buscar y se reutiliza en búsquedas siguientes.
+- Vercel publica cabeceras `Link` para descubrir la guía y el catálogo desde cualquier página. WebMCP es experimental: los enlaces y el buscador siguen funcionando en navegadores sin esta API. No requiere un SDK externo.
+
+Al cambiar secciones o capacidades, actualizar el registro WebMCP, `llms.txt` y la guía pública. Las comprobaciones de WebMCP requieren un navegador compatible; un «No aplicable» en cobertura de formularios es normal en la portada, que no tiene formularios.

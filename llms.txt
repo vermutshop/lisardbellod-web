@@ -1,0 +1,29 @@
+# Lisard Bellod
+
+> Web personal de Lisard Bellod: experiencias con coches eléctricos, emprendimiento, tecnología y vida local; artículos, vídeos y herramientas prácticas en español y catalán.
+
+El dominio canónico es https://lisardbellod.com. El blog conserva publicaciones históricas: las experiencias, precios y condiciones corresponden a la fecha de cada artículo. Consulta el texto original y su fecha antes de presentar datos como actuales. Las calculadoras ofrecen estimaciones con los datos introducidos. La Shop identifica los enlaces de afiliado en cada ficha.
+
+## Contenidos
+
+- [Inicio](https://lisardbellod.com/): Presentación y últimos vídeos por canal.
+- [Blog y buscador](https://lisardbellod.com/blog/): Artículos y archivo histórico. Se puede buscar con el parámetro q, por ejemplo /blog/?q=coche%20electrico.
+- [Videoteca](https://lisardbellod.com/videos.html): Vídeos con filtros por tema y búsqueda.
+- [Herramientas](https://lisardbellod.com/herramientas.html): Calculadoras y guías.
+- [Calculadora de compra de coche](https://lisardbellod.com/calculadora-compra-coche.html): Coste de compra al contado o financiada.
+- [Calculadora eléctrico frente a combustible](https://lisardbellod.com/calculadora-ahorro-coche-electrico.html): Comparación del gasto energético según kilómetros, consumos y tarifas.
+- [Shop](https://lisardbellod.com/shop.html): Productos y servicios recomendados; comprobar el precio en el comercio de destino.
+- [Proyectos](https://lisardbellod.com/proyectos.html): Proyectos de Lisard.
+- [Contacto](https://lisardbellod.com/contacto.html): Canales públicos de contacto.
+
+## Acceso para agentes
+
+- [Guía de consulta](https://lisardbellod.com/ai/explorar-lisard-bellod/SKILL.md): Cómo buscar contenido, consultar fuentes y utilizar las herramientas del sitio.
+- [Catálogo de recursos](https://lisardbellod.com/.well-known/ai-catalog.json): Manifiesto de descubrimiento de la guía para agentes.
+- [Índice del blog](https://lisardbellod.com/blog/search-index.json): Datos públicos del buscador; descargar solo si se necesita buscar en el archivo completo.
+- [Mapa del sitio](https://lisardbellod.com/sitemap.xml): URLs canónicas de las páginas publicadas.
+
+## Optional
+
+- [Newsletter](https://news.lisard.es): Publicaciones y suscripción en una web externa.
+- [Robots](https://lisardbellod.com/robots.txt): Directivas de rastreo. Este llms.txt es una guía de contenidos, no una licencia ni una política de entrenamiento.
