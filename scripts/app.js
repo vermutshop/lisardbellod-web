@@ -630,7 +630,7 @@ async function init() {
   if (!document.querySelector('[data-stat]') && page !== "home" && page !== "videos") return;
   const [{ mergeSiteMetrics }, dataResponse, socialMetrics, overrides] = await Promise.all([
     import("./site-metrics.mjs"),
-    fetch("/data/data.json", { cache: "no-store" }),
+    fetch(page === "home" ? "/data/home.json" : "/data/data.json", { cache: "no-store" }),
     optionalJson("/data/social-metrics.json"),
     optionalJson("/data/metric-overrides.json"),
   ]);

@@ -82,8 +82,17 @@ function dependencies(file, html, canonical) {
     const asset = localAsset(match[1], canonical);
     if (asset) result.push(asset);
   }
+  for (const match of html.matchAll(/<img\b[^>]*\bsrcset=["']([^"']+)["']/gi)) {
+    for (const candidate of match[1].split(',')) {
+      const asset = localAsset(candidate.trim().split(/\s+/)[0], canonical);
+      if (asset) result.push(asset);
+    }
+  }
   if (result.includes('scripts/app.js')) result.push('scripts/site-metrics.mjs');
-  if (['index.html', 'videos.html', 'contacto.html'].includes(file)) {
+  if (file === 'index.html') {
+    result.push('data/home.json', 'data/social-metrics.json', 'data/metric-overrides.json');
+  }
+  if (['videos.html', 'contacto.html'].includes(file)) {
     result.push('data/data.json', 'data/social-metrics.json', 'data/metric-overrides.json');
   }
   if (file === 'shop.html') result.push('data/shop.json');

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "sync:youtube": "node --env-file=.env.local ./scripts/fetch-youtube.mjs",
-    "build": "node ./scripts/build-sitemaps.mjs",
+    "build": "node ./scripts/build-home-styles.mjs && node ./scripts/build-home-data.mjs && node ./scripts/build-sitemaps.mjs",
     "serve": "npx serve .",
     "test": "node --test tests/*.test.mjs"
   },
