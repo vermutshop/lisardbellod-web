@@ -18,7 +18,10 @@ for (const name of ["data", "home", "shop", "social-metrics", "metric-overrides"
 }
 await mkdir(`${destination}/public/scripts`);
 for (const name of await readdir("scripts")) {
-  if (name.endsWith(".js")) await cp(`scripts/${name}`, `${destination}/public/scripts/${name}`);
+  // app.js imports this module in the browser on the home and video pages.
+  if (name.endsWith(".js") || name === "site-metrics.mjs") {
+    await cp(`scripts/${name}`, `${destination}/public/scripts/${name}`);
+  }
 }
 for (const directory of ["api", "deploy"]) {
   await cp(directory, `${destination}/${directory}`, { recursive: true });
