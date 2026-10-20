@@ -21,13 +21,13 @@ Web estática orientada a autoridad y rendimiento, alimentada por un único arch
 1. Cambia los IDs de `CHANNELS` en `scripts/fetch-youtube.mjs`.
 2. Ajusta los seguidores de Instagram y TikTok en `SOCIALS`.
 3. Crea un archivo `.env.local` a partir de `.env.local.example` y guarda ahí tu clave de YouTube Data API v3.
-4. Publica el repositorio en Vercel o Netlify como sitio estático.
+4. Publica los cambios en `main`: GitHub Actions los despliega en el servidor. Consulta `deploy/README.md`.
 
 ## Flujo recomendado
 
 1. GitHub Actions ejecuta `node ./scripts/fetch-youtube.mjs` cada día.
 2. El script actualiza `data/data.json` y `npm run build` regenera el resumen de la portada, sus estilos y el sitemap.
-3. El commit automático dispara el despliegue en Vercel o Netlify.
+3. GitHub Actions construye y publica en el servidor `54.36.182.119`, también después de las actualizaciones automáticas.
 4. La web servida sigue siendo estática, rápida y simple de mantener.
 
 ## Notas
@@ -46,7 +46,7 @@ Es la fuente actual para el buscador y el sitemap; no reconstruyas producción
 desde el inventario antiguo de WordPress porque excluiría las entradas nuevas.
 `python3 scripts/build-blog-search-index.py` actualiza el buscador y
 `npm run build` genera un único `sitemap.xml` para toda la web y
-`data/sitemap-state.json` desde las páginas indexables. Vercel ejecuta el build
+`data/sitemap-state.json` desde las páginas indexables. GitHub Actions ejecuta el build
 en cada despliegue y `.github/workflows/sync-sitemaps.yml` versiona estos
 archivos y el índice de búsqueda tras cada publicación.
 
@@ -125,3 +125,11 @@ actualizar antes el webhook autenticado de Telegram.
 - Vercel publica cabeceras `Link` para descubrir la guía y el catálogo desde cualquier página. WebMCP es experimental: los enlaces y el buscador siguen funcionando en navegadores sin esta API. No requiere un SDK externo.
 
 Al cambiar secciones o capacidades, actualizar el registro WebMCP, `llms.txt` y la guía pública. Las comprobaciones de WebMCP requieren un navegador compatible; un «No aplicable» en cobertura de formularios es normal en la portada, que no tiene formularios.
+
+## Migración al servidor propio
+
+La publicación automática en Apache y el contador están preparados en el servidor
+`54.36.182.119`. El cambio de DNS lo realiza Lisard después de las comprobaciones.
+La ruta del bot de Telegram mantiene temporalmente un puente HTTPS a Vercel porque
+sus cuatro variables sensibles no son exportables. No eliminar Vercel hasta
+completar ese paso. Configuración, recuperación y estado en [`deploy/README.md`](deploy/README.md).

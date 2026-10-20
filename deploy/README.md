@@ -21,6 +21,16 @@ del directorio servido por Apache.
 - `/etc/apache2/lisardbellod-site.inc`: reglas exclusivas de este dominio.
 - `/home/lisardbellod/public_html/.well-known/acme-challenge/`: validación HTTPS.
 
+Certificado inicial de Let's Encrypt emitido el 20 de octubre de 2026, válido
+hasta el 18 de enero de 2027, para la raíz y `www`. Apache utiliza los archivos
+de `/etc/letsencrypt/live/lisardbellod.com/`. La unidad
+`lisardbellod-certificate.timer` comprueba diariamente su renovación mediante
+HTTP y recarga Apache únicamente al renovarlo. Tras cambiar el DNS, comprobar
+la renovación con `sudo certbot renew --cert-name lisardbellod.com --dry-run`.
+La prueba de renovación necesita que ambos nombres apunten al nuevo servidor.
+No habilitar el temporizador global de Certbot: los demás dominios tienen su
+propia gestión.
+
 La clave de despliegue y la clave pública verificada del servidor se guardan
 como secretos `LISARDBELLOD_DEPLOY_KEY` y `LISARDBELLOD_KNOWN_HOSTS` en GitHub.
 No guardar credenciales en este repositorio. El usuario de publicación solo
@@ -52,3 +62,13 @@ mismo servidor (A o CNAME a la raíz). Revisar los registros AAAA existentes
 para evitar que IPv6 continúe enviando visitantes a otro origen. Conservar
 correo y los demás subdominios. La configuración DNS no se modifica desde
 este workflow.
+
+## Verificación previa al cambio DNS
+
+El 20 de octubre de 2026 pasaron las 31 pruebas del proyecto y se compararon
+por HTTPS 94 páginas y recursos del servidor con sus archivos de publicación:
+contenido idéntico, sitemap con 2.015 URLs y buscador con 1.749 artículos.
+Se verificaron certificado, redirecciones, respuestas 404 para archivos
+privados, contador existente y rechazo de peticiones sin el secreto del bot.
+No se enviaron mensajes ni se incrementaron contadores durante las pruebas.
+Los despliegues de GitHub Actions terminaron correctamente.
