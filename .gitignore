@@ -4,3 +4,6 @@ blog-media/
 blog-draft/
 blog-preview/
 data/blog/
+.vercel
+.env*
+dist-server/

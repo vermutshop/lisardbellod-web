@@ -1,0 +1,51 @@
+name: Deploy website to server
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Update YouTube Data", "Sync blog search and sitemaps"]
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-lisardbellod-server
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - name: Build and check website
+        run: |
+          npm test
+          python3 scripts/build-blog-search-index.py
+          npm run build
+          node deploy/package.mjs
+          git rev-parse HEAD > dist-server/public/deploy-commit.txt
+          tar -czf "$RUNNER_TEMP/website.tar.gz" -C dist-server .
+      - name: Upload and activate
+        env:
+          DEPLOY_KEY: ${{ secrets.LISARDBELLOD_DEPLOY_KEY }}
+          KNOWN_HOSTS: ${{ secrets.LISARDBELLOD_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/deploy_key
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/deploy_key ~/.ssh/known_hosts
+          sha=$(git rev-parse HEAD)
+          options=(-i ~/.ssh/deploy_key -o BatchMode=yes -o StrictHostKeyChecking=yes)
+          scp -P 42422 "${options[@]}" "$RUNNER_TEMP/website.tar.gz" "lisardbellod@54.36.182.119:apps/incoming/$sha.tar.gz"
+          ssh -p 42422 "${options[@]}" lisardbellod@54.36.182.119 "/home/lisardbellod/apps/activate.sh $sha"
+          rm ~/.ssh/deploy_key

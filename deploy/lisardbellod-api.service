@@ -1,0 +1,23 @@
+[Unit]
+Description=Lisard Bellod API
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=lisardbellod
+Group=lisardbellod
+WorkingDirectory=/home/lisardbellod/apps/current
+Environment=NODE_ENV=production
+Environment=PORT=3002
+EnvironmentFile=/home/lisardbellod/apps/shared/api.env
+ExecStart=/usr/bin/node deploy/api-server.mjs
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target
