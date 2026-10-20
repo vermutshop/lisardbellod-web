@@ -22,8 +22,8 @@ test('proxy forwards cache/range and content headers without sending credentials
  assert.equal(o.headers.host,'lisardbellod.com');assert.equal(o.headers.cookie,undefined);assert.equal(o.headers.authorization,undefined);assert.equal(o.headers['x-telegram-bot-api-secret-token'],undefined);
 });
 test('routing leaves Telegram local and sends article and static files through the bridge',()=>{
- const c=JSON.parse(readFileSync('vercel.json','utf8'));const rule=c.rewrites[0];
- const match=new RegExp('^/'+rule.source.slice('/:path('.length,-1)+'$');
+ const c=JSON.parse(readFileSync('vercel.json','utf8'));const rule=c.routes[0];
+ const match=new RegExp('^'+rule.src+'$');
  for(const path of ['/','/blog/canada-osoyoos-spotted-lake/','/sitemap.xml','/api/calculator-counter','/blog-assets/a.webp']) assert.ok(match.test(path));
  for(const path of ['/api/telegram-metrics','/api/telegram-metrics/','/api/server-proxy']) assert.ok(!match.test(path));
 });

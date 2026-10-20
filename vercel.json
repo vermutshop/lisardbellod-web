@@ -92,15 +92,15 @@
       ]
     }
   ],
-  "rewrites": [
-    {
-      "source": "/:path((?!api/telegram-metrics/?$|api/server-proxy/?$).*)",
-      "destination": "/api/server-proxy?__origin_path=:path*"
-    }
-  ],
   "functions": {
     "api/server-proxy.js": {
       "maxDuration": 30
     }
-  }
+  },
+  "routes": [
+    {
+      "src": "/((?!api/telegram-metrics/?$|api/server-proxy/?$).*)",
+      "dest": "/api/server-proxy?__origin_path=$1"
+    }
+  ]
 }

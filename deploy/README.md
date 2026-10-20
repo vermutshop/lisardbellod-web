@@ -75,7 +75,7 @@ Los despliegues de GitHub Actions terminaron correctamente.
 
 ## Puente temporal mientras el DNS apunta a Vercel
 
-`api/server-proxy.js` recibe las rutas públicas mediante el rewrite de
+`api/server-proxy.js` recibe las rutas públicas mediante una ruta anterior a los archivos estáticos de
 `vercel.json` y las solicita por HTTPS a `54.36.182.119`, con SNI y Host
 `lisardbellod.com` y validación normal del certificado. No consulta el DNS
 público del dominio, por lo que no vuelve al propio Vercel. La respuesta
