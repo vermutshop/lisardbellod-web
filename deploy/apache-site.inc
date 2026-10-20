@@ -30,16 +30,17 @@ RedirectMatch 308 ^/blog/paginas(?:/.*)?$ /blog/
 
 ProxyPreserveHost Off
 ProxyTimeout 30
-ProxyPassMatch "^/api/calculator-counter/?$" "http://127.0.0.1:3002/api/calculator-counter"
+ProxyPass /api/calculator-counter http://127.0.0.1:3002/api/calculator-counter
 ProxyPassReverse /api/calculator-counter http://127.0.0.1:3002/api/calculator-counter
 
 # Transitional bridge: four Telegram secrets are not exportable from Vercel.
 # Remove this proxy only after configuring and checking the local webhook.
 SSLProxyEngine On
 SSLProxyVerify require
+SSLProxyVerifyDepth 5
 SSLProxyCheckPeerName On
 SSLProxyCACertificateFile /etc/ssl/certs/ca-certificates.crt
-ProxyPassMatch "^/api/telegram-metrics/?$" "https://lisardbellod-web.vercel.app/api/telegram-metrics"
+ProxyPass /api/telegram-metrics https://lisardbellod-web.vercel.app/api/telegram-metrics
 ProxyPassReverse /api/telegram-metrics https://lisardbellod-web.vercel.app/api/telegram-metrics
 <Location /api/>
     LimitRequestBody 65536
