@@ -91,3 +91,6 @@
 @media (max-width: 620px) { .blog-legacy-feature { grid-template-columns: 1fr; } .blog-legacy-feature > img { min-height: 0; height: auto; aspect-ratio: 16 / 9; } }
 @media (max-width: 900px) { .blog-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (max-width: 620px) { .blog-grid, .blog-search-list, .blog-article-navigation { grid-template-columns: 1fr; } .blog-preview-hero, .blog-article-shell { padding-top: 2.5rem; } .blog-shop-actions { flex-direction: column; } .blog-footer-inner { flex-direction: column; align-items: stretch; } }
+
+.blog-footer-credits { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+.blog-footer-credits p { margin: 0; line-height: 1.7; }

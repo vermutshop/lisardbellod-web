@@ -1,6 +1,6 @@
 """Shared article navigation and footer for the whole migrated blog.
 
-Edit social links or footer copy here, then rebuild the archive to update every page.
+Keep this template and the versioned blog HTML footers in sync; do not rebuild the historical archive for routine edits.
 """
 
 import html
@@ -18,6 +18,10 @@ def footer() -> str:
           <a class="button primary" href="{YOUTUBE_URL}" target="_blank" rel="noopener noreferrer">YouTube</a>
           <a class="button secondary" href="{INSTAGRAM_URL}" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
+      </div>
+      <div class="container blog-footer-credits">
+        <p>by <a class="inline-link" href="https://www.youtube.com/@LisardBellod" target="_blank" rel="noopener noreferrer">Lisard</a>
+          &amp; powered by <a class="inline-link" href="https://guiaev.com" target="_blank" rel="noopener noreferrer">Coche eléctrico</a></p>
       </div>
     </footer>"""
 
