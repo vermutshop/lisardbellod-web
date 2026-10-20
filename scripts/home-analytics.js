@@ -1,4 +1,5 @@
-// Keep the home page's initial render ahead of third-party analytics work.
+// Shared GA4 and Metricool loader for the homepage, blog and error page.
+// Keep the initial render ahead of third-party analytics work.
 (() => {
   if (window.__lisardHomeAnalyticsScheduled) return;
   window.__lisardHomeAnalyticsScheduled = true;
