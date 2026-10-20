@@ -72,3 +72,28 @@ Se verificaron certificado, redirecciones, respuestas 404 para archivos
 privados, contador existente y rechazo de peticiones sin el secreto del bot.
 No se enviaron mensajes ni se incrementaron contadores durante las pruebas.
 Los despliegues de GitHub Actions terminaron correctamente.
+
+## Puente temporal mientras el DNS apunta a Vercel
+
+`api/server-proxy.js` recibe las rutas públicas mediante el rewrite de
+`vercel.json` y las solicita por HTTPS a `54.36.182.119`, con SNI y Host
+`lisardbellod.com` y validación normal del certificado. No consulta el DNS
+público del dominio, por lo que no vuelve al propio Vercel. La respuesta
+lleva `X-Lisard-Origin: server` y `Cache-Control: no-store`: los cambios de
+la versión activa en Apache se sirven sin depender del despliegue estático
+de Vercel.
+
+La ruta de Telegram queda excluida: conserva su función actual hasta que
+se rellenen y comprueben sus credenciales en el servidor. El contador sí
+se consulta en el servidor. El puente no reenvía cookies ni autorización
+a las páginas públicas y solo permite escrituras en el contador.
+
+Es una transición, no la retirada de Vercel. Sus límites de funciones
+siguen aplicándose (incluido el máximo de respuesta de 4,5 MB). Los recursos
+públicos actuales están por debajo de ese límite. La ruta `/.well-known`
+está reservada por Vercel, de modo que la renovación HTTP del certificado
+del servidor requiere completar el cambio DNS descrito arriba.
+
+Al apuntar raíz y `www` al servidor, el tráfico ya no pasa por este puente.
+Comprobar HTTPS y renovar el certificado; retirar después la configuración
+del puente y, cuando Telegram esté trasladado, la dependencia restante.

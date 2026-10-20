@@ -91,5 +91,16 @@
         }
       ]
     }
-  ]
+  ],
+  "rewrites": [
+    {
+      "source": "/:path((?!api/telegram-metrics/?$|api/server-proxy/?$).*)",
+      "destination": "/api/server-proxy?__origin_path=:path*"
+    }
+  ],
+  "functions": {
+    "api/server-proxy.js": {
+      "maxDuration": 30
+    }
+  }
 }
