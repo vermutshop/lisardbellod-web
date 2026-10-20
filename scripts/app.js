@@ -643,11 +643,16 @@ async function init() {
 }
 
 init().catch(() => {
-  document.querySelectorAll('[data-stat]').forEach((element) => { element.textContent = "—"; });
+  document.querySelectorAll('[data-stat]').forEach((element) => {
+    if (/^(?:\s*|\.{3}|…|—)$/.test(element.textContent.trim())) element.textContent = "—";
+  });
+  const hasSavedMetrics = /\d/.test(document.querySelector('[data-stat="totalAudience"]')?.textContent || "");
   const target = document.querySelector('[data-metrics-sync]') || document.querySelector('main');
   if (target?.hasAttribute('data-metrics-sync')) {
-    target.textContent = "Las cifras no están disponibles ahora. Puedes seguir explorando la web.";
-  } else if (target) {
+    target.textContent = hasSavedMetrics
+      ? "Mostrando las últimas cifras guardadas. No se ha podido comprobar si hay datos nuevos."
+      : "Las cifras no están disponibles ahora. Puedes seguir explorando la web.";
+  } else if (target && !hasSavedMetrics) {
     target.insertAdjacentHTML("beforeend", '<div class="container"><p class="empty-state">No se han podido cargar los datos. Prueba a recargar la página.</p></div>');
   }
 });
