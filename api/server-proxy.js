@@ -33,6 +33,13 @@ export default async function handler(req, res) {
   let options;
   try { options = originRequest(req); }
   catch { res.statusCode = 400; res.end('Solicitud no válida'); return; }
+  if (req.headers.host?.toLowerCase() === 'www.lisardbellod.com') {
+    res.statusCode = 308;
+    res.setHeader('Location', 'https://lisardbellod.com' + options.path);
+    res.setHeader('Cache-Control', 'no-store');
+    res.end();
+    return;
+  }
   // Vercel has already parsed JSON bodies. Raw Node requests are streamed below.
   let body;
   if (req.body !== undefined && !['GET', 'HEAD'].includes(options.method)) {

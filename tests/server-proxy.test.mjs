@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { originRequest } from '../api/server-proxy.js';
+import handler, { originRequest } from '../api/server-proxy.js';
 import { readFileSync } from 'node:fs';
 const req = (path, extra = {}) => ({url:'/?q=Canad%C3%A1&__origin_path=ignored',method:'GET',headers:{},query:{__origin_path:path},...extra});
 test('proxy pins the server IP while validating the domain TLS certificate and preserving path/query',()=>{
@@ -26,4 +26,10 @@ test('routing leaves Telegram local and sends article and static files through t
  const match=new RegExp('^'+rule.src+'$');
  for(const path of ['/','/blog/canada-osoyoos-spotted-lake/','/sitemap.xml','/api/calculator-counter','/blog-assets/a.webp']) assert.ok(match.test(path));
  for(const path of ['/api/telegram-metrics','/api/telegram-metrics/','/api/server-proxy']) assert.ok(!match.test(path));
+});
+
+test('www redirects to the canonical domain preserving the full path and query',async()=>{
+ const headers={};let ended=false;const res={setHeader:(k,v)=>{headers[k]=v},end:()=>{ended=true}};
+ await handler(req('blog/',{headers:{host:'www.lisardbellod.com'}}),res);
+ assert.equal(res.statusCode,308);assert.equal(headers.Location,'https://lisardbellod.com/blog/?q=Canad%C3%A1');assert.ok(ended);
 });
