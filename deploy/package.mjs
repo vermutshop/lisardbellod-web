@@ -1,4 +1,4 @@
-import { cp, mkdir, readdir, writeFile } from "node:fs/promises";
+import { cp, mkdir, readdir, writeFile, rename, lstat } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const destination = resolve(process.argv[2] || "dist-server");
@@ -11,6 +11,24 @@ for (const entry of await readdir(".")) {
 }
 for (const directory of ["blog", "blog-assets", "styles", "image", "downloads", "ai", ".well-known"]) {
   await cp(directory, `${destination}/public/${directory}`, { recursive: true });
+}
+// Historical WordPress slugs are stored escaped in Git. Apache decodes URLs
+// before looking up files, so the deployed directory names must be decoded.
+// Keep source names and canonical/public URLs unchanged.
+for (const entry of await readdir(`${destination}/public/blog`, { withFileTypes: true })) {
+  if (!entry.isDirectory() || !entry.name.includes("%")) continue;
+  const decoded = decodeURIComponent(entry.name);
+  if (decoded === entry.name) continue;
+  if (/[\/\\\x00]/.test(decoded) || decoded === "." || decoded === "..") {
+    throw new Error(`Unsafe blog directory: ${entry.name}`);
+  }
+  const target = `${destination}/public/blog/${decoded}`;
+  const existing = await lstat(target).catch(error => {
+    if (error.code === "ENOENT") return null;
+    throw error;
+  });
+  if (existing) throw new Error(`Blog directory collision: ${entry.name}`);
+  await rename(`${destination}/public/blog/${entry.name}`, target);
 }
 await mkdir(`${destination}/public/data`);
 for (const name of ["data", "home", "shop", "social-metrics", "metric-overrides", "youtube-normal-videos"]) {

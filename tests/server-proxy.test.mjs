@@ -16,6 +16,13 @@ test('proxy rejects Telegram loops, path traversal, ambiguous paths and writes o
  assert.throws(()=>originRequest(req('blog/',{method:'POST'})));
  assert.equal(originRequest(req('api/calculator-counter',{method:'POST'})).method,'POST');
 });
+test('proxy preserves historical Unicode slugs whether the rewrite parameter is decoded or escaped',()=>{
+ for (const path of ['blog/pepitu-caido-10-horas…/','blog/pepitu-caido-10-horas%e2%80%a6/']) {
+  assert.equal(originRequest(req(path)).path, '/blog/pepitu-caido-10-horas%E2%80%A6/?q=Canad%C3%A1');
+ }
+ assert.equal(originRequest(req('blog/¿por-que-quiero-la-ps3/')).path, '/blog/%C2%BFpor-que-quiero-la-ps3/?q=Canad%C3%A1');
+ assert.equal(originRequest(req('image/a b#c?d.png')).path, '/image/a%20b%23c%3Fd.png?q=Canad%C3%A1');
+});
 test('proxy forwards cache/range and content headers without sending credentials or attacker Host',()=>{
  const o=originRequest(req('image/a.webp',{headers:{host:'evil.example',authorization:'private',cookie:'private',range:'bytes=0-99','if-none-match':'"abc"','x-telegram-bot-api-secret-token':'private'}}));
  assert.equal(o.headers.range,'bytes=0-99');assert.equal(o.headers['if-none-match'],'"abc"');

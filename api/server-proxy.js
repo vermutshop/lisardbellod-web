@@ -23,10 +23,14 @@ export function originRequest(req) {
       !(decoded === '/api/calculator-counter' && ['POST', 'OPTIONS'].includes(method))) throw new Error('Invalid method');
   url.searchParams.delete('__origin_path');
   const query = url.searchParams.toString();
+  // Rewrite parameters may arrive decoded (e.g. WordPress slugs with ¿ or …).
+  // Node's HTTP client needs an escaped path; encode each path segment so that
+  // literal query/fragment characters cannot change the upstream URL.
+  const encodedPath = decoded.split('/').map(encodeURIComponent).join('/');
   const headers = { host: ORIGIN_HOST };
   for (const key of REQUEST_HEADERS) if (req.headers[key]) headers[key] = req.headers[key];
   return { hostname: ORIGIN_IP, servername: ORIGIN_HOST, port: 443, method,
-    path: path + (query ? '?' + query : ''), headers, timeout: 20000 };
+    path: encodedPath + (query ? '?' + query : ''), headers, timeout: 20000 };
 }
 
 export default async function handler(req, res) {

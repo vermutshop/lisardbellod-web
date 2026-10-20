@@ -32,6 +32,13 @@ test('server package includes the browser module dependency graph', async () => 
     const merged = mergeSiteMetrics(catalog, null, null);
     assert(merged.videos.length > 0, 'Packaged video catalog must remain available to the browser');
     await assert.rejects(access(join(publicScripts, 'fetch-youtube.mjs')));
+    // Match Apache's decoded filesystem lookup for every historical slug.
+    for (const entry of await readdir('blog', { withFileTypes: true })) {
+      if (!entry.isDirectory() || !entry.name.includes('%')) continue;
+      const source = await readFile(join('blog', entry.name, 'index.html'), 'utf8');
+      const published = await readFile(join(output, 'public/blog', decodeURIComponent(entry.name), 'index.html'), 'utf8');
+      assert.equal(published, source, `Historical article lost: ${entry.name}`);
+    }
   } finally {
     await rm(temp, { recursive: true, force: true });
   }
