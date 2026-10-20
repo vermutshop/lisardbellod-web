@@ -79,7 +79,7 @@ Las fichas no muestran precios. Los enlaces de afiliado se identifican en la fic
 Nombre: **countlisard**. Usuario: [@counterlisardbot](https://t.me/counterlisardbot).
 Abre ese chat y envía `/actualizar` para mostrar el menú de métricas.
 
-El bot permite cambiar seguidores de Instagram y TikTok, horas de YouTube, views del último año, suscriptores y views totales de cada canal. Siempre muestra el valor actual y pide confirmación antes de publicar el cambio. Telegram avisa a Vercel en el momento, y Vercel actualiza el repositorio de GitHub.
+El bot permite cambiar seguidores de Instagram y TikTok, horas de YouTube, views del último año, suscriptores y views totales de cada canal. Siempre muestra el valor actual y pide confirmación antes de publicar el cambio. Telegram avisa al servidor en el momento, y el bot actualiza el repositorio de GitHub. GitHub Actions publica el cambio en la web.
 
 Las correcciones se guardan en `data/metric-overrides.json`. Los datos públicos de cada canal vuelven a tomar el valor de la API tras la siguiente sincronización; las visualizaciones anuales de Studio siguen siendo manuales.
 
@@ -87,14 +87,14 @@ Las correcciones se guardan en `data/metric-overrides.json`. Los datos públicos
 
 1. Crea un bot privado desde `@BotFather` y guarda su token.
 2. Obtén el ID numérico de tu chat de Telegram.
-3. En las variables de entorno de Vercel añade las siguientes variables, solo para producción:
+3. En `/home/lisardbellod/apps/shared/telegram.env` añade las siguientes variables (archivo privado, permisos 600):
    - `TELEGRAM_BOT_TOKEN`
    - `TELEGRAM_WEBHOOK_SECRET` con una cadena larga y aleatoria
    - `TELEGRAM_ALLOWED_CHAT_ID`
    - `TELEGRAM_GITHUB_TOKEN`, un fine-grained token de GitHub con permiso `Contents: Read and write` exclusivamente para `vermutshop/lisardbellod-web`
    - `TELEGRAM_GITHUB_REPOSITORY=vermutshop/lisardbellod-web`
 4. Mantén las variables de KV ya usadas por `api/calculator-counter.js`; el bot las reutiliza para guardar la conversación durante 30 minutos.
-5. Tras desplegar, configura el webhook de Telegram apuntando a `https://www.lisardbellod.com/api/telegram-metrics` y usando el mismo `TELEGRAM_WEBHOOK_SECRET`.
+5. Reinicia `lisardbellod-api.service` y ejecuta `deploy/register-telegram.mjs` con ese archivo de entorno, según `deploy/README.md`.
 6. Abre el bot y escribe `/actualizar`.
 
 El endpoint ignora cualquier mensaje cuyo chat no coincida con `TELEGRAM_ALLOWED_CHAT_ID`.
@@ -130,6 +130,6 @@ Al cambiar secciones o capacidades, actualizar el registro WebMCP, `llms.txt` y 
 
 La publicación automática en Apache y el contador están preparados en el servidor
 `54.36.182.119`. El cambio de DNS lo realiza Lisard después de las comprobaciones.
-La ruta del bot de Telegram mantiene temporalmente un puente HTTPS a Vercel porque
-sus cuatro variables sensibles no son exportables. No eliminar Vercel hasta
-completar ese paso. Configuración, recuperación y estado en [`deploy/README.md`](deploy/README.md).
+El bot de Telegram también se ejecuta en el servidor, con un webhook dirigido a
+su IP fija. Vercel sigue siendo el puente de la web mientras el DNS apunte allí.
+Configuración, recuperación y estado en [`deploy/README.md`](deploy/README.md).

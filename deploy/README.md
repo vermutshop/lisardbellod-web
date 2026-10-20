@@ -41,19 +41,29 @@ de dar el despliegue por bueno. Si falla la comprobación, restaura la versión
 anterior. Para una recuperación manual, cambiar `current` a una release
 anterior y reiniciar únicamente `lisardbellod-api.service`.
 
-## Telegram durante la transición
+## Telegram en el servidor
 
-La ruta `/api/telegram-metrics` se reenvía mediante HTTPS verificado a
-`lisardbellod-web.vercel.app`, también desde `www`. El contador se ejecuta
-en el nuevo servidor y conserva los datos existentes de Redis.
+El bot `@counterlisardbot` se ejecuta en la API local. Sus credenciales están en
+`/home/lisardbellod/apps/shared/telegram.env`, propiedad de `lisardbellod` y modo
+600. El servicio carga este archivo además de `api.env`, que conserva Redis.
+Nunca guardar estos archivos en Git ni dentro del directorio público.
 
-Vercel no permite exportar los valores sensibles `TELEGRAM_BOT_TOKEN`,
-`TELEGRAM_ALLOWED_CHAT_ID`, `TELEGRAM_GITHUB_TOKEN` y
-`TELEGRAM_WEBHOOK_SECRET`. Para retirar Vercel por completo, configurar esos
-valores en `apps/shared/api.env`, cambiar el proxy de Telegram a
-`http://127.0.0.1:3002/api/telegram-metrics`, reiniciar el servicio y comprobar
-una actualización autorizada del bot. No eliminar el proyecto de Vercel
-mientras esta ruta siga dependiendo de él.
+Después de cambiar las credenciales, reiniciar y registrar el webhook:
+
+```sh
+sudo systemctl restart lisardbellod-api.service
+sudo -u lisardbellod node --env-file=/home/lisardbellod/apps/shared/telegram.env /home/lisardbellod/apps/current/deploy/register-telegram.mjs
+```
+
+El registro comprueba la identidad del bot, el chat privado y la lectura del
+repositorio antes de cambiar el webhook. El token de GitHub necesita además
+`Contents: Read and write` para guardar cambios confirmados de métricas.
+El webhook usa `https://lisardbellod.com/api/telegram-metrics` y fija la IP
+`54.36.182.119`, por lo que Telegram llega directamente al servidor incluso
+antes del cambio DNS. Conserva las actualizaciones pendientes.
+
+Una copia local de configuración no se sincroniza automáticamente: hay que
+actualizar el archivo privado del servidor antes de ejecutar esos comandos.
 
 ## Cambio DNS
 
@@ -83,8 +93,8 @@ lleva `X-Lisard-Origin: server` y `Cache-Control: no-store`: los cambios de
 la versión activa en Apache se sirven sin depender del despliegue estático
 de Vercel.
 
-La ruta de Telegram queda excluida: conserva su función actual hasta que
-se rellenen y comprueben sus credenciales en el servidor. El contador sí
+La ruta de Telegram queda excluida del puente: su webhook ya apunta
+directamente al servidor mediante una IP fija. El contador sí
 se consulta en el servidor. El puente no reenvía cookies ni autorización
 a las páginas públicas y solo permite escrituras en el contador.
 
@@ -96,4 +106,4 @@ del servidor requiere completar el cambio DNS descrito arriba.
 
 Al apuntar raíz y `www` al servidor, el tráfico ya no pasa por este puente.
 Comprobar HTTPS y renovar el certificado; retirar después la configuración
-del puente y, cuando Telegram esté trasladado, la dependencia restante.
+del puente y la dependencia de Vercel.

@@ -33,15 +33,9 @@ ProxyTimeout 30
 ProxyPass /api/calculator-counter http://127.0.0.1:3002/api/calculator-counter
 ProxyPassReverse /api/calculator-counter http://127.0.0.1:3002/api/calculator-counter
 
-# Transitional bridge: four Telegram secrets are not exportable from Vercel.
-# Remove this proxy only after configuring and checking the local webhook.
-SSLProxyEngine On
-SSLProxyVerify require
-SSLProxyVerifyDepth 5
-SSLProxyCheckPeerName On
-SSLProxyCACertificateFile /etc/ssl/certs/ca-certificates.crt
-ProxyPass /api/telegram-metrics https://lisardbellod-web.vercel.app/api/telegram-metrics
-ProxyPassReverse /api/telegram-metrics https://lisardbellod-web.vercel.app/api/telegram-metrics
+# Telegram is served by the same isolated local API as the counter.
+ProxyPass /api/telegram-metrics http://127.0.0.1:3002/api/telegram-metrics
+ProxyPassReverse /api/telegram-metrics http://127.0.0.1:3002/api/telegram-metrics
 <Location /api/>
     LimitRequestBody 65536
 </Location>
