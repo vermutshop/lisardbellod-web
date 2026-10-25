@@ -35,11 +35,11 @@ jobs:
             git reset --hard origin/main
             python3 scripts/build-blog-search-index.py
             npm run build
-            if git diff --quiet -- index.html data/home.json blog/search-index.json sitemap.xml data/sitemap-state.json; then
+            if git diff --quiet -- index.html data/home.json blog sitemap.xml data/sitemap-state.json; then
               echo "Search and sitemaps are current"
               exit 0
             fi
-            git add index.html data/home.json blog/search-index.json sitemap.xml data/sitemap-state.json
+            git add index.html data/home.json blog sitemap.xml data/sitemap-state.json
             git commit -m "chore: sync search and sitemaps"
             if git push origin HEAD:main; then
               exit 0
