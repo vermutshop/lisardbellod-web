@@ -1,0 +1,6 @@
+.ranking-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.ranking-example { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.ranking-example caption { padding: 0 0 .8rem; text-align: left; color: var(--muted); font-size: .88rem; }
+.ranking-example th, .ranking-example td { padding: .7rem .6rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.ranking-example thead th { color: #a9d3ff; }
+.ranking-example th:last-child, .ranking-example td:last-child { text-align: right; }
