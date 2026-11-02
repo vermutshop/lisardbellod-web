@@ -36,6 +36,8 @@ como secretos `LISARDBELLOD_DEPLOY_KEY` y `LISARDBELLOD_KNOWN_HOSTS` en GitHub.
 No guardar credenciales en este repositorio. El usuario de publicación solo
 tiene permiso sudo para reiniciar su propio servicio.
 
+Antes de subir cada paquete, `prune-releases.py` libera copias de despliegues antiguos: conserva la versión activa y las tres más recientes con marcador de commit válido. No limpia configuraciones compartidas ni carpetas desconocidas. Esta retención evita agotar la cuota de 5 GB de la cuenta.
+
 La activación conserva las versiones anteriores y comprueba el contador antes
 de dar el despliegue por bueno. Si falla la comprobación, restaura la versión
 anterior. Para una recuperación manual, cambiar `current` a una release
