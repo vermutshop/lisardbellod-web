@@ -1,0 +1,11 @@
+.blog-article-content .sifon-banner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; margin: 1.5rem 0 2rem; padding: 1.5rem; border: 1px solid #d5bc96; border-radius: 18px; background: #f3e5d2; color: #3b2c20; text-decoration: none; }
+.sifon-banner > span { display: grid; gap: .45rem; line-height: 1.4; }
+.sifon-banner strong { font-size: clamp(1.5rem,4vw,2rem); }
+.sifon-banner b { flex-shrink: 0; padding: .8rem 1rem; border-radius: 10px; background: #3b2c20; color: #fff; }
+.blog-article-content .sifon-banner:hover { background: #ebd7ba; }
+.blog-article-content .sifon-banner:focus-visible { outline: 3px solid #7db8ff; outline-offset: 5px; }
+.blog-article-content .sifon-photo { max-width: 620px; margin: 2rem auto; }
+.sifon-photo img { display: block; width: 100%; height: auto; }
+.sifon-photo figcaption { margin-top: .7rem; color: var(--muted); font-size: .88rem; line-height: 1.5; }
+@media (max-width: 640px) { .blog-article-content .sifon-banner { align-items: stretch; flex-direction: column; gap: 1rem; padding: 1.2rem; } .sifon-banner b { text-align: center; } }
+.blog-article-content .sifon-photo-small { max-width: 420px; }
