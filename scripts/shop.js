@@ -16,10 +16,7 @@ function createProductCard(product) {
   if (!product.name || !product.store) throw new Error("Falta el nombre o la tienda");
   const isCollection = product.kind === "collection";
   const isService = product.kind === "service";
-  const destination = isService ? product.url : productUrl(product.url);
-  if (isService && (typeof destination !== "string" || !/^tel:\+\d{8,15}$/.test(destination))) {
-    throw new Error("Teléfono de servicio no válido");
-  }
+  const destination = productUrl(product.url);
   const card = document.createElement("article");
   card.className = isService ? "shop-card shop-service-card" : "shop-card";
 
@@ -92,12 +89,10 @@ function createProductCard(product) {
   buyLink.className = `button ${isService ? "primary" : "secondary"} shop-buy-link`;
   // Keep the supplied link intact, including affiliate codes and tracking parameters.
   buyLink.href = destination;
-  if (!isService) {
-    buyLink.target = imageLink.target;
-    buyLink.rel = imageLink.rel;
-  }
-  buyLink.textContent = isService ? `Llamar a Toni · ${product.phone}` : isCollection ? "Explorar accesorios ↗" : `Comprar en ${product.store} ↗`;
-  buyLink.setAttribute("aria-label", isService ? `Llamar a Toni al ${product.phone}` : `${isCollection ? "Explorar" : "Comprar"} ${product.name} en ${product.store} (abre en una pestaña nueva)`);
+  buyLink.target = imageLink.target;
+  buyLink.rel = imageLink.rel;
+  buyLink.textContent = isService ? "Contactar" : isCollection ? "Explorar accesorios ↗" : `Comprar en ${product.store} ↗`;
+  buyLink.setAttribute("aria-label", isService ? "Contactar: ver vídeo de la instalación (abre en una pestaña nueva)" : `${isCollection ? "Explorar" : "Comprar"} ${product.name} en ${product.store} (abre en una pestaña nueva)`);
   body.append(buyLink);
 
   if (product.affiliate) {
