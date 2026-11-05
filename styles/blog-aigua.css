@@ -1,0 +1,10 @@
+.blog-article-content .aigua-banner { display:flex; align-items:center; justify-content:space-between; gap:1.5rem; margin:1.5rem 0 2rem; padding:1.5rem; border:1px solid #4e9daf; border-radius:18px; background:#e4f4f5; color:#123443; text-decoration:none; }
+.aigua-banner > span { display:grid; gap:.45rem; line-height:1.4; }
+.aigua-banner strong { font-size:clamp(1.5rem,4vw,2rem); }
+.aigua-banner b { flex-shrink:0; padding:.8rem 1rem; border-radius:10px; background:#123443; color:#fff; }
+.blog-article-content .aigua-banner:hover { background:#cce9ed; }
+.blog-article-content .aigua-banner:focus-visible { outline:3px solid #7db8ff; outline-offset:5px; }
+.aigua-capture { margin:2rem 0; }
+.aigua-capture img { display:block; width:100%; height:auto; }
+.aigua-capture figcaption { margin-top:.7rem; color:var(--muted); font-size:.88rem; line-height:1.5; }
+@media(max-width:640px) { .blog-article-content .aigua-banner { align-items:stretch; flex-direction:column; gap:1rem; padding:1.2rem; } .aigua-banner b { text-align:center; } }
