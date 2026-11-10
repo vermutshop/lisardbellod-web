@@ -1,14 +1,14 @@
 {
   "meta": {
     "generatedBy": "scripts/fetch-youtube.mjs",
-    "lastUpdated": "2026-11-09T13:37:12.914Z",
+    "lastUpdated": "2026-11-10T13:15:15.878Z",
     "regenerationWindowDays": 1
   },
   "metrics": {
     "totalAudience": 12545,
     "totalVideos": 187,
     "hoursWatchedThisYear": 72664,
-    "viewsLast365Days": 1588670
+    "viewsLast365Days": 1592327
   },
   "socials": {
     "instagramFollowers": 229,
@@ -22,7 +22,7 @@
       "description": "Pruebas de coches eléctricos, rutas, carga y tecnología en el día a día.",
       "category": "Principal",
       "subscribers": 7250,
-      "views": 3034003,
+      "views": 3038553,
       "uploadsPlaylistId": "UUUaJJERaZmu5_lfJPxT4X8A",
       "latestVideos": [
         {
@@ -35,7 +35,7 @@
           "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
           "channelName": "Lisard Bellod",
           "category": "Principal",
-          "views": 8747,
+          "views": 8780,
           "durationMinutes": 17.533333333333335
         },
         {
@@ -48,7 +48,7 @@
           "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
           "channelName": "Lisard Bellod",
           "category": "Principal",
-          "views": 7839,
+          "views": 7847,
           "durationMinutes": 17.9
         },
         {
@@ -61,7 +61,7 @@
           "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
           "channelName": "Lisard Bellod",
           "category": "Principal",
-          "views": 12074,
+          "views": 12215,
           "durationMinutes": 20.95
         }
       ]
@@ -73,7 +73,7 @@
       "description": "Negocios, ideas y lo que voy aprendiendo al poner en marcha mis proyectos.",
       "category": "Emprendimiento",
       "subscribers": 192,
-      "views": 28539,
+      "views": 28612,
       "uploadsPlaylistId": "UUuHu9H9TimiFbUbtoi-EDCg",
       "latestVideos": [
         {
@@ -86,7 +86,7 @@
           "channelId": "UCuHu9H9TimiFbUbtoi-EDCg",
           "channelName": "Lisard World",
           "category": "Emprendimiento",
-          "views": 182,
+          "views": 183,
           "durationMinutes": 33.733333333333334
         },
         {
@@ -99,7 +99,7 @@
           "channelId": "UCuHu9H9TimiFbUbtoi-EDCg",
           "channelName": "Lisard World",
           "category": "Emprendimiento",
-          "views": 10100,
+          "views": 10129,
           "durationMinutes": 21.85
         },
         {
@@ -124,7 +124,7 @@
       "description": "Gent, comerç i vida local. Des de Valls i en català.",
       "category": "Catalan",
       "subscribers": 41,
-      "views": 3809,
+      "views": 3814,
       "uploadsPlaylistId": "UUPX8H24n-SzE4TKFbG3B2-g",
       "latestVideos": [
         {
@@ -137,7 +137,7 @@
           "channelId": "UCPX8H24n-SzE4TKFbG3B2-g",
           "channelName": "Valls al mon",
           "category": "Catalan",
-          "views": 229,
+          "views": 230,
           "durationMinutes": 63.86666666666667
         },
         {
@@ -150,7 +150,7 @@
           "channelId": "UCPX8H24n-SzE4TKFbG3B2-g",
           "channelName": "Valls al mon",
           "category": "Catalan",
-          "views": 182,
+          "views": 183,
           "durationMinutes": 55.266666666666666
         },
         {
@@ -163,7 +163,7 @@
           "channelId": "UCPX8H24n-SzE4TKFbG3B2-g",
           "channelName": "Valls al mon",
           "category": "Catalan",
-          "views": 452,
+          "views": 453,
           "durationMinutes": 25.583333333333332
         }
       ]
@@ -180,7 +180,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 8747,
+      "views": 8780,
       "durationMinutes": 17.533333333333335
     },
     {
@@ -193,7 +193,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 7839,
+      "views": 7847,
       "durationMinutes": 17.9
     },
     {
@@ -206,7 +206,7 @@
       "channelId": "UCuHu9H9TimiFbUbtoi-EDCg",
       "channelName": "Lisard World",
       "category": "Emprendimiento",
-      "views": 182,
+      "views": 183,
       "durationMinutes": 33.733333333333334
     },
     {
@@ -219,7 +219,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 12074,
+      "views": 12215,
       "durationMinutes": 20.95
     },
     {
@@ -232,7 +232,7 @@
       "channelId": "UCuHu9H9TimiFbUbtoi-EDCg",
       "channelName": "Lisard World",
       "category": "Emprendimiento",
-      "views": 10100,
+      "views": 10129,
       "durationMinutes": 21.85
     },
     {
@@ -245,7 +245,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 6345,
+      "views": 6358,
       "durationMinutes": 21.45
     },
     {
@@ -258,7 +258,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 9344,
+      "views": 9381,
       "durationMinutes": 18.65
     },
     {
@@ -271,7 +271,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 23164,
+      "views": 23335,
       "durationMinutes": 19.383333333333333
     },
     {
@@ -284,7 +284,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 27444,
+      "views": 27679,
       "durationMinutes": 32
     },
     {
@@ -297,7 +297,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 33723,
+      "views": 33951,
       "durationMinutes": 37.1
     },
     {
@@ -310,7 +310,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 29588,
+      "views": 29731,
       "durationMinutes": 39.21666666666667
     },
     {
@@ -323,7 +323,7 @@
       "channelId": "UCPX8H24n-SzE4TKFbG3B2-g",
       "channelName": "Valls al mon",
       "category": "Catalan",
-      "views": 229,
+      "views": 230,
       "durationMinutes": 63.86666666666667
     },
     {
@@ -336,7 +336,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 18941,
+      "views": 18978,
       "durationMinutes": 15.716666666666667
     },
     {
@@ -349,7 +349,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 28632,
+      "views": 28702,
       "durationMinutes": 25.85
     },
     {
@@ -362,7 +362,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 5224,
+      "views": 5225,
       "durationMinutes": 5.366666666666666
     },
     {
@@ -375,7 +375,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 7621,
+      "views": 7630,
       "durationMinutes": 32.88333333333333
     },
     {
@@ -401,7 +401,7 @@
       "channelId": "UCPX8H24n-SzE4TKFbG3B2-g",
       "channelName": "Valls al mon",
       "category": "Catalan",
-      "views": 182,
+      "views": 183,
       "durationMinutes": 55.266666666666666
     },
     {
@@ -414,7 +414,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 20414,
+      "views": 20456,
       "durationMinutes": 25.466666666666665
     },
     {
@@ -440,7 +440,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 11538,
+      "views": 11573,
       "durationMinutes": 26.15
     },
     {
@@ -453,7 +453,7 @@
       "channelId": "UCuHu9H9TimiFbUbtoi-EDCg",
       "channelName": "Lisard World",
       "category": "Emprendimiento",
-      "views": 576,
+      "views": 577,
       "durationMinutes": 27.816666666666666
     },
     {
@@ -466,7 +466,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 26255,
+      "views": 26300,
       "durationMinutes": 22.583333333333332
     },
     {
@@ -479,7 +479,7 @@
       "channelId": "UCuHu9H9TimiFbUbtoi-EDCg",
       "channelName": "Lisard World",
       "category": "Emprendimiento",
-      "views": 385,
+      "views": 386,
       "durationMinutes": 25.066666666666666
     },
     {
@@ -492,7 +492,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 6913,
+      "views": 6914,
       "durationMinutes": 21.266666666666666
     },
     {
@@ -544,7 +544,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 2864,
+      "views": 2867,
       "durationMinutes": 7
     },
     {
@@ -557,7 +557,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 13161,
+      "views": 13171,
       "durationMinutes": 15.35
     },
     {
@@ -583,7 +583,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 5725,
+      "views": 5732,
       "durationMinutes": 5.65
     },
     {
@@ -596,7 +596,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 5839,
+      "views": 5843,
       "durationMinutes": 5.983333333333333
     },
     {
@@ -609,7 +609,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 3719,
+      "views": 3735,
       "durationMinutes": 6.3
     },
     {
@@ -635,7 +635,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 4600,
+      "views": 4601,
       "durationMinutes": 5.183333333333334
     },
     {
@@ -648,7 +648,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 1011,
+      "views": 1014,
       "durationMinutes": 36.05
     },
     {
@@ -661,7 +661,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 1275,
+      "views": 1277,
       "durationMinutes": 14.35
     },
     {
@@ -674,7 +674,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 10825,
+      "views": 10845,
       "durationMinutes": 22.466666666666665
     },
     {
@@ -687,7 +687,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 7749,
+      "views": 7759,
       "durationMinutes": 22.066666666666666
     },
     {
@@ -700,7 +700,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 13295,
+      "views": 13323,
       "durationMinutes": 23
     },
     {
@@ -713,7 +713,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 10885,
+      "views": 10908,
       "durationMinutes": 15.05
     },
     {
@@ -726,7 +726,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 8126,
+      "views": 8131,
       "durationMinutes": 35.5
     },
     {
@@ -739,7 +739,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 44564,
+      "views": 44621,
       "durationMinutes": 13.016666666666667
     },
     {
@@ -752,7 +752,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 41186,
+      "views": 41198,
       "durationMinutes": 13.116666666666667
     },
     {
@@ -765,7 +765,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 12788,
+      "views": 12836,
       "durationMinutes": 22.516666666666666
     },
     {
@@ -778,7 +778,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 3220,
+      "views": 3227,
       "durationMinutes": 11.533333333333333
     },
     {
@@ -804,7 +804,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 34003,
+      "views": 34154,
       "durationMinutes": 22.65
     },
     {
@@ -817,7 +817,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 9998,
+      "views": 10068,
       "durationMinutes": 18.15
     },
     {
@@ -830,7 +830,7 @@
       "channelId": "UCPX8H24n-SzE4TKFbG3B2-g",
       "channelName": "Valls al mon",
       "category": "Catalan",
-      "views": 452,
+      "views": 453,
       "durationMinutes": 25.583333333333332
     },
     {
@@ -856,7 +856,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 6513,
+      "views": 6546,
       "durationMinutes": 16.25
     },
     {
@@ -869,7 +869,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 7805,
+      "views": 7813,
       "durationMinutes": 22.883333333333333
     },
     {
@@ -882,7 +882,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 4740,
+      "views": 4741,
       "durationMinutes": 11.033333333333333
     },
     {
@@ -895,7 +895,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 19713,
+      "views": 19740,
       "durationMinutes": 15.616666666666667
     },
     {
@@ -908,7 +908,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 2860,
+      "views": 2864,
       "durationMinutes": 23.116666666666667
     },
     {
@@ -934,7 +934,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 13882,
+      "views": 13892,
       "durationMinutes": 13.766666666666667
     },
     {
@@ -947,7 +947,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 19049,
+      "views": 19086,
       "durationMinutes": 28.333333333333332
     },
     {
@@ -960,7 +960,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 7142,
+      "views": 7151,
       "durationMinutes": 15.7
     },
     {
@@ -973,7 +973,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 5863,
+      "views": 5873,
       "durationMinutes": 5.583333333333333
     },
     {
@@ -986,7 +986,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 5177,
+      "views": 5188,
       "durationMinutes": 19
     },
     {
@@ -999,7 +999,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 4460,
+      "views": 4462,
       "durationMinutes": 18.416666666666668
     },
     {
@@ -1012,7 +1012,7 @@
       "channelId": "UCPX8H24n-SzE4TKFbG3B2-g",
       "channelName": "Valls al mon",
       "category": "Catalan",
-      "views": 302,
+      "views": 304,
       "durationMinutes": 18.183333333333334
     },
     {
@@ -1038,7 +1038,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 15249,
+      "views": 15285,
       "durationMinutes": 33.88333333333333
     },
     {
@@ -1051,7 +1051,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 18553,
+      "views": 18572,
       "durationMinutes": 46.21666666666667
     },
     {
@@ -1077,7 +1077,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 32484,
+      "views": 32535,
       "durationMinutes": 21.233333333333334
     },
     {
@@ -1090,7 +1090,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 2692,
+      "views": 2693,
       "durationMinutes": 8.25
     },
     {
@@ -1116,7 +1116,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 3805,
+      "views": 3807,
       "durationMinutes": 23.316666666666666
     },
     {
@@ -1129,7 +1129,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 13986,
+      "views": 13994,
       "durationMinutes": 13.033333333333333
     },
     {
@@ -1142,7 +1142,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 26478,
+      "views": 26530,
       "durationMinutes": 26.2
     },
     {
@@ -1155,7 +1155,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 9033,
+      "views": 9044,
       "durationMinutes": 24.916666666666668
     },
     {
@@ -1181,7 +1181,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 3887,
+      "views": 3892,
       "durationMinutes": 90.75
     },
     {
@@ -1194,7 +1194,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 15272,
+      "views": 15345,
       "durationMinutes": 24.2
     },
     {
@@ -1207,7 +1207,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 5172,
+      "views": 5181,
       "durationMinutes": 53.11666666666667
     },
     {
@@ -1220,7 +1220,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 8380,
+      "views": 8393,
       "durationMinutes": 50.35
     },
     {
@@ -1233,7 +1233,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 5200,
+      "views": 5241,
       "durationMinutes": 37.083333333333336
     },
     {
@@ -1246,7 +1246,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 5814,
+      "views": 5823,
       "durationMinutes": 42.666666666666664
     },
     {
@@ -1259,7 +1259,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 9804,
+      "views": 9809,
       "durationMinutes": 90.98333333333333
     },
     {
@@ -1272,7 +1272,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 5405,
+      "views": 5408,
       "durationMinutes": 23.45
     },
     {
@@ -1285,7 +1285,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 3070,
+      "views": 3080,
       "durationMinutes": 33.28333333333333
     },
     {
@@ -1311,7 +1311,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 2617,
+      "views": 2620,
       "durationMinutes": 25.233333333333334
     },
     {
@@ -1324,7 +1324,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 8208,
+      "views": 8213,
       "durationMinutes": 31.133333333333333
     },
     {
@@ -1337,7 +1337,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 2047,
+      "views": 2050,
       "durationMinutes": 16.2
     },
     {
@@ -1350,7 +1350,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 1748,
+      "views": 1749,
       "durationMinutes": 17.4
     },
     {
@@ -1363,7 +1363,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 6455,
+      "views": 6467,
       "durationMinutes": 21.1
     },
     {
@@ -1441,7 +1441,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 4689,
+      "views": 4692,
       "durationMinutes": 33.733333333333334
     },
     {
@@ -1454,7 +1454,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 4521,
+      "views": 4522,
       "durationMinutes": 22.216666666666665
     },
     {
@@ -1480,7 +1480,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 20914,
+      "views": 20954,
       "durationMinutes": 25.25
     },
     {
@@ -1519,7 +1519,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 9886,
+      "views": 9915,
       "durationMinutes": 10.033333333333333
     },
     {
@@ -1545,7 +1545,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 2667,
+      "views": 2671,
       "durationMinutes": 18.466666666666665
     },
     {
@@ -1558,7 +1558,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 30112,
+      "views": 30160,
       "durationMinutes": 30.016666666666666
     },
     {
@@ -1584,7 +1584,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 980,
+      "views": 986,
       "durationMinutes": 76.7
     },
     {
@@ -1597,7 +1597,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 2358,
+      "views": 2362,
       "durationMinutes": 25.75
     },
     {
@@ -1610,7 +1610,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 3374,
+      "views": 3380,
       "durationMinutes": 22.05
     },
     {
@@ -1623,7 +1623,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 4570,
+      "views": 4571,
       "durationMinutes": 32.083333333333336
     },
     {
@@ -1636,7 +1636,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 8841,
+      "views": 8845,
       "durationMinutes": 23.133333333333333
     },
     {
@@ -1649,7 +1649,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 15882,
+      "views": 15888,
       "durationMinutes": 24.033333333333335
     },
     {
@@ -1675,7 +1675,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 6047,
+      "views": 6055,
       "durationMinutes": 32.75
     },
     {
@@ -1688,7 +1688,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 21045,
+      "views": 21143,
       "durationMinutes": 19.383333333333333
     },
     {
@@ -1714,7 +1714,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 8502,
+      "views": 8509,
       "durationMinutes": 26.816666666666666
     },
     {
@@ -1727,7 +1727,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 4769,
+      "views": 4771,
       "durationMinutes": 24.7
     },
     {
@@ -1740,7 +1740,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 3936,
+      "views": 3937,
       "durationMinutes": 5.983333333333333
     },
     {
@@ -1766,7 +1766,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 11679,
+      "views": 11682,
       "durationMinutes": 16.616666666666667
     },
     {
@@ -1792,7 +1792,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 5092,
+      "views": 5103,
       "durationMinutes": 22.833333333333332
     },
     {
@@ -1805,7 +1805,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 9240,
+      "views": 9241,
       "durationMinutes": 17.2
     },
     {
@@ -1818,7 +1818,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 29015,
+      "views": 29016,
       "durationMinutes": 13.716666666666667
     },
     {
@@ -1831,7 +1831,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 15011,
+      "views": 15016,
       "durationMinutes": 25.983333333333334
     },
     {
@@ -1844,7 +1844,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 9273,
+      "views": 9278,
       "durationMinutes": 15.6
     },
     {
@@ -1857,7 +1857,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 6305,
+      "views": 6312,
       "durationMinutes": 18.933333333333334
     },
     {
@@ -1870,7 +1870,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 3790,
+      "views": 3791,
       "durationMinutes": 12.066666666666666
     },
     {
@@ -1883,7 +1883,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 16470,
+      "views": 16484,
       "durationMinutes": 22.05
     },
     {
@@ -1922,7 +1922,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 4119,
+      "views": 4121,
       "durationMinutes": 19.966666666666665
     },
     {
@@ -1935,7 +1935,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 7795,
+      "views": 7799,
       "durationMinutes": 31.5
     },
     {
@@ -1974,7 +1974,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 3043,
+      "views": 3046,
       "durationMinutes": 22.533333333333335
     },
     {
@@ -2000,7 +2000,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 2699,
+      "views": 2702,
       "durationMinutes": 16.966666666666665
     },
     {
@@ -2026,7 +2026,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 18380,
+      "views": 18385,
       "durationMinutes": 16.25
     },
     {
@@ -2065,7 +2065,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 5392,
+      "views": 5393,
       "durationMinutes": 13.783333333333333
     },
     {
@@ -2078,7 +2078,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 14493,
+      "views": 14496,
       "durationMinutes": 23.116666666666667
     },
     {
@@ -2091,7 +2091,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 16257,
+      "views": 16264,
       "durationMinutes": 7.033333333333333
     },
     {
@@ -2104,7 +2104,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 34730,
+      "views": 34731,
       "durationMinutes": 27.633333333333333
     },
     {
@@ -2117,7 +2117,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 19818,
+      "views": 19820,
       "durationMinutes": 18.966666666666665
     },
     {
@@ -2130,7 +2130,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 13945,
+      "views": 13947,
       "durationMinutes": 11.333333333333334
     },
     {
@@ -2208,7 +2208,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 1628,
+      "views": 1629,
       "durationMinutes": 8.016666666666667
     },
     {
@@ -2260,7 +2260,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 1901,
+      "views": 1907,
       "durationMinutes": 12.466666666666667
     },
     {
@@ -2273,7 +2273,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 1841,
+      "views": 1843,
       "durationMinutes": 3.6833333333333336
     },
     {
@@ -2364,7 +2364,7 @@
       "channelId": "UCUaJJERaZmu5_lfJPxT4X8A",
       "channelName": "Lisard Bellod",
       "category": "Principal",
-      "views": 608,
+      "views": 609,
       "durationMinutes": 12.433333333333334
     },
     {
